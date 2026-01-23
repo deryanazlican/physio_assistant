@@ -1,0 +1,62 @@
+{
+  "patient_name": "BET",
+  "condition": "KALCA_AGRISI",
+  "fitness_level": 5,
+  "created_date": "2026-01-08T20:42:03.110921",
+  "start_date": "2026-01-08",
+  "weeks": 2,
+  "schedule": {
+    "Hafta_1": {
+      "Pazartesi": {
+        "exercises": [
+          "KALCA_DIZ_CEKME",
+          "KALCA_KOPRU"
+        ],
+        "completed": false,
+        "date": null
+      },
+      "Çarşamba": {
+        "exercises": [
+          "KALCA_DUZ_KALDIR",
+          "KALCA_YAN_ACMA"
+        ],
+        "completed": false,
+        "date": null
+      },
+      "Cuma": {
+        "exercises": [
+          "KALCA_YUZUSTU",
+          "KALCA_YAN_DIZ_CEKME"
+        ],
+        "completed": false,
+        "date": null
+      }
+    },
+    "Hafta_2": {
+      "Pazartesi": {
+        "exercises": [
+          "KALCA_DIZ_CEKME",
+          "KALCA_KOPRU"
+        ],
+        "completed": false,
+        "date": null
+      },
+      "Çarşamba": {
+        "exercises": [
+          "KALCA_DUZ_KALDIR",
+          "KALCA_YAN_ACMA"
+        ],
+        "completed": false,
+        "date": null
+      },
+      "Cuma": {
+        "exercises": [
+          "KALCA_YUZUSTU",
+          "KALCA_YAN_DIZ_CEKME"
+        ],
+        "completed": false,
+        "date": null
+      }
+    }
+  }
+}

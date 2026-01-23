@@ -1,158 +1,289 @@
-# exercises/diz.py
-# YENİ DOSYA - Diz Egzersizleri Mantığı
-
 import numpy as np
 import mediapipe as mp
+import time
 from utils.counter import RepCounter
 from utils.timer import DurationTimer
 from utils.angles import calculate_angle_3d
 
-# --- Landmark Sabitleri ---
-mp_pose = mp.solutions.pose
-TARGET_REPS = 10 # Her egzersiz için hedef tekrar sayısı
+mp_pose = mp.solutions.pose.PoseLandmark
 
-# --- Sayaçların Tanımlanması ---
+# ==================== AYARLAR (DÜŞÜRÜLDÜ) ====================
+HAVLU_EZME_ANGLE = 150      # 160 → 150
+YUZUSTU_FLEX_THRESH = 110   # 100 → 110 (daha kolay)
+YAN_KALDIR_LIMIT = 150      # 160 → 150
+OTUR_UZAT_THRESH = 150      # 160 → 150
+SQUAT_MIN = 70              # 85 → 70
+SQUAT_MAX = 140             # 150 → 140
 
-# 1. Diz Germe (Oturarak)
-# Açı: HIP-KNEE-ANKLE. Hedef: > 175 (düz), Nötr: < 160 (bükülü)
-counter_diz_germe_sol = RepCounter("DIZ_GERME", "Sol", threshold_angle=175, target_reps=TARGET_REPS, neutral_threshold=160)
-counter_diz_germe_sag = RepCounter("DIZ_GERME", "Sag", threshold_angle=175, target_reps=TARGET_REPS, neutral_threshold=160)
+MAX_REPS = 10
+HAVLU_HOLD_TIME = 5
+YAN_HOLD_TIME = 5
+SQUAT_HOLD_TIME = 10
 
-# 2. Topuk Kaydırma (Yatarak)
-# Açı: HIP-KNEE-ANKLE. Açı KÜÇÜLÜR. (180 - açı) hilesi kullanılır.
-# Nötr (Düz): 170 -> 180-170=10. Hedef (Bükülü): 90 -> 180-90=90
-counter_topuk_kaydir_sol = RepCounter("DIZ_TOPUK_KAYDIR", "Sol", threshold_angle=90, target_reps=TARGET_REPS, neutral_threshold=20)
-counter_topuk_kaydir_sag = RepCounter("DIZ_TOPUK_KAYDIR", "Sag", threshold_angle=90, target_reps=TARGET_REPS, neutral_threshold=20)
+# ==================== SAYAÇLAR ====================
+counter_yuzustu_sol = RepCounter("DIZ_YUZUSTU_BUKME", "Sol", threshold_angle=YUZUSTU_FLEX_THRESH, target_reps=MAX_REPS, neutral_threshold=150)
+counter_yuzustu_sag = RepCounter("DIZ_YUZUSTU_BUKME", "Sag", threshold_angle=YUZUSTU_FLEX_THRESH, target_reps=MAX_REPS, neutral_threshold=150)
 
-# 3. Düz Bacak Kaldırma (Yatarak)
-# Açı: SHOULDER-HIP-KNEE. Açı KÜÇÜLÜR. (180 - açı) hilesi kullanılır.
-# Nötr (Yerde): 175 -> 180-175=5. Hedef (Havada): 135 -> 180-135=45
-counter_bacak_kaldir_sol = RepCounter("DIZ_BACAK_KALDIR", "Sol", threshold_angle=45, target_reps=TARGET_REPS, neutral_threshold=15)
-counter_bacak_kaldir_sag = RepCounter("DIZ_BACAK_KALDIR", "Sag", threshold_angle=45, target_reps=TARGET_REPS, neutral_threshold=15)
+counter_otur_sol = RepCounter("DIZ_OTUR_UZAT", "Sol", threshold_angle=OTUR_UZAT_THRESH, target_reps=MAX_REPS, neutral_threshold=110)
+counter_otur_sag = RepCounter("DIZ_OTUR_UZAT", "Sag", threshold_angle=OTUR_UZAT_THRESH, target_reps=MAX_REPS, neutral_threshold=110)
 
-# 4. Oturarak Bacak Uzatma
-# Açı: HIP-KNEE-ANKLE. Hedef: > 160 (düz), Nötr: < 110 (bükülü)
-counter_otur_uzat_sol = RepCounter("DIZ_OTUR_UZAT", "Sol", threshold_angle=160, target_reps=TARGET_REPS, neutral_threshold=110)
-counter_otur_uzat_sag = RepCounter("DIZ_OTUR_UZAT", "Sag", threshold_angle=160, target_reps=TARGET_REPS, neutral_threshold=110)
+# ==================== GLOBAL STATE ====================
+last_hip_y = None
+havlu_start_time_sol = None
+havlu_start_time_sag = None
+havlu_completed_sol = False
+havlu_completed_sag = False
 
-# 5. Duvar Squat (SÜRE BAZLI)
-# Hedef açı: 80-110 derece arası. Hedef süre: 10 saniye
-timer_duvar_squat_sol = DurationTimer("DIZ_DUVAR_SQUAT", "Sol", target_duration=10)
-timer_duvar_squat_sag = DurationTimer("DIZ_DUVAR_SQUAT", "Sag", target_duration=10)
+yan_start_time_sol = None
+yan_start_time_sag = None
+yan_completed_sol = False
+yan_completed_sag = False
 
-# 6. Otur Kalk
-# Açı: HIP-KNEE-ANKLE. Hedef: > 160 (ayakta), Nötr: < 110 (oturuyor)
-counter_otur_kalk_sol = RepCounter("DIZ_OTUR_KALK", "Sol", threshold_angle=160, target_reps=TARGET_REPS, neutral_threshold=110)
-counter_otur_kalk_sag = RepCounter("DIZ_OTUR_KALK", "Sag", threshold_angle=160, target_reps=TARGET_REPS, neutral_threshold=110)
+squat_start_time = None
+squat_completed = False
 
-
+# ==================== RESET ====================
 def reset_diz_counters():
-    """Tüm diz sayaçlarını ve zamanlayıcıları sıfırlar."""
-    counter_diz_germe_sol.reset(); counter_diz_germe_sag.reset()
-    counter_topuk_kaydir_sol.reset(); counter_topuk_kaydir_sag.reset()
-    counter_bacak_kaldir_sol.reset(); counter_bacak_kaldir_sag.reset()
-    counter_otur_uzat_sol.reset(); counter_otur_uzat_sag.reset()
-    timer_duvar_squat_sol.reset(); timer_duvar_squat_sag.reset()
-    counter_otur_kalk_sol.reset(); counter_otur_kalk_sag.reset()
-    print("Tüm Diz sayaçları ve zamanlayıcıları sıfırlandı.")
-
-
-def get_exercise_feedback(current_exercise, landmarks):
-    """
-    Seçilen diz egzersizine göre açıları hesaplar, sayaçları günceller
-    ve kullanıcıya talimat/mesaj döndürür.
-    """
+    global last_hip_y
+    global havlu_start_time_sol, havlu_start_time_sag, havlu_completed_sol, havlu_completed_sag
+    global yan_start_time_sol, yan_start_time_sag, yan_completed_sol, yan_completed_sag
+    global squat_start_time, squat_completed
     
-    feedback_talimat = "Egzersiz seçilmedi"
-    feedback_mesaj = ""
+    counter_yuzustu_sol.reset()
+    counter_yuzustu_sag.reset()
+    counter_otur_sol.reset()
+    counter_otur_sag.reset()
+    
+    last_hip_y = None
+    havlu_start_time_sol = None
+    havlu_start_time_sag = None
+    havlu_completed_sol = False
+    havlu_completed_sag = False
+    
+    yan_start_time_sol = None
+    yan_start_time_sag = None
+    yan_completed_sol = False
+    yan_completed_sag = False
+    
+    squat_start_time = None
+    squat_completed = False
+    
+    print("✅ Diz modülü sıfırlandı.")
+
+# ==================== YARDIMCI FONKSİYONLAR ====================
+def get_lm(landmarks, lm_name):
+    lm = landmarks[lm_name.value]
+    if lm.visibility < 0.25:  # 0.3 → 0.25
+        return None
+    return [lm.x, lm.y, lm.z]
+
+def check_side_lying(l_sh, r_sh):
+    """Yan yatış kontrolü"""
+    y_diff = abs(l_sh[1] - r_sh[1])
+    return y_diff > 0.12  # 0.15 → 0.12 (daha kolay)
+
+def check_prone(l_sh, l_hip):
+    """Yüzüstü kontrolü"""
+    y_diff = abs(l_sh[1] - l_hip[1])
+    return y_diff < 0.15  # Omuz ve kalça aynı hizada
+
+# ==================== ANA FONKSİYON ====================
+def get_exercise_feedback(current_exercise, landmarks):
+    global last_hip_y
+    global havlu_start_time_sol, havlu_start_time_sag, havlu_completed_sol, havlu_completed_sag
+    global yan_start_time_sol, yan_start_time_sag, yan_completed_sol, yan_completed_sag
+    global squat_start_time, squat_completed
+    
+    talimat = ""
+    mesaj = ""
+    ekstra_bilgi = {}
     
     try:
-        # Gerekli landmark koordinatlarını al
-        l_hip = [landmarks[mp_pose.PoseLandmark.LEFT_HIP.value].x, landmarks[mp_pose.PoseLandmark.LEFT_HIP.value].y, landmarks[mp_pose.PoseLandmark.LEFT_HIP.value].z]
-        l_knee = [landmarks[mp_pose.PoseLandmark.LEFT_KNEE.value].x, landmarks[mp_pose.PoseLandmark.LEFT_KNEE.value].y, landmarks[mp_pose.PoseLandmark.LEFT_KNEE.value].z]
-        l_ankle = [landmarks[mp_pose.PoseLandmark.LEFT_ANKLE.value].x, landmarks[mp_pose.PoseLandmark.LEFT_ANKLE.value].y, landmarks[mp_pose.PoseLandmark.LEFT_ANKLE.value].z]
-        l_shoulder = [landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value].x, landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value].y, landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value].z]
+        l_sh = get_lm(landmarks, mp_pose.LEFT_SHOULDER)
+        r_sh = get_lm(landmarks, mp_pose.RIGHT_SHOULDER)
+        l_hip = get_lm(landmarks, mp_pose.LEFT_HIP)
+        r_hip = get_lm(landmarks, mp_pose.RIGHT_HIP)
+        l_knee = get_lm(landmarks, mp_pose.LEFT_KNEE)
+        r_knee = get_lm(landmarks, mp_pose.RIGHT_KNEE)
+        l_ankle = get_lm(landmarks, mp_pose.LEFT_ANKLE)
+        r_ankle = get_lm(landmarks, mp_pose.RIGHT_ANKLE)
 
-        r_hip = [landmarks[mp_pose.PoseLandmark.RIGHT_HIP.value].x, landmarks[mp_pose.PoseLandmark.RIGHT_HIP.value].y, landmarks[mp_pose.PoseLandmark.RIGHT_HIP.value].z]
-        r_knee = [landmarks[mp_pose.PoseLandmark.RIGHT_KNEE.value].x, landmarks[mp_pose.PoseLandmark.RIGHT_KNEE.value].y, landmarks[mp_pose.PoseLandmark.RIGHT_KNEE.value].z]
-        r_ankle = [landmarks[mp_pose.PoseLandmark.RIGHT_ANKLE.value].x, landmarks[mp_pose.PoseLandmark.RIGHT_ANKLE.value].y, landmarks[mp_pose.PoseLandmark.RIGHT_ANKLE.value].z]
-        r_shoulder = [landmarks[mp_pose.PoseLandmark.RIGHT_SHOULDER.value].x, landmarks[mp_pose.PoseLandmark.RIGHT_SHOULDER.value].y, landmarks[mp_pose.PoseLandmark.RIGHT_SHOULDER.value].z]
+        if not l_hip or not r_hip or not l_knee or not r_knee:
+            return "⚠️ Gorunmuyorsun", "Bacaklarini goster", {}
 
-        
-        # --- EGZERSİZ YÖNLENDİRİCİ ---
-        
-        if current_exercise == "MENU_DIZ":
-            feedback_talimat = "Lutfen bir diz egzersizi secin"
-
-        elif current_exercise == "DIZ_GERME":
-            feedback_talimat = "1. Diz Germe: Dizinizi gererek bacaginizi kaldirin."
+        # ==================== 1. HAVLU EZME ====================
+        if current_exercise == "DIZ_HAVLU_EZME":
+            talimat = f"Dizin altina havlu koy, ez ve tut ({HAVLU_HOLD_TIME}sn her bacak)"
+            
             angle_sol = calculate_angle_3d(l_hip, l_knee, l_ankle)
             angle_sag = calculate_angle_3d(r_hip, r_knee, r_ankle)
-            msg_sol = counter_diz_germe_sol.count(angle_sol)
-            msg_sag = counter_diz_germe_sag.count(angle_sag)
-            feedback_mesaj = f"[SOL: {msg_sol}]  [SAG: {msg_sag}]"
+            
+            # SOL BACAK
+            if angle_sol > HAVLU_EZME_ANGLE and not havlu_completed_sol:
+                if havlu_start_time_sol is None:
+                    havlu_start_time_sol = time.time()
+                elapsed = time.time() - havlu_start_time_sol
+                if elapsed >= HAVLU_HOLD_TIME:
+                    havlu_completed_sol = True
+                    msg_sol = "✅ TAMAM!"
+                else:
+                    msg_sol = f"Tut! {int(HAVLU_HOLD_TIME - elapsed)}sn"
+            elif havlu_completed_sol:
+                msg_sol = "✅ TAMAM!"
+            else:
+                havlu_start_time_sol = None
+                msg_sol = f"Ezmelisin ({int(angle_sol)}°)"
+            
+            # SAĞ BACAK
+            if angle_sag > HAVLU_EZME_ANGLE and not havlu_completed_sag:
+                if havlu_start_time_sag is None:
+                    havlu_start_time_sag = time.time()
+                elapsed = time.time() - havlu_start_time_sag
+                if elapsed >= HAVLU_HOLD_TIME:
+                    havlu_completed_sag = True
+                    msg_sag = "✅ TAMAM!"
+                else:
+                    msg_sag = f"Tut! {int(HAVLU_HOLD_TIME - elapsed)}sn"
+            elif havlu_completed_sag:
+                msg_sag = "✅ TAMAM!"
+            else:
+                havlu_start_time_sag = None
+                msg_sag = f"Ezmelisin ({int(angle_sag)}°)"
+            
+            mesaj = f"Sol: {msg_sol} | Sağ: {msg_sag}"
+            ekstra_bilgi = {"angle": min(angle_sol, angle_sag)}
 
-        elif current_exercise == "DIZ_TOPUK_KAYDIR":
-            feedback_talimat = "2. Topuk Kaydirma: Yuzustu yatin, topugu kalcaya cekin."
+        # ==================== 2. YÜZÜSTÜ BÜKME ====================
+        elif current_exercise == "DIZ_YUZUSTU_BUKME":
+            talimat = "Yuzustu yat, topugunu kalcana cek (Her bacak 10'ar)"
+            
+            if not check_prone(l_sh, l_hip):
+                mesaj = "⚠️ Yüzüstü yatmalısın!"
+                return talimat, mesaj, {}
+            
             angle_sol = calculate_angle_3d(l_hip, l_knee, l_ankle)
             angle_sag = calculate_angle_3d(r_hip, r_knee, r_ankle)
-            msg_sol = counter_topuk_kaydir_sol.count(180 - angle_sol) # Açı küçüldüğü için
-            msg_sag = counter_topuk_kaydir_sag.count(180 - angle_sag) # 180'den çıkar
-            feedback_mesaj = f"[SOL: {msg_sol}]  [SAG: {msg_sag}]"
+            
+            sol_reps = counter_yuzustu_sol.rep_count
+            sag_reps = counter_yuzustu_sag.rep_count
+            
+            if sol_reps >= MAX_REPS and sag_reps >= MAX_REPS:
+                mesaj = f"✅ TAMAMLANDI! (Sol:{sol_reps} Sağ:{sag_reps})"
+                ekstra_bilgi = {"completed": True, "reps": MAX_REPS, "max_reps": MAX_REPS}
+            else:
+                msg_sol = counter_yuzustu_sol.count(angle_sol)
+                msg_sag = counter_yuzustu_sag.count(angle_sag)
+                
+                if "HARIKA" in msg_sol or "HARIKA" in msg_sag:
+                    mesaj = f"Sol:{sol_reps}/10 Sağ:{sag_reps}/10"
+                else:
+                    mesaj = f"{int(angle_sol)}°/{int(angle_sag)}° | Sol:{sol_reps}/10 Sağ:{sag_reps}/10"
+                
+                ekstra_bilgi = {"angle": min(angle_sol, angle_sag), "reps": min(sol_reps, sag_reps), "max_reps": MAX_REPS}
 
-        elif current_exercise == "DIZ_BACAK_KALDIR":
-            feedback_talimat = "3. Duz Bacak Kaldirma: Sirtustu yatin, duz bacagi kaldirin."
-            angle_sol = calculate_angle_3d(l_shoulder, l_hip, l_knee)
-            angle_sag = calculate_angle_3d(r_shoulder, r_hip, r_knee)
-            msg_sol = counter_bacak_kaldir_sol.count(180 - angle_sol) # Açı küçüldüğü için
-            msg_sag = counter_bacak_kaldir_sag.count(180 - angle_sag) # 180'den çıkar
-            feedback_mesaj = f"[SOL: {msg_sol}]  [SAG: {msg_sag}]"
+        # ==================== 3. YAN YATARAK KALDIRMA ====================
+        elif current_exercise == "DIZ_YAN_KALDIR":
+            talimat = f"Yan yat, ustteki bacagi kaldir ({YAN_HOLD_TIME}sn her bacak)"
+            
+            if not check_side_lying(l_sh, r_sh):
+                mesaj = "⚠️ Yan yatmalısın!"
+                return talimat, mesaj, {}
+            
+            # Hangi taraf üstte?
+            left_is_up = l_hip[1] < r_hip[1]
+            
+            if left_is_up:
+                leg_spread = abs(l_ankle[1] - r_ankle[1])
+                is_holding = leg_spread > 0.12  # 0.15 → 0.12
+                
+                if is_holding and not yan_completed_sol:
+                    if yan_start_time_sol is None:
+                        yan_start_time_sol = time.time()
+                    elapsed = time.time() - yan_start_time_sol
+                    if elapsed >= YAN_HOLD_TIME:
+                        yan_completed_sol = True
+                        mesaj = "✅ SOL TAMAM!"
+                    else:
+                        mesaj = f"SOL TUT! {int(YAN_HOLD_TIME - elapsed)}sn"
+                elif yan_completed_sol:
+                    mesaj = "✅ SOL TAMAM!"
+                else:
+                    yan_start_time_sol = None
+                    mesaj = "Sol: Kaldır"
+            else:
+                leg_spread = abs(r_ankle[1] - l_ankle[1])
+                is_holding = leg_spread > 0.12
+                
+                if is_holding and not yan_completed_sag:
+                    if yan_start_time_sag is None:
+                        yan_start_time_sag = time.time()
+                    elapsed = time.time() - yan_start_time_sag
+                    if elapsed >= YAN_HOLD_TIME:
+                        yan_completed_sag = True
+                        mesaj = "✅ SAĞ TAMAM!"
+                    else:
+                        mesaj = f"SAĞ TUT! {int(YAN_HOLD_TIME - elapsed)}sn"
+                elif yan_completed_sag:
+                    mesaj = "✅ SAĞ TAMAM!"
+                else:
+                    yan_start_time_sag = None
+                    mesaj = "Sağ: Kaldır"
 
+        # ==================== 4. OTURARAK UZATMA ====================
         elif current_exercise == "DIZ_OTUR_UZAT":
-            feedback_talimat = "4. Oturarak Bacak Uzatma: Sandalyede bacaginizi duz uzatin."
+            talimat = "Oturarak dizini duzelestir (Her bacak 10'ar)"
+            
             angle_sol = calculate_angle_3d(l_hip, l_knee, l_ankle)
             angle_sag = calculate_angle_3d(r_hip, r_knee, r_ankle)
-            msg_sol = counter_otur_uzat_sol.count(angle_sol)
-            msg_sag = counter_otur_uzat_sag.count(angle_sag)
-            feedback_mesaj = f"[SOL: {msg_sol}]  [SAG: {msg_sag}]"
             
+            sol_reps = counter_otur_sol.rep_count
+            sag_reps = counter_otur_sag.rep_count
+            
+            if sol_reps >= MAX_REPS and sag_reps >= MAX_REPS:
+                mesaj = f"✅ TAMAMLANDI! (Sol:{sol_reps} Sağ:{sag_reps})"
+                ekstra_bilgi = {"completed": True, "reps": MAX_REPS, "max_reps": MAX_REPS}
+            else:
+                msg_sol = counter_otur_sol.count(angle_sol)
+                msg_sag = counter_otur_sag.count(angle_sag)
+                mesaj = f"{int(angle_sol)}°/{int(angle_sag)}° | Sol:{sol_reps}/10 Sağ:{sag_reps}/10"
+                ekstra_bilgi = {"angle": min(angle_sol, angle_sag), "reps": min(sol_reps, sag_reps), "max_reps": MAX_REPS}
+
+        # ==================== 5. DUVAR SQUAT ====================
         elif current_exercise == "DIZ_DUVAR_SQUAT":
-            feedback_talimat = "5. Duvar Squat (10sn): Duvara yaslanin ve 90 derece comelin."
+            talimat = f"Sirini duvara yasla, çömel ve tut ({SQUAT_HOLD_TIME}sn)"
             
-            angle_sol = calculate_angle_3d(l_hip, l_knee, l_ankle)
-            angle_sag = calculate_angle_3d(r_hip, r_knee, r_ankle)
+            angle = calculate_angle_3d(l_hip, l_knee, l_ankle)
             
-            # Sol bacak için pozisyon kontrolü
-            is_active_sol = False; pose_feedback_sol = ""
-            if angle_sol > 120: pose_feedback_sol = "Biraz Comel"
-            elif angle_sol < 80: pose_feedback_sol = "Biraz Kalk"
-            else: is_active_sol = True; pose_feedback_sol = "POZISYONU KORU"
+            in_position = SQUAT_MIN < angle < SQUAT_MAX
             
-            # Sağ bacak için pozisyon kontrolü
-            is_active_sag = False; pose_feedback_sag = ""
-            if angle_sag > 120: pose_feedback_sag = "Biraz Comel"
-            elif angle_sag < 80: pose_feedback_sag = "Biraz Kalk"
-            else: is_active_sag = True; pose_feedback_sag = "POZISYONU KORU"
+            if in_position and not squat_completed:
+                if squat_start_time is None:
+                    squat_start_time = time.time()
+                elapsed = time.time() - squat_start_time
+                if elapsed >= SQUAT_HOLD_TIME:
+                    squat_completed = True
+                    mesaj = "✅ HARIKA TAMAMLANDI!"
+                    ekstra_bilgi = {"completed": True, "progress": 100}
+                else:
+                    progress = (elapsed / SQUAT_HOLD_TIME) * 100
+                    mesaj = f"💪 TUT! {int(SQUAT_HOLD_TIME - elapsed)}sn | Açı: {int(angle)}°"
+                    ekstra_bilgi = {"timer": SQUAT_HOLD_TIME - elapsed, "progress": progress, "angle": angle}
+            elif squat_completed:
+                mesaj = "✅ TAMAMLANDI!"
+                ekstra_bilgi = {"completed": True, "progress": 100}
+            else:
+                squat_start_time = None
+                if angle >= SQUAT_MAX:
+                    mesaj = f"Daha fazla çömel ({int(angle)}°)"
+                else:
+                    mesaj = f"Çok indin! Biraz kalk ({int(angle)}°)"
+                ekstra_bilgi = {"angle": angle}
 
-            # Zamanlayıcıları güncelle
-            msg_sol = timer_duvar_squat_sol.update_feedback(is_active_sol)
-            msg_sag = timer_duvar_squat_sag.update_feedback(is_active_sag)
-            
-            feedback_mesaj = f"[SOL: {pose_feedback_sol} - {msg_sol}]  [SAG: {pose_feedback_sag} - {msg_sag}]"
+        else:
+            mesaj = "Bilinmeyen hareket"
 
-        elif current_exercise == "DIZ_OTUR_KALK":
-            feedback_talimat = "6. Otur Kalk: Sandalyeden kalkin ve tekrar oturun."
-            angle_sol = calculate_angle_3d(l_hip, l_knee, l_ankle)
-            angle_sag = calculate_angle_3d(r_hip, r_knee, r_ankle)
-            msg_sol = counter_otur_kalk_sol.count(angle_sol)
-            msg_sag = counter_otur_kalk_sag.count(angle_sag)
-            feedback_mesaj = f"[SOL: {msg_sol}]  [SAG: {msg_sag}]"
-        
     except Exception as e:
-        feedback_talimat = "Kullanici algilanmadi veya hesaplama hatasi."
-        feedback_mesaj = f"Hata: {e}"
-        # Hata durumunda da zamanlayıcıları duraklat
-        timer_duvar_squat_sol.update_feedback(False)
-        timer_duvar_squat_sag.update_feedback(False)
-        
-    return feedback_talimat, feedback_mesaj
+        mesaj = f"❌ Hata: {str(e)}"
+        print(f"DIZ MODULU HATA: {e}")
+
+    return talimat, mesaj, ekstra_bilgi

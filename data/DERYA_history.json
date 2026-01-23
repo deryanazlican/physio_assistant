@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": "2026-01-06T17:02:51.365925",
+    "exercise": "ROM_LAT",
+    "data": {
+      "reps": 10,
+      "angle": 1.4042200843038717,
+      "duration": 0.0,
+      "quality": 0.7,
+      "pain_level": 3,
+      "notes": ""
+    }
+  },
+  {
+    "timestamp": "2026-01-06T17:38:54.442425",
+    "exercise": "ROM_LAT",
+    "data": {
+      "reps": 10,
+      "angle": 3.5304064193217877,
+      "duration": 0.0,
+      "quality": 0.7,
+      "pain_level": 3,
+      "notes": ""
+    }
+  }
+]

@@ -1,5 +1,5 @@
 # utils/timer.py
-# YENİ DOSYA - Süre Bazlı Egzersizler için Zamanlayıcı
+# FİNAL SÜRÜM (v2) - İLERLEME ÇUBUĞU İÇİN OPTİMİZE EDİLDİ
 
 import time
 from utils.logger import log_exercise
@@ -7,66 +7,69 @@ from utils.logger import log_exercise
 class DurationTimer:
     """
     Belirlenen bir süre boyunca hareketi takip eder.
-    Sadece hareket algılandığında süre işler.
+    Sadece hareket algılandığında (is_active=True) süre işler.
     """
     
     def __init__(self, exercise_name, side, target_duration):
         self.exercise_name = exercise_name
         self.side = side
-        self.target_duration = target_duration  # Saniye cinsinden
-        
+        self.target_duration = target_duration  # Hedef saniye
         self.reset()
 
     def reset(self):
         """Zamanlayıcıyı sıfırlar."""
         self.start_time = None
-        self.elapsed_time = 0
+        self.elapsed_time = 0 # Toplam geçen süre
+        self.last_update_time = None
         self.is_running = False
         self.is_complete = False
         self.logged = False
-        self.last_message = f"{self.side}: Basla ({self.target_duration} sn)"
-        print(f"{self.exercise_name} ({self.side}) zamanlayici sifirlandi.")
+        self.last_message = f"{self.target_duration} sn Bekle"
 
     def update_feedback(self, is_active):
         """
-        Kullanıcının aktif olup olmadığına göre zamanlayıcıyı günceller ve mesaj döndürür.
+        is_active: Kullanıcı doğru pozisyonda mı? (True/False)
         """
         
         if self.is_complete:
-            return self.last_message
+            return "TAMAMLANDI!"
 
-        # 1. Kullanıcı aktif (hareket ediyor)
         if is_active:
+            current_time = time.time()
             if not self.is_running:
-                # Zamanlayıcıyı başlat/devam ettir
-                self.start_time = time.time()
+                # Sayım yeni başlıyor veya devam ediyor
                 self.is_running = True
+                self.last_update_time = current_time
             
-            # Geçen toplam süreyi hesapla
-            current_total_elapsed = self.elapsed_time + (time.time() - self.start_time)
+            # Geçen süreyi ekle
+            delta = current_time - self.last_update_time
+            self.elapsed_time += delta
+            self.last_update_time = current_time
             
-            if current_total_elapsed >= self.target_duration:
-                # Hedef tamamlandı
+            # Hedef kontrolü
+            if self.elapsed_time >= self.target_duration:
                 self.is_complete = True
                 self.is_running = False
-                self.last_message = "TAMAMLANDI!"
                 if not self.logged:
                     log_exercise(self.exercise_name, self.target_duration, self.side)
                     self.logged = True
+                return "TAMAMLANDI!"
             else:
-                # Devam ediyor
-                self.last_message = f"Devam... {int(current_total_elapsed)}/{self.target_duration} sn"
+                # Main.py regex'i için format: "X / Y"
+                # Örn: "TUT! 3/10" -> Main.py bunu bar'a çevirir.
+                remaining = int(self.target_duration - self.elapsed_time)
+                elapsed_int = int(self.elapsed_time)
+                self.last_message = f"TUT! {elapsed_int}/{self.target_duration}"
         
-        # 2. Kullanıcı aktif değil (durdu)
         else:
-            if self.is_running:
-                # Zamanlayıcıyı duraklat
-                self.elapsed_time += (time.time() - self.start_time)
-                self.is_running = False
-            
+            # Pozisyon bozuldu, zamanı durdur ama sıfırlama (isteğe bağlı)
+            # İstersen self.elapsed_time = 0 yaparak hatada sıfırlatabilirsin.
+            # Şimdilik duraklatıyoruz:
+            self.is_running = False
+            self.last_update_time = None
             if self.elapsed_time > 0:
-                self.last_message = f"Durdun. {int(self.elapsed_time)}/{self.target_duration} sn"
+                self.last_message = f"DURDUN! {int(self.elapsed_time)}/{self.target_duration}"
             else:
-                self.last_message = f"{self.side}: Harekete Basla"
+                self.last_message = f"Pozisyon Al ({self.target_duration} sn)"
                 
         return self.last_message

@@ -1,368 +1,469 @@
-# exercises/boyun.py
-# GÜNCEL TAM KOD (V7 - V0 (Orijinal) Kod Temelli + V2/V3 Düzeltmeleri)
-
 import mediapipe as mp
-import time 
+import time
 import numpy as np
-from utils.angles import calculate_angle_3d, calculate_distance_3d
-from utils.counter import RepCounter 
-from utils.logger import log_exercise
+from utils.angles import calculate_distance_3d
+from utils.counter import RepCounter
 
 mp_pose = mp.solutions.pose.PoseLandmark
 
-# --- YARDIMCI FONKSİYONLAR ---
-def get_landmark_coords(landmarks, landmark_name):
-    lm = landmarks[landmark_name.value]
-    if lm.visibility < 0.5: # Orijinal V0 eşiği
-        raise ValueError(f"{landmark_name.name} gorunmuyor!")
+# ==================== SABITLER ====================
+LATERAL_THRESH = 15       # 30 → 15 (çok ağrıtıyordu)
+ROTATION_THRESH = 15      # 25 → 15 (daha kolay)
+FLEX_THRESH = 15          # 20 → 15 (daha kolay)
+NEUTRAL_THRESH = 8        # 12 → 8 (daha hassas merkez)
+
+MAX_REPS = 10
+ISOMETRIC_WORK_TIME = 10
+ISOMETRIC_REST_TIME = 5
+ISOMETRIC_SETS = 3
+ROTATION_HOLD_TIME = 3
+COUNTDOWN_TIME = 3
+
+# ==================== GLOBAL STATE ====================
+# Rotasyon
+rot_start_time = None
+rotation_held_side = None
+rotation_completed_sides = {"sag": False, "sol": False}
+
+# İzometrik (3 set sistemi)
+izo_state = 0           # 0:Bekle, 1:Hazırlık, 2:Çalış, 3:Dinlen, 4:Tamamlandı
+izo_timer_start = None
+izo_current_set = 0
+izo_completed = False
+
+# Çember (tamamen yeni)
+circle_phase = 0  # 0:Başla, 1:Sağ, 2:Arka, 3:Sol, 4:Ön
+circle_count = 0
+circle_direction = None
+
+# Lateral
+lateral_must_return_center = False
+lateral_last_side = None
+
+# Fleksiyon
+flex_must_return_center = False
+flex_last_direction = None
+
+# ==================== SAYAÇLAR ====================
+lateral_counter_sag = RepCounter("Yana Egilme", "Sag", LATERAL_THRESH, MAX_REPS, NEUTRAL_THRESH)
+lateral_counter_sol = RepCounter("Yana Egilme", "Sol", LATERAL_THRESH, MAX_REPS, NEUTRAL_THRESH)
+
+rotasyon_counter_sag = RepCounter("Donme", "Sag", ROTATION_THRESH, MAX_REPS, NEUTRAL_THRESH)
+rotasyon_counter_sol = RepCounter("Donme", "Sol", ROTATION_THRESH, MAX_REPS, NEUTRAL_THRESH)
+
+fleksiyon_counter = RepCounter("ROM Fleksiyon", "On", FLEX_THRESH, MAX_REPS, NEUTRAL_THRESH)
+ekstansiyon_counter = RepCounter("ROM Ekstansiyon", "Arka", FLEX_THRESH, MAX_REPS, NEUTRAL_THRESH)
+
+circle_counter = RepCounter("Boyun Cember", "Tam Tur", 1, MAX_REPS, 0)
+
+# ==================== YARDIMCI FONKSİYONLAR ====================
+def get_lm(landmarks, lm_name):
+    lm = landmarks[lm_name.value]
+    if lm.visibility < 0.5:  # Görünürlük eşiği artırıldı
+        return None
     return [lm.x, lm.y, lm.z]
 
-def get_midpoint(p1, p2):
-    return [(p1[0] + p2[0]) / 2, (p1[1] + p2[1]) / 2, (p1[2] + p2[2]) / 2]
+def calculate_lateral_angle(nose, l_sh, r_sh):
+    """Yana eğilme açısı"""
+    neck_center = np.array([
+        (l_sh[0] + r_sh[0]) / 2.0,
+        (l_sh[1] + r_sh[1]) / 2.0
+    ])
 
-# --- SAYAÇLARI VE DURUMLARI OLUŞTUR ---\
+    head_vec = np.array([nose[0], nose[1]]) - neck_center
+    vertical = np.array([0.0, -1.0])
 
-# V0 Orijinal ROM Ayarları (Sadece "az sayıyor" dediğin için eşik 7'ye düşürüldü)
-lateral_counter_sag = RepCounter("Yana Egilme", "Sag", threshold_angle=7, target_reps=5, neutral_threshold=2)
-lateral_counter_sol = RepCounter("Yana Egilme", "Sol", threshold_angle=7, target_reps=5, neutral_threshold=2)
-rotasyon_counter_sag = RepCounter("Donme", "Sag", threshold_angle=7, target_reps=5, neutral_threshold=2)
-rotasyon_counter_sol = RepCounter("Donme", "Sol", threshold_angle=7, target_reps=5, neutral_threshold=2)
+    norm_head = np.linalg.norm(head_vec)
+    if norm_head == 0:
+        return 0.0
 
-# V2 DÜZELTMESİ (ROM Öne/Arkaya - BU DOĞRUYDU, KORUNDU)
-NEUTRAL_ANGLE_FLEX_EKST = 30 
-fleksiyon_counter = RepCounter("ROM Fleksiyon", "On", threshold_angle=15, target_reps=5, neutral_threshold=5)
-ekstansiyon_counter = RepCounter("ROM Ekstansiyon", "Arka", threshold_angle=15, target_reps=5, neutral_threshold=5)
+    dot = np.dot(head_vec, vertical)
+    cosv = np.clip(dot / (norm_head * 1.0), -1.0, 1.0)
+    angle = np.degrees(np.arccos(cosv))
 
+    if nose[0] > neck_center[0]:
+        return angle
+    else:
+        return -angle
 
-IZO_SURE_HEDEF = 5; IZO_DINLENME_SURESI = 3; IZO_TEKRAR_SAYISI = 3 
-izo_fleks_state = "beklemede"; izo_fleks_timer = 0; izo_fleks_rep = 0; izo_fleks_aci = 0.0 
-izo_ekst_state = "beklemede"; izo_ekst_timer = 0; izo_ekst_rep = 0; izo_ekst_aci = 0.0 
-izo_lat_sag_state = "beklemede"; izo_lat_sag_timer = 0; izo_lat_sag_rep = 0; izo_lat_sag_aci = 0.0 
-izo_lat_sol_state = "beklemede"; izo_lat_sol_timer = 0; izo_lat_sol_rep = 0; izo_lat_sol_aci = 0.0 
-izo_rot_sag_state = "beklemede"; izo_rot_sag_timer = 0; izo_rot_sag_rep = 0; izo_rot_sag_aci = 0.0
-izo_rot_sol_state = "beklemede"; izo_rot_sol_timer = 0; izo_rot_sol_rep = 0; izo_rot_sol_aci = 0.0
+def calculate_flexion_angle(nose, l_sh, r_sh):
+    """Öne/arkaya eğilme açısı - TAMAMEN YENİ HESAPLAMA"""
+    shoulder_center_y = (l_sh[1] + r_sh[1]) / 2.0
+    
+    # Y farkı
+    y_diff = nose[1] - shoulder_center_y
+    
+    # ÇOK DÜŞÜK ÇARPAN (10-15° başlasın)
+    angle = y_diff * 80  # 150 → 80 
+    
+    return angle
 
-# --- SAYAÇ SIFIRLAMA FONKSİYONU ---
+def get_total_reps(exercise_name):
+    """Toplam tekrar sayısı"""
+    if exercise_name == "ROM_LAT":
+        return min(lateral_counter_sag.rep_count, lateral_counter_sol.rep_count)
+    elif exercise_name == "ROM_ROT":
+        return min(rotasyon_counter_sag.rep_count, rotasyon_counter_sol.rep_count)
+    elif exercise_name == "ROM_FLEKS":
+        return min(fleksiyon_counter.rep_count, ekstansiyon_counter.rep_count)
+    elif exercise_name == "ROM_CEMBER":
+        return circle_count
+    return 0
+
+# ==================== RESET ====================
 def reset_boyun_counters():
-    global izo_fleks_state, izo_fleks_rep, izo_ekst_state, izo_ekst_rep
-    global izo_lat_sag_state, izo_lat_sag_rep, izo_lat_sol_state, izo_lat_sol_rep
-    global izo_rot_sag_state, izo_rot_sag_rep, izo_rot_sol_state, izo_rot_sol_rep
-    print("Tum sayaclar sifirlandi.")
-    lateral_counter_sag.reset(); lateral_counter_sol.reset()
-    rotasyon_counter_sag.reset(); rotasyon_counter_sol.reset()
-    fleksiyon_counter.reset(); ekstansiyon_counter.reset()
-    izo_fleks_state = "beklemede"; izo_fleks_rep = 0; izo_ekst_state = "beklemede"; izo_ekst_rep = 0
-    izo_lat_sag_state = "beklemede"; izo_lat_sag_rep = 0; izo_lat_sol_state = "beklemede"; izo_lat_sol_rep = 0
-    izo_rot_sag_state = "beklemede"; izo_rot_sag_rep = 0; izo_rot_sol_state = "beklemede"; izo_rot_sol_rep = 0
+    global izo_state, izo_timer_start, izo_completed, izo_current_set
+    global rot_start_time, rotation_held_side, rotation_completed_sides
+    global circle_phase, circle_count, circle_direction
+    global lateral_must_return_center, lateral_last_side
+    global flex_must_return_center, flex_last_direction
+    
+    lateral_counter_sag.reset()
+    lateral_counter_sol.reset()
+    rotasyon_counter_sag.reset()
+    rotasyon_counter_sol.reset()
+    fleksiyon_counter.reset()
+    ekstansiyon_counter.reset()
+    circle_counter.reset()
 
-# --- "PRO" YÖNLENDİRİCİ FONKSİYON ---
+    izo_state = 0
+    izo_timer_start = None
+    izo_completed = False
+    izo_current_set = 0
+    
+    rot_start_time = None
+    rotation_held_side = None
+    rotation_completed_sides = {"sag": False, "sol": False}
+    
+    circle_phase = 0
+    circle_count = 0
+    circle_direction = None
+    
+    lateral_must_return_center = False
+    lateral_last_side = None
+    
+    flex_must_return_center = False
+    flex_last_direction = None
+    
+    print("✅ Boyun modülü sıfırlandı.")
+
+# ==================== İZOMETRİK (SADECE AÇI, EL YOK!) ====================
+def process_isometric_3sets(head_angle):
+    """
+    3 SET SİSTEMİ - SADECE BAŞ AÇISI!
+    head_angle > 10 ise çalışıyor kabul et
+    """
+    global izo_state, izo_timer_start, izo_completed, izo_current_set
+
+    if izo_completed:
+        return "✅ TAMAMLANDI! (3 SET)", {"completed": True, "progress": 100, "timer": 0, "set": 3}
+
+    # BAŞ EĞİK DEĞİLSE DUR!
+    if abs(head_angle) < 10:
+        izo_state = 0
+        izo_timer_start = None
+        return "❌ Basini egik tut!", {"completed": False, "progress": 0, "timer": 0, "set": izo_current_set}
+
+    # State 0: Başlangıç
+    if izo_state == 0:
+        izo_state = 1
+        izo_timer_start = time.time()
+        izo_current_set = 1
+        return f"⏳ Hazirlan (3 sn)...", {"completed": False, "progress": 0, "timer": 3, "set": 1}
+    
+    # State 1: Hazırlık (3 sn)
+    elif izo_state == 1:
+        elapsed = time.time() - izo_timer_start
+        remaining = COUNTDOWN_TIME - elapsed
+        
+        if elapsed < COUNTDOWN_TIME:
+            progress = (elapsed / COUNTDOWN_TIME) * 100
+            return f"⏳ Hazirlan... {int(remaining)}", {"completed": False, "progress": progress, "timer": remaining, "set": izo_current_set}
+        else:
+            izo_state = 2
+            izo_timer_start = time.time()
+            return "🔥 BASLA! TUT!", {"completed": False, "progress": 0, "timer": ISOMETRIC_WORK_TIME, "set": izo_current_set}
+    
+    # State 2: Çalışma (10 sn)
+    elif izo_state == 2:
+        elapsed = time.time() - izo_timer_start
+        remaining = ISOMETRIC_WORK_TIME - elapsed
+        progress = (elapsed / ISOMETRIC_WORK_TIME) * 100
+        
+        if elapsed < ISOMETRIC_WORK_TIME:
+            return f"💪 TUT! {int(remaining)}sn | SET {izo_current_set}/3", {"completed": False, "progress": progress, "timer": remaining, "set": izo_current_set}
+        else:
+            if izo_current_set >= ISOMETRIC_SETS:
+                izo_completed = True
+                return "✅ HARIKA! 3 SET TAMAMLANDI!", {"completed": True, "progress": 100, "timer": 0, "set": 3}
+            else:
+                izo_state = 3
+                izo_timer_start = time.time()
+                return f"😌 DINLEN! {ISOMETRIC_REST_TIME}sn", {"completed": False, "progress": 0, "timer": ISOMETRIC_REST_TIME, "set": izo_current_set}
+    
+    # State 3: Dinlenme (5 sn)
+    elif izo_state == 3:
+        elapsed = time.time() - izo_timer_start
+        remaining = ISOMETRIC_REST_TIME - elapsed
+        progress = (elapsed / ISOMETRIC_REST_TIME) * 100
+        
+        if elapsed < ISOMETRIC_REST_TIME:
+            return f"😌 Dinlen... {int(remaining)}sn | SET {izo_current_set}/3", {"completed": False, "progress": progress, "timer": remaining, "set": izo_current_set}
+        else:
+            izo_current_set += 1
+            izo_state = 2
+            izo_timer_start = time.time()
+            return f"🔥 SET {izo_current_set} BASLA!", {"completed": False, "progress": 0, "timer": ISOMETRIC_WORK_TIME, "set": izo_current_set}
+    
+    return "", {"completed": False, "progress": 0, "timer": 0, "set": izo_current_set}
+
+# ==================== ANA FONKSİYON ====================
 def get_exercise_feedback(exercise_name, landmarks):
+    global rot_start_time, rotation_held_side, rotation_completed_sides
+    global circle_phase, circle_count, circle_direction
+    global lateral_must_return_center, lateral_last_side
+    global flex_must_return_center, flex_last_direction
+
     talimat = ""
     mesaj = ""
+    ekstra_bilgi = {}
+
     try:
-        if exercise_name == "MENU":
-            talimat = "Lutfen bir hareket secin:"
-        elif exercise_name == "ROM_LAT":
-            talimat = "Basini YANA EG (Hedef: 7 der) ve merkeze don."
-            mesaj = check_boyun_lateral_fleksiyon(landmarks)
+        nose = get_lm(landmarks, mp_pose.NOSE)
+        l_sh = get_lm(landmarks, mp_pose.LEFT_SHOULDER)
+        r_sh = get_lm(landmarks, mp_pose.RIGHT_SHOULDER)
+        l_ear = get_lm(landmarks, mp_pose.LEFT_EAR)
+        r_ear = get_lm(landmarks, mp_pose.RIGHT_EAR)
+        l_wrist = get_lm(landmarks, mp_pose.LEFT_WRIST)
+        r_wrist = get_lm(landmarks, mp_pose.RIGHT_WRIST)
+
+        if not nose or not l_sh or not r_sh:
+            return "⚠️ Gorunmuyorsun", "Kameraya tam karsidan gec", {}
+
+        # ==================== ROM LATERAL (AYRI SAYIM) ====================
+        if exercise_name == "ROM_LAT":
+            talimat = "Her iki tarafa da 10'ar tekrar yap"
+            tilt_angle = calculate_lateral_angle(nose, l_sh, r_sh)
+            abs_angle = abs(tilt_angle)
+            
+            sag_reps = lateral_counter_sag.rep_count
+            sol_reps = lateral_counter_sol.rep_count
+
+            if sag_reps >= MAX_REPS and sol_reps >= MAX_REPS:
+                mesaj = f"✅ TAMAMLANDI! (Sağ:{sag_reps} Sol:{sol_reps})"
+                ekstra_bilgi = {"angle": abs_angle, "reps": MAX_REPS, "max_reps": MAX_REPS, "completed": True}
+                return talimat, mesaj, ekstra_bilgi
+
+            if abs_angle < NEUTRAL_THRESH:
+                lateral_counter_sag.count(0)
+                lateral_counter_sol.count(0)
+                mesaj = f"✓ MERKEZ | Sağ:{sag_reps}/10 Sol:{sol_reps}/10"
+            elif tilt_angle > LATERAL_THRESH:
+                msg = lateral_counter_sag.count(abs_angle)
+                if "HARIKA" in msg:
+                    mesaj = f"➡️ SAGA {int(abs_angle)}° | {msg}"
+                elif lateral_counter_sag.state == "up":
+                    mesaj = f"➡️ SAGA {int(abs_angle)}° | Merkeze don"
+                else:
+                    mesaj = f"➡️ SAGA {int(abs_angle)}° | Sağ:{sag_reps}/10"
+            elif tilt_angle < -LATERAL_THRESH:
+                msg = lateral_counter_sol.count(abs_angle)
+                if "HARIKA" in msg:
+                    mesaj = f"⬅️ SOLA {int(abs_angle)}° | {msg}"
+                elif lateral_counter_sol.state == "up":
+                    mesaj = f"⬅️ SOLA {int(abs_angle)}° | Merkeze don"
+                else:
+                    mesaj = f"⬅️ SOLA {int(abs_angle)}° | Sol:{sol_reps}/10"
+            else:
+                mesaj = f"Daha fazla egil | Sağ:{sag_reps}/10 Sol:{sol_reps}/10"
+
+            ekstra_bilgi = {"angle": abs_angle, "reps": min(sag_reps, sol_reps), "max_reps": MAX_REPS}
+
+        # ==================== ROM ROTASYON (ÇOK KOLAY) ====================
         elif exercise_name == "ROM_ROT":
-            talimat = "Basini YANA DONDUR (Hedef: 7 der) ve merkeze don."
-            mesaj = check_boyun_rotasyon(landmarks)
+            talimat = f"Yana dön ve {ROTATION_HOLD_TIME}sn tut"
+            
+            # Basit X koordinatı kontrolü
+            center_x = (l_sh[0] + r_sh[0]) / 2.0
+            head_x = nose[0]
+            
+            # Basit offset (omuz genişliği normalizasyonu yok!)
+            offset = head_x - center_x
+            
+            sag_reps = rotasyon_counter_sag.rep_count
+            sol_reps = rotasyon_counter_sol.rep_count
+
+            if sag_reps >= MAX_REPS and sol_reps >= MAX_REPS:
+                mesaj = f"✅ TAMAMLANDI! (Sağ:{sag_reps} Sol:{sol_reps})"
+                ekstra_bilgi = {"completed": True, "reps": MAX_REPS, "max_reps": MAX_REPS}
+                return talimat, mesaj, ekstra_bilgi
+
+            # ÇOK DÜŞÜK EŞİK (0.08 = çok kolay!)
+            side = None
+            if offset > 0.08:
+                side = "sag"
+            elif offset < -0.08:
+                side = "sol"
+
+            if side:
+                if rot_start_time is None or side != rotation_held_side:
+                    rot_start_time = time.time()
+                    rotation_held_side = side
+
+                elapsed = time.time() - rot_start_time
+                remaining = ROTATION_HOLD_TIME - elapsed
+                progress = (elapsed / ROTATION_HOLD_TIME) * 100
+
+                if elapsed >= ROTATION_HOLD_TIME:
+                    if not rotation_completed_sides[side]:
+                        if side == "sag":
+                            rotasyon_counter_sag.count(100)
+                        else:
+                            rotasyon_counter_sol.count(100)
+                        rotation_completed_sides[side] = True
+                        mesaj = f"✅ {side.upper()} TAMAM! | Sağ:{sag_reps}/10 Sol:{sol_reps}/10"
+                    else:
+                        mesaj = f"✓ {side.upper()} yapıldı | Sağ:{sag_reps}/10 Sol:{sol_reps}/10"
+                else:
+                    mesaj = f"🔄 {side.upper()} TUT! {int(remaining)}sn | Sağ:{sag_reps}/10 Sol:{sol_reps}/10"
+                
+                ekstra_bilgi = {"timer": remaining, "progress": progress, "reps": min(sag_reps, sol_reps), "max_reps": MAX_REPS}
+            else:
+                rot_start_time = None
+                rotation_held_side = None
+                if rotation_completed_sides["sag"] and rotation_completed_sides["sol"]:
+                    rotation_completed_sides = {"sag": False, "sol": False}
+                mesaj = f"↔️ MERKEZ | Sağ:{sag_reps}/10 Sol:{sol_reps}/10"
+                ekstra_bilgi = {"reps": min(sag_reps, sol_reps), "max_reps": MAX_REPS}
+
+        # ==================== ROM FLEKSİYON (DÜZELTİLDİ) ====================
         elif exercise_name == "ROM_FLEKS":
-            talimat = "Basini ONE/ARKAYA EG (Hedef: 15 der) ve merkeze don."
-            mesaj = check_boyun_fleksiyon_ekstansiyon(landmarks)
+            talimat = "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)"
+            
+            # İyileştirilmiş açı hesabı
+            angle = calculate_flexion_angle(nose, l_sh, r_sh)
+            
+            flex_reps = fleksiyon_counter.rep_count
+            ext_reps = ekstansiyon_counter.rep_count
+
+            if flex_reps >= MAX_REPS and ext_reps >= MAX_REPS:
+                mesaj = f"✅ TAMAMLANDI! (Öne:{flex_reps} Arkaya:{ext_reps})"
+                ekstra_bilgi = {"angle": abs(angle), "completed": True, "reps": MAX_REPS, "max_reps": MAX_REPS}
+                return talimat, mesaj, ekstra_bilgi
+
+            if abs(angle) < NEUTRAL_THRESH:
+                fleksiyon_counter.count(0)
+                ekstansiyon_counter.count(0)
+                mesaj = f"✓ MERKEZ | Öne:{flex_reps}/10 Arkaya:{ext_reps}/10"
+            elif angle > FLEX_THRESH:
+                msg = fleksiyon_counter.count(abs(angle))
+                if "HARIKA" in msg:
+                    mesaj = f"⬇️ FLEKSIYON {int(abs(angle))}° | {msg}"
+                elif fleksiyon_counter.state == "up":
+                    mesaj = f"⬇️ FLEKSIYON {int(abs(angle))}° | Merkeze don"
+                else:
+                    mesaj = f"⬇️ FLEKSIYON {int(abs(angle))}° | Öne:{flex_reps}/10"
+            elif angle < -FLEX_THRESH:
+                msg = ekstansiyon_counter.count(abs(angle))
+                if "HARIKA" in msg:
+                    mesaj = f"⬆️ EKSTANSIYON {int(abs(angle))}° | {msg}"
+                elif ekstansiyon_counter.state == "up":
+                    mesaj = f"⬆️ EKSTANSIYON {int(abs(angle))}° | Merkeze don"
+                else:
+                    mesaj = f"⬆️ EKSTANSIYON {int(abs(angle))}° | Arkaya:{ext_reps}/10"
+            else:
+                mesaj = f"Daha fazla egil | Öne:{flex_reps}/10 Arkaya:{ext_reps}/10"
+
+            ekstra_bilgi = {"angle": abs(angle), "reps": min(flex_reps, ext_reps), "max_reps": MAX_REPS}
+
+        # ==================== ÇEMBER (ÇOK BASİT!) ====================
+        elif exercise_name == "ROM_CEMBER":
+            talimat = "Basini saat yonunde cevir (10 tur)"
+            
+            # Basit koordinat kontrolü
+            dx = nose[0] - ((l_sh[0] + r_sh[0]) / 2.0)
+            dy = nose[1] - ((l_sh[1] + r_sh[1]) / 2.0)
+            
+            if circle_count >= MAX_REPS:
+                mesaj = f"✅ TAMAMLANDI! ({MAX_REPS} tur)"
+                ekstra_bilgi = {"completed": True, "reps": circle_count, "max_reps": MAX_REPS}
+                return talimat, mesaj, ekstra_bilgi
+
+            # ÇOK BASİT MANTIK
+            if circle_phase == 0:  # ÖN
+                if dy > 0.01:
+                    circle_phase = 1
+                    mesaj = f"✓ ÖN | {circle_count}/10"
+                else:
+                    mesaj = f"Öne egil | {circle_count}/10"
+            
+            elif circle_phase == 1:  # SAĞ
+                if dx > 0.08:
+                    circle_phase = 2
+                    mesaj = f"✓ SAĞ | {circle_count}/10"
+                else:
+                    mesaj = f"Saga don | {circle_count}/10"
+            
+            elif circle_phase == 2:  # ARKA
+                if dy < -0.01:
+                    circle_phase = 3
+                    mesaj = f"✓ ARKA | {circle_count}/10"
+                else:
+                    mesaj = f"Arkaya | {circle_count}/10"
+            
+            elif circle_phase == 3:  # SOL
+                if dx < -0.08:
+                    circle_phase = 4
+                    mesaj = f"✓ SOL | {circle_count}/10"
+                else:
+                    mesaj = f"Sola don | {circle_count}/10"
+            
+            elif circle_phase == 4:  # ÖNE DÖNÜŞ
+                if dy > 0.01:
+                    circle_count += 1
+                    circle_phase = 1
+                    mesaj = f"✅ TUR {circle_count}! | {circle_count}/10"
+                else:
+                    mesaj = f"One gel | {circle_count}/10"
+
+            ekstra_bilgi = {"reps": circle_count, "max_reps": MAX_REPS}
+
+        # ==================== İZOMETRİK ÖN (SADECE AÇI!) ====================
         elif exercise_name == "IZO_FLEKS":
-            talimat = "Elini alnina koy ve 5sn IT (Kafani oynatma!)"
-            mesaj = check_boyun_izometrik_fleksiyon(landmarks)
-        elif exercise_name == "IZO_EKST": 
-            talimat = "Elini basinin arkasina koy ve 5sn IT"
-            mesaj = check_boyun_izometrik_ekstansiyon(landmarks)
+            talimat = "Elleri alnina koy ve one it (3x10sn)"
+            
+            # SADECE AÇI KONTROLÜ (el yok!)
+            angle = calculate_flexion_angle(nose, l_sh, r_sh)
+            
+            # Öne eğiliyorsa (pozitif açı)
+            mesaj, ekstra_bilgi = process_isometric_3sets(angle)
+
+        # ==================== İZOMETRİK ARKA (SADECE AÇI!) ====================
+        elif exercise_name == "IZO_EKST":
+            talimat = "Elleri ensene koy ve geriye it (3x10sn)"
+            
+            # SADECE AÇI KONTROLÜ
+            angle = calculate_flexion_angle(nose, l_sh, r_sh)
+            
+            # Geriye eğiliyorsa (negatif açı)
+            mesaj, ekstra_bilgi = process_isometric_3sets(angle)
+
+        # ==================== İZOMETRİK YAN (SADECE AÇI!) ====================
         elif exercise_name == "IZO_LAT":
-            talimat = "Elini sakagina koy ve 5sn IT (Kafani egme!)"
-            mesaj = check_boyun_izometrik_lateral(landmarks)
-        elif exercise_name == "IZO_ROT": 
-            talimat = "Elini cenene koy ve 5sn DONDUR (Kafani dondurme!)"
-            mesaj = check_boyun_izometrik_rotasyon(landmarks)
+            talimat = "Eli sakagina koy ve yana it (3x10sn)"
+            
+            # SADECE AÇI KONTROLÜ
+            angle = calculate_lateral_angle(nose, l_sh, r_sh)
+            
+            # Yana eğiliyorsa
+            mesaj, ekstra_bilgi = process_isometric_3sets(angle)
+
+        else:
+            talimat = "⚠️ Bilinmeyen Hareket"
+            mesaj = f"Gelen: {exercise_name}"
+
     except Exception as e:
-        talimat = "Lutfen kamerada tam gorunun."
-        mesaj = f"Algilama hatasi: {e}"
-    return talimat, mesaj
+        mesaj = f"❌ Hata: {str(e)}"
+        print(f"BOYUN MODULU HATA: {e}")
 
-# --- ROM HAREKETLERİ ---
-
-# HATA 1: ROM ÖNE/ARKAYA (V2'den beri DÜZGÜN ÇALIŞIYOR)
-def check_boyun_fleksiyon_ekstansiyon(landmarks):
-    global NEUTRAL_ANGLE_FLEX_EKST
-    sol_kulak = get_landmark_coords(landmarks, mp_pose.LEFT_EAR); sag_kulak = get_landmark_coords(landmarks, mp_pose.RIGHT_EAR)
-    bas_ortasi = get_midpoint(sol_kulak, sag_kulak); sol_omuz = get_landmark_coords(landmarks, mp_pose.LEFT_SHOULDER)
-    sag_omuz = get_landmark_coords(landmarks, mp_pose.RIGHT_SHOULDER); omuz_ortasi = get_midpoint(sol_omuz, sag_omuz)
-    p_forward = np.array(omuz_ortasi) + np.array([0, 0, -0.1])
-    aci = calculate_angle_3d(bas_ortasi, omuz_ortasi, p_forward)
-    mutlak_aci = int(90 - aci)
-    relative_angle_on = max(0, mutlak_aci - NEUTRAL_ANGLE_FLEX_EKST)
-    relative_angle_arka = max(0, NEUTRAL_ANGLE_FLEX_EKST - mutlak_aci)
-    rep_mesaji_on = fleksiyon_counter.count(relative_angle_on)
-    rep_mesaji_arka = ekstansiyon_counter.count(relative_angle_arka)
-    return f"Aci: {mutlak_aci} der | {rep_mesaji_on} | {rep_mesaji_arka}"
-
-# Hata "Az Sayıyor" (Eşik 7'ye düşürüldü)
-def check_boyun_lateral_fleksiyon(landmarks):
-    sol_kulak = get_landmark_coords(landmarks, mp_pose.LEFT_EAR); sag_kulak = get_landmark_coords(landmarks, mp_pose.RIGHT_EAR)
-    bas_ortasi = get_midpoint(sol_kulak, sag_kulak); sol_omuz = get_landmark_coords(landmarks, mp_pose.LEFT_SHOULDER)
-    sag_omuz = get_landmark_coords(landmarks, mp_pose.RIGHT_SHOULDER); omuz_ortasi = get_midpoint(sol_omuz, sag_omuz)
-    p_horizontal = np.array(omuz_ortasi) + np.array([0.1, 0, 0]); aci = calculate_angle_3d(bas_ortasi, omuz_ortasi, p_horizontal)
-    aci_gosterge = int(90 - aci); yon_threshold = 5; yon = "Orta"
-    if aci_gosterge > yon_threshold: yon = "Saga"
-    elif aci_gosterge < -yon_threshold: yon = "Sola"
-    if yon == "Saga":
-        rep_mesaji_sag = lateral_counter_sag.count(abs(aci_gosterge)); rep_mesaji_sol = lateral_counter_sol.get_current_message() 
-    elif yon == "Sola":
-        rep_mesaji_sag = lateral_counter_sag.get_current_message(); rep_mesaji_sol = lateral_counter_sol.count(abs(aci_gosterge))
-    else: 
-        rep_mesaji_sag = lateral_counter_sag.count(abs(aci_gosterge)); rep_mesaji_sol = lateral_counter_sol.count(abs(aci_gosterge))
-    mesaj = f"Aci: {abs(aci_gosterge)} der | {rep_mesaji_sag} | {rep_mesaji_sol}" 
-    omuz_farki_y = abs(sol_omuz[1] - sag_omuz[1])
-    if omuz_farki_y > 0.05: mesaj = "HILE: Omuzlarini kaldirma!"
-    return mesaj
-
-# HATA 2: ROM DÖNME (V3'te DÜZELMİŞTİ)
-def check_boyun_rotasyon(landmarks):
-    sol_kulak = get_landmark_coords(landmarks, mp_pose.LEFT_EAR); sag_kulak = get_landmark_coords(landmarks, mp_pose.RIGHT_EAR)
-    burun = get_landmark_coords(landmarks, mp_pose.NOSE); head_width = sag_kulak[0] - sol_kulak[0]
-    # V3 Düzeltmesi: Profil kontrolü kaldırıldı
-    nose_normalized_pos = (burun[0] - sol_kulak[0]) / head_width; rotation_normalized = (nose_normalized_pos - 0.5) * 2
-    aci = int(rotation_normalized * 80); yon_threshold = 5; yon = "Orta"
-    if aci > yon_threshold: yon = "Saga"
-    elif aci < -yon_threshold: yon = "Sola"
-    if yon == "Saga":
-        rep_mesaji_sag = rotasyon_counter_sag.count(abs(aci)); rep_mesaji_sol = rotasyon_counter_sol.get_current_message()
-    elif yon == "Sola":
-        rep_mesaji_sag = rotasyon_counter_sag.get_current_message(); rep_mesaji_sol = rotasyon_counter_sol.count(abs(aci))
-    else: 
-        rep_mesaji_sag = rotasyon_counter_sag.count(abs(aci)); rep_mesaji_sol = rotasyon_counter_sol.count(abs(aci))
-    return f"Aci: {abs(aci)} der | {rep_mesaji_sag} | {rep_mesaji_sol}"
-
-# --- İZOMETRİK HAREKETLER ---
-
-# HATA 3: İZO ÖNE (V7 - Orijinal V0 Mantığına Geri Dönüldü)
-def check_boyun_izometrik_fleksiyon(landmarks):
-    global izo_fleks_state, izo_fleks_timer, izo_fleks_rep, izo_fleks_aci
-    el_pozisyonda = False
-    try:
-        # V0 (Orijinal) PARMAK (INDEX) kullanılıyor
-        sol_parmak = get_landmark_coords(landmarks, mp_pose.LEFT_INDEX); sag_parmak = get_landmark_coords(landmarks, mp_pose.RIGHT_INDEX)
-        burun_noktasi = get_landmark_coords(landmarks, mp_pose.NOSE); mesafe_sol = calculate_distance_3d(sol_parmak, burun_noktasi)
-        mesafe_sag = calculate_distance_3d(sag_parmak, burun_noktasi); sol_parmak_y = sol_parmak[1]; burun_y = burun_noktasi[1]; sag_parmak_y = sag_parmak[1]
-        
-        # V0 (Orijinal) Eşik (0.15) ve Y kontrolü
-        if (mesafe_sol < 0.15 and sol_parmak_y < burun_y) or (mesafe_sag < 0.15 and sag_parmak_y < burun_y):
-            el_pozisyonda = True
-    except Exception as e: el_pozisyonda = False 
-    
-    # --- Sayaç mantığı (dokunulmadı) ---
-    sol_kulak = get_landmark_coords(landmarks, mp_pose.LEFT_EAR); sol_omuz = get_landmark_coords(landmarks, mp_pose.LEFT_SHOULDER)
-    sag_omuz = get_landmark_coords(landmarks, mp_pose.RIGHT_SHOULDER); fleksiyon_aci = calculate_angle_3d(sol_kulak, sol_omuz, sag_omuz)
-    if izo_fleks_rep >= IZO_TEKRAR_SAYISI:
-        if izo_fleks_state != "tamamlandi": log_exercise("Izometrik Fleksiyon", IZO_TEKRAR_SAYISI, "On"); izo_fleks_state = "tamamlandi"
-        return f"TAMAMLANDI!"
-    if izo_fleks_state == "beklemede":
-        if el_pozisyonda:
-            izo_fleks_state = "sayimda"; izo_fleks_timer = time.time(); izo_fleks_aci = fleksiyon_aci 
-            return f"TUT! ({izo_fleks_rep + 1}/{IZO_TEKRAR_SAYISI})"
-        else: return f"Tekrar: {izo_fleks_rep}/{IZO_TEKRAR_SAYISI}"
-    elif izo_fleks_state == "sayimda":
-        gecen_saniye = time.time() - izo_fleks_timer; aci_farki = abs(fleksiyon_aci - izo_fleks_aci); bas_dik = (aci_farki < 15)
-        if not el_pozisyonda: izo_fleks_state = "beklemede"; return f"HATA: Elini indirdin!"
-        if not bas_dik: izo_fleks_state = "beklemede"; return f"HILE: Kafani oynattin!"
-        if gecen_saniye >= IZO_SURE_HEDEF:
-            izo_fleks_rep += 1; izo_fleks_state = "dinlen"; izo_fleks_timer = time.time(); return f"HARIKA! ({izo_fleks_rep}/{IZO_TEKRAR_SAYISI})"
-        else: kalan_saniye = IZO_SURE_HEDEF - int(gecen_saniye); return f"TUT! {kalan_saniye}s... ({izo_fleks_rep + 1}/{IZO_TEKRAR_SAYISI})"
-    elif izo_fleks_state == "dinlen":
-        if time.time() - izo_fleks_timer >= IZO_DINLENME_SURESI:
-            izo_fleks_state = "beklemede"; return f"Hazir ol... ({izo_fleks_rep + 1}/{IZO_TEKRAR_SAYISI})"
-        else: return f"Dinlen... ({izo_fleks_rep}/{IZO_TEKRAR_SAYISI})"
-
-# HATA 3: İZO ARKAYA (V7 - Orijinal V0 Mantığına Geri Dönüldü)
-def check_boyun_izometrik_ekstansiyon(landmarks):
-    global izo_ekst_state, izo_ekst_timer, izo_ekst_rep, izo_ekst_aci
-    el_pozisyonda = False
-    try:
-        # V0 (Orijinal) PARMAK (INDEX) kullanılıyor
-        sol_parmak = get_landmark_coords(landmarks, mp_pose.LEFT_INDEX); sag_parmak = get_landmark_coords(landmarks, mp_pose.RIGHT_INDEX)
-        sol_kulak_nokta = get_landmark_coords(landmarks, mp_pose.LEFT_EAR); sag_kulak_nokta = get_landmark_coords(landmarks, mp_pose.RIGHT_EAR)
-        mesafe_sol = calculate_distance_3d(sol_parmak, sol_kulak_nokta); mesafe_sag = calculate_distance_3d(sag_parmak, sag_kulak_nokta)
-        
-        # V0 (Orijinal) Eşik (0.55). Görüntüdeki (V6) hatayı çözmek için bunu 0.25'e düşürüyoruz.
-        if (mesafe_sol < 0.25 or mesafe_sag < 0.25): el_pozisyonda = True 
-    except Exception as e: el_pozisyonda = False 
-    
-    # --- Sayaç mantığı (dokunulmadı) ---
-    sol_kulak_aci = get_landmark_coords(landmarks, mp_pose.LEFT_EAR)
-    sol_omuz = get_landmark_coords(landmarks, mp_pose.LEFT_SHOULDER); sag_omuz = get_landmark_coords(landmarks, mp_pose.RIGHT_SHOULDER)
-    fleksiyon_aci = calculate_angle_3d(sol_kulak_aci, sol_omuz, sag_omuz)
-    if izo_ekst_rep >= IZO_TEKRAR_SAYISI:
-        if izo_ekst_state != "tamamlandi": log_exercise("Izometrik Ekstansiyon", IZO_TEKRAR_SAYISI, "Arka"); izo_ekst_state = "tamamlandi"
-        return f"TAMAMLANDI!"
-    if izo_ekst_state == "beklemede":
-        if el_pozisyonda:
-            izo_ekst_state = "sayimda"; izo_ekst_timer = time.time(); izo_ekst_aci = fleksiyon_aci 
-            return f"TUT! ({izo_ekst_rep + 1}/{IZO_TEKRAR_SAYISI})"
-        else: return f"Tekrar: {izo_ekst_rep}/{IZO_TEKRAR_SAYISI}"
-    elif izo_ekst_state == "sayimda":
-        gecen_saniye = time.time() - izo_ekst_timer; aci_farki = abs(fleksiyon_aci - izo_ekst_aci); bas_dik = (aci_farki < 15) 
-        if not el_pozisyonda: izo_ekst_state = "beklemede"; return f"HATA: Elini indirdin!"
-        if not bas_dik: izo_ekst_state = "beklemede"; return f"HILE: Kafani oynattin!"
-        if gecen_saniye >= IZO_SURE_HEDEF:
-            izo_ekst_rep += 1; izo_ekst_state = "dinlen"; izo_ekst_timer = time.time(); return f"HARIKA! ({izo_ekst_rep}/{IZO_TEKRAR_SAYISI})"
-        else: kalan_saniye = IZO_SURE_HEDEF - int(gecen_saniye); return f"TUT! {kalan_saniye}s... ({izo_ekst_rep + 1}/{IZO_TEKRAR_SAYISI})"
-    elif izo_ekst_state == "dinlen":
-        if time.time() - izo_ekst_timer >= IZO_DINLENME_SURESI:
-            izo_ekst_state = "beklemede"; return f"Hazir ol... ({izo_ekst_rep + 1}/{IZO_TEKRAR_SAYISI})"
-        else: return f"HARIKA! ({izo_ekst_rep}/{IZO_TEKRAR_SAYISI})"
-
-# HATA 4B: İZO YANA (V7 - Orijinal V0 Mantığına Geri Dönüldü)
-def check_boyun_izometrik_lateral(landmarks):
-    global izo_lat_sag_state, izo_lat_sag_timer, izo_lat_sag_rep, izo_lat_sag_aci
-    global izo_lat_sol_state, izo_lat_sol_timer, izo_lat_sol_rep, izo_lat_sol_aci
-    sag_el_pozisyonda = False; sol_el_pozisyonda = False
-    
-    # V0 (Orijinal) Mantık: Önce SAĞ eli (RIGHT_INDEX) ara
-    # V6'daki hatanın (diğer elin çökmesi) yaşanmaması için ayrı try-except blokları
-    try:
-        sag_parmak = get_landmark_coords(landmarks, mp_pose.RIGHT_INDEX); sag_kulak_nokta = get_landmark_coords(landmarks, mp_pose.RIGHT_EAR)
-        mesafe_sag = calculate_distance_3d(sag_parmak, sag_kulak_nokta)
-        # Eşiği 0.25'e düşürüyoruz
-        if mesafe_sag < 0.25: sag_el_pozisyonda = True 
-    except Exception as e: sag_el_pozisyonda = False
-    
-    # V0 (Orijinal) Mantık: Sonra SOL eli (LEFT_INDEX) ara
-    try:
-        sol_parmak = get_landmark_coords(landmarks, mp_pose.LEFT_INDEX); sol_kulak_nokta = get_landmark_coords(landmarks, mp_pose.LEFT_EAR)
-        mesafe_sol = calculate_distance_3d(sol_parmak, sol_kulak_nokta)
-        # Eşiği 0.25'e düşürüyoruz
-        if mesafe_sol < 0.25: sol_el_pozisyonda = True 
-    except Exception as e: sol_el_pozisyonda = False
-    
-    sol_kulak = get_landmark_coords(landmarks, mp_pose.LEFT_EAR); sag_kulak = get_landmark_coords(landmarks, mp_pose.RIGHT_EAR)
-    bas_ortasi = get_midpoint(sol_kulak, sag_kulak); sol_omuz = get_landmark_coords(landmarks, mp_pose.LEFT_SHOULDER)
-    sag_omuz = get_landmark_coords(landmarks, mp_pose.RIGHT_SHOULDER); omuz_ortasi = get_midpoint(sol_omuz, sag_omuz)
-    p_horizontal = np.array(omuz_ortasi) + np.array([0.1, 0, 0])
-    lateral_aci = int(90 - calculate_angle_3d(bas_ortasi, omuz_ortasi, p_horizontal))
-    
-    # V0 (Orijinal) ve V3 Mantığı: Sağ/Sol etiketleri TERS DEĞİL.
-    # main.py'deki flip'e göre (Gerçek Sol El = RIGHT_WRIST = Ekranda Sağ)
-    
-    if sag_el_pozisyonda and not sol_el_pozisyonda: # Sağ el (Gerçek Sol, Ekranda Sağ)
-        if izo_lat_sag_rep >= IZO_TEKRAR_SAYISI:
-            if izo_lat_sag_state != "tamamlandi": log_exercise("Izometrik Lateral", IZO_TEKRAR_SAYISI, "Sag"); izo_lat_sag_state = "tamamlandi"
-            return f"Sag: TAMAMLANDI!"
-        if izo_lat_sag_state == "beklemede":
-            izo_lat_sag_state = "sayimda"; izo_lat_sag_timer = time.time(); izo_lat_sag_aci = lateral_aci 
-            return f"Sag: TUT! ({izo_lat_sag_rep + 1}/{IZO_TEKRAR_SAYISI})"
-        elif izo_lat_sag_state == "sayimda":
-            gecen_saniye = time.time() - izo_lat_sag_timer; aci_farki = abs(lateral_aci - izo_lat_sag_aci); bas_dik = (aci_farki < 10 or lateral_aci > 0) 
-            if not sag_el_pozisyonda: izo_lat_sag_state = "beklemede"; return f"HATA (Sag): Elini indirdin!"
-            if not bas_dik: izo_lat_sag_state = "beklemede"; return f"HILE (Sag): Kafani yana egme!"
-            if gecen_saniye >= IZO_SURE_HEDEF:
-                izo_lat_sag_rep += 1; izo_lat_sag_state = "dinlen"; izo_lat_sag_timer = time.time(); return f"HARIKA! (Sag) ({izo_lat_sag_rep}/{IZO_TEKRAR_SAYISI})"
-            else: kalan_saniye = IZO_SURE_HEDEF - int(gecen_saniye); return f"Sag: TUT! {kalan_saniye}s... ({izo_lat_sag_rep + 1}/{IZO_TEKRAR_SAYISI})"
-        elif izo_lat_sag_state == "dinlen":
-            if time.time() - izo_lat_sag_timer >= IZO_DINLENME_SURESI:
-                izo_lat_sag_state = "beklemede"; return f"Hazir ol (Sag)... ({izo_lat_sag_rep + 1}/{IZO_TEKRAR_SAYISI})"
-            else: return f"Dinlen (Sag)... ({izo_lat_sag_rep}/{IZO_TEKRAR_SAYISI})"
-    
-    elif sol_el_pozisyonda and not sag_el_pozisyonda: # Sol el (Gerçek Sağ, Ekranda Sol)
-        if izo_lat_sol_rep >= IZO_TEKRAR_SAYISI:
-            if izo_lat_sol_state != "tamamlandi": log_exercise("Izometrik Lateral", IZO_TEKRAR_SAYISI, "Sol"); izo_lat_sol_state = "tamamlandi"
-            return f"Sol: TAMAMLANDI!"
-        if izo_lat_sol_state == "beklemede":
-            izo_lat_sol_state = "sayimda"; izo_lat_sol_timer = time.time(); izo_lat_sol_aci = lateral_aci 
-            return f"Sol: TUT! ({izo_lat_sol_rep + 1}/{IZO_TEKRAR_SAYISI})"
-        elif izo_lat_sol_state == "sayimda":
-            gecen_saniye = time.time() - izo_lat_sol_timer; aci_farki = abs(lateral_aci - izo_lat_sol_aci); bas_dik = (aci_farki < 10 or lateral_aci < 0) 
-            if not sol_el_pozisyonda: izo_lat_sol_state = "beklemede"; return f"HATA (Sol): Elini indirdin!"
-            if not bas_dik: izo_lat_sol_state = "beklemede"; return f"HILE (Sol): Kafani yana egme!"
-            if gecen_saniye >= IZO_SURE_HEDEF:
-                izo_lat_sol_rep += 1; izo_lat_sol_state = "dinlen"; izo_lat_sol_timer = time.time(); return f"HARIKA! (Sol) ({izo_lat_sol_rep}/{IZO_TEKRAR_SAYISI})"
-            else: kalan_saniye = IZO_SURE_HEDEF - int(gecen_saniye); return f"Sol: TUT! {kalan_saniye}s... ({izo_lat_sol_rep + 1}/{IZO_TEKRAR_SAYISI})"
-        elif izo_lat_sol_state == "dinlen":
-            if time.time() - izo_lat_sol_timer >= IZO_DINLENME_SURESI:
-                izo_lat_sol_state = "beklemede"; return f"Hazir ol (Sol)... ({izo_lat_sol_rep + 1}/{IZO_TEKRAR_SAYISI})"
-            else: return f"Dinlen (Sol)... ({izo_lat_sol_rep}/{IZO_TEKRAR_SAYISI})"
-    else:
-        return f"(Sag: {izo_lat_sag_rep}/{IZO_TEKRAR_SAYISI} | Sol: {izo_lat_sol_rep}/{IZO_TEKRAR_SAYISI})"
-
-# HATA 5: İZO DÖNDÜRME (V7 - Orijinal V0 Mantığına Geri Dönüldü)
-def check_boyun_izometrik_rotasyon(landmarks):
-    global izo_rot_sag_state, izo_rot_sag_timer, izo_rot_sag_rep, izo_rot_sag_aci
-    global izo_rot_sol_state, izo_rot_sol_timer, izo_rot_sol_rep, izo_rot_sol_aci
-    sag_el_pozisyonda = False; sol_el_pozisyonda = False
-
-    # V0 (Orijinal) Mantık: Önce SAĞ eli (RIGHT_INDEX) ara
-    try:
-        agiz_sol = get_landmark_coords(landmarks, mp_pose.MOUTH_LEFT); agiz_sag = get_landmark_coords(landmarks, mp_pose.MOUTH_RIGHT)
-        agiz_ortasi = get_midpoint(agiz_sol, agiz_sag)
-        sag_parmak = get_landmark_coords(landmarks, mp_pose.RIGHT_INDEX)
-        mesafe_sag = calculate_distance_3d(sag_parmak, agiz_ortasi)
-        if mesafe_sag < 0.15: sag_el_pozisyonda = True # Orijinal V0 eşiği
-    except Exception as e: sag_el_pozisyonda = False
-    
-    # V0 (Orijinal) Mantık: Sonra SOL eli (LEFT_INDEX) ara
-    try:
-        agiz_sol = get_landmark_coords(landmarks, mp_pose.MOUTH_LEFT); agiz_sag = get_landmark_coords(landmarks, mp_pose.MOUTH_RIGHT)
-        agiz_ortasi = get_midpoint(agiz_sol, agiz_sag)
-        sol_parmak = get_landmark_coords(landmarks, mp_pose.LEFT_INDEX)
-        mesafe_sol = calculate_distance_3d(sol_parmak, agiz_ortasi)
-        if mesafe_sol < 0.15: sol_el_pozisyonda = True # Orijinal V0 eşiği
-    except Exception as e: sol_el_pozisyonda = False
-
-    sol_kulak_aci = get_landmark_coords(landmarks, mp_pose.LEFT_EAR); sag_kulak_aci = get_landmark_coords(landmarks, mp_pose.RIGHT_EAR)
-    burun = get_landmark_coords(landmarks, mp_pose.NOSE); head_width = sag_kulak_aci[0] - sol_kulak_aci[0]
-    
-    # V3 DÜZELTMESİ (Hata 5): "Algılanma hatası". Eşik 0.07'ye ayarlandı.
-    if head_width < 0.07: raise Exception("HILE: Kafani dondurme!") 
-    
-    nose_normalized_pos = (burun[0] - sol_kulak_aci[0]) / head_width
-    rotasyon_aci = int(((nose_normalized_pos - 0.5) * 2) * 80)
-    
-    # V0 (Orijinal) ve V3 Mantığı: Sağ/Sol etiketleri TERS DEĞİL.
-    
-    if sag_el_pozisyonda and not sol_el_pozisyonda: # Sağ el (Gerçek Sol, Ekranda Sağ)
-        if izo_rot_sag_rep >= IZO_TEKRAR_SAYISI: 
-            if izo_rot_sag_state != "tamamlandi": log_exercise("Izometrik Rotasyon", IZO_TEKRAR_SAYISI, "Sag"); izo_rot_sag_state = "tamamlandi"
-            return f"Sag Donus: TAMAMLANDI!"
-        if izo_rot_sag_state == "beklemede":
-            izo_rot_sag_state = "sayimda"; izo_rot_sag_timer = time.time(); izo_rot_sag_aci = rotasyon_aci 
-            return f"Sag Donus: TUT! ({izo_rot_sag_rep + 1}/{IZO_TEKRAR_SAYISI})"
-        elif izo_rot_sag_state == "sayimda":
-            gecen_saniye = time.time() - izo_rot_sag_timer; aci_farki = abs(rotasyon_aci - izo_rot_sag_aci); bas_dondu = (aci_farki > 15 or rotasyon_aci > 0) 
-            if not sag_el_pozisyonda: izo_rot_sag_state = "beklemede"; return f"HATA (Sag Donus): Elini indirdin!"
-            if bas_dondu: izo_rot_sag_state = "beklemede"; return f"HILE (Sag Donus): Kafani dondurme!"
-            if gecen_saniye >= IZO_SURE_HEDEF:
-                izo_rot_sag_rep += 1; izo_rot_sag_state = "dinlen"; izo_rot_sag_timer = time.time(); return f"HARIKA! (Sag Donus) ({izo_rot_sag_rep}/{IZO_TEKRAR_SAYISI})"
-            else: kalan_saniye = IZO_SURE_HEDEF - int(gecen_saniye); return f"Sag Donus: TUT! {kalan_saniye}s... ({izo_rot_sag_rep + 1}/{IZO_TEKRAR_SAYISI})"
-        elif izo_rot_sag_state == "dinlen":
-            if time.time() - izo_rot_sag_timer >= IZO_DINLENME_SURESI:
-                izo_rot_sag_state = "beklemede"; return f"Hazir ol (Sag Donus)... ({izo_rot_sag_rep + 1}/{IZO_TEKRAR_SAYISI})"
-            else: return f"HARIKA! (Sag Donus) ({izo_rot_sag_rep}/{IZO_TEKRAR_SAYISI})"
-
-    elif sol_el_pozisyonda and not sag_el_pozisyonda: # Sol el (Gerçek Sağ, Ekranda Sol)
-        if izo_rot_sol_rep >= IZO_TEKRAR_SAYISI: 
-            if izo_rot_sol_state != "tamamlandi": log_exercise("Izometrik Rotasyon", IZO_TEKRAR_SAYISI, "Sol"); izo_rot_sol_state = "tamamlandi"
-            return f"Sol Donus: TAMAMLANDI!"
-        if izo_rot_sol_state == "beklemede":
-            izo_rot_sol_state = "sayimda"; izo_rot_sol_timer = time.time(); izo_rot_sol_aci = rotasyon_aci 
-            return f"Sol Donus: TUT! ({izo_rot_sol_rep + 1}/{IZO_TEKRAR_SAYISI})"
-        elif izo_rot_sol_state == "sayimda":
-            gecen_saniye = time.time() - izo_rot_sol_timer; aci_farki = abs(rotasyon_aci - izo_rot_sol_aci); bas_dondu = (aci_farki > 15 or rotasyon_aci < 0) 
-            if not sol_el_pozisyonda: izo_rot_sol_state = "beklemede"; return f"HATA (Sol Donus): Elini indirdin!"
-            if bas_dondu: izo_rot_sol_state = "beklemede"; return f"HILE (Sol Donus): Kafani dondurme!"
-            if gecen_saniye >= IZO_SURE_HEDEF:
-                izo_rot_sol_rep += 1; izo_rot_sol_state = "dinlen"; izo_rot_sol_timer = time.time(); return f"HARIKA! (Sol Donus) ({izo_rot_sol_rep}/{IZO_TEKRAR_SAYISI})"
-            else: kalan_saniye = IZO_SURE_HEDEF - int(gecen_saniye); return f"Sol Donus: TUT! {kalan_saniye}s... ({izo_rot_sol_rep + 1}/{IZO_TEKRAR_SAYISI})"
-        elif izo_rot_sol_state == "dinlen":
-            if time.time() - izo_rot_sol_timer >= IZO_DINLENME_SURESI:
-                izo_rot_sol_state = "beklemede"; return f"Hazir ol (Sol Donus)... ({izo_rot_sol_rep + 1}/{IZO_TEKRAR_SAYISI})"
-            else: return f"HARIKA! (Sol Donus) ({izo_rot_sol_rep}/{IZO_TEKRAR_SAYISI})"
-    else:
-        return f"(Sag: {izo_rot_sag_rep}/{IZO_TEKRAR_SAYISI} | Sol: {izo_rot_sol_rep}/{IZO_TEKRAR_SAYISI})"
+    return talimat, mesaj, ekstra_bilgi

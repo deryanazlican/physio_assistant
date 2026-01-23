@@ -1,0 +1,62 @@
+{
+  "patient_name": "KNM",
+  "condition": "OMUZ_AGRISI",
+  "fitness_level": 5,
+  "created_date": "2026-01-06T20:28:46.569253",
+  "start_date": "2026-01-06",
+  "weeks": 2,
+  "schedule": {
+    "Hafta_1": {
+      "Pazartesi": {
+        "exercises": [
+          "OMUZ_PEN_FLEKSIYON",
+          "OMUZ_PEN_ABDUKSIYON"
+        ],
+        "completed": false,
+        "date": null
+      },
+      "Çarşamba": {
+        "exercises": [
+          "OMUZ_YANA_ACMA",
+          "OMUZ_GERME"
+        ],
+        "completed": false,
+        "date": null
+      },
+      "Cuma": {
+        "exercises": [
+          "OMUZ_CEMBER",
+          "OMUZ_DUVAR_YANA"
+        ],
+        "completed": false,
+        "date": null
+      }
+    },
+    "Hafta_2": {
+      "Pazartesi": {
+        "exercises": [
+          "OMUZ_ONE_ACMA",
+          "OMUZ_DISA_ACMA"
+        ],
+        "completed": false,
+        "date": null
+      },
+      "Çarşamba": {
+        "exercises": [
+          "OMUZ_DUVAR_ONE",
+          "OMUZ_DUVAR_GERIYE"
+        ],
+        "completed": false,
+        "date": null
+      },
+      "Cuma": {
+        "exercises": [
+          "OMUZ_YANA_ACMA",
+          "OMUZ_CEMBER"
+        ],
+        "completed": false,
+        "date": null
+      }
+    }
+  }
+}

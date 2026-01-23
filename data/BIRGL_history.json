@@ -1,0 +1,14 @@
+[
+  {
+    "timestamp": "2026-01-06T19:07:34.056441",
+    "exercise": "ROM_LAT",
+    "data": {
+      "reps": 10,
+      "angle": 6.567722408906375,
+      "duration": 0.0,
+      "quality": 0.7,
+      "pain_level": 3,
+      "notes": ""
+    }
+  }
+]

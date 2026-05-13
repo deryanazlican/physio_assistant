@@ -4,7 +4,7 @@ from core.session_manager import SessionManager
 from utils.reports import kaydet_session_raporu
 from utils.pdf_report import export_session_pdf_auto
 
-API_KEY = "AIzaSyD-hlWo6gMsrzNm8_Z-yopqalazr3BKWYA"
+API_KEY = ""
 
 chatbot = PhysioChatbot(api_key=API_KEY)
 planner = PersonalizedPlanGenerator()

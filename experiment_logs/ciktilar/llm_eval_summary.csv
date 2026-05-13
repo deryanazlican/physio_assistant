@@ -1,0 +1,4 @@
+﻿backend_type,model_name,total_cases,success_count,avg_latency,avg_score,avg_answer_length,success_rate
+gemini,gemini-2.5-flash,11,0,0.0,,139.0,0.0
+ollama,llama3.1,11,10,107.16170489999853,3.5,579.0909090909091,0.9090909090909091
+together,meta-llama/Llama-3.3-70B-Instruct-Turbo,11,0,0.0,,139.0,0.0

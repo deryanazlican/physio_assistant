@@ -1,0 +1,104 @@
+{
+  "patient_name": "DENEME",
+  "complaint": "merhaba dizim agriyor",
+  "condition": "DIZ_AGRISI",
+  "created_at": "2026-03-10T21:26:11.581857",
+  "ended_at": null,
+  "plan": {
+    "patient_name": "DENEME",
+    "condition": "BOYUN_AGRISI",
+    "fitness_level": 5,
+    "created_date": "2026-03-10T21:26:23.930127",
+    "start_date": "2026-03-10",
+    "weeks": 2,
+    "schedule": {
+      "Hafta_1": {
+        "Pazartesi": {
+          "exercises": [
+            "ROM_LAT",
+            "ROM_ROT"
+          ],
+          "completed": false,
+          "date": null
+        },
+        "Çarşamba": {
+          "exercises": [
+            "ROM_FLEKS",
+            "IZO_FLEKS"
+          ],
+          "completed": false,
+          "date": null
+        },
+        "Cuma": {
+          "exercises": [
+            "ROM_CEMBER",
+            "IZO_LAT"
+          ],
+          "completed": false,
+          "date": null
+        }
+      },
+      "Hafta_2": {
+        "Pazartesi": {
+          "exercises": [
+            "ROM_LAT",
+            "ROM_ROT"
+          ],
+          "completed": false,
+          "date": null
+        },
+        "Çarşamba": {
+          "exercises": [
+            "ROM_FLEKS",
+            "IZO_EKST"
+          ],
+          "completed": false,
+          "date": null
+        },
+        "Cuma": {
+          "exercises": [
+            "ROM_LAT",
+            "ROM_ROT"
+          ],
+          "completed": false,
+          "date": null
+        }
+      }
+    }
+  },
+  "exercise_results": [
+    {
+      "exercise_code": "ROM_FLEKS",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 27,
+      "status": "done",
+      "timestamp": "2026-04-17T22:48:54.149060"
+    },
+    {
+      "exercise_code": "ROM_FLEKS",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 27,
+      "status": "done",
+      "timestamp": "2026-04-17T22:48:56.327621"
+    },
+    {
+      "exercise_code": "ROM_FLEKS",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 37,
+      "status": "done",
+      "timestamp": "2026-04-17T22:49:39.993988"
+    },
+    {
+      "exercise_code": "ROM_FLEKS",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 37,
+      "status": "done",
+      "timestamp": "2026-04-17T22:49:42.631721"
+    }
+  ],
+  "notes": []
+}

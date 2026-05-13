@@ -1,0 +1,1544 @@
+{
+  "patient_name": "DENEME",
+  "exercise_code": "ROM_FLEKS",
+  "model_name": "movenet_lightning",
+  "target_angle": 25.0,
+  "summary": {
+    "frame_count": 190,
+    "duration_sec": 86.96,
+    "completed_reps": 0,
+    "avg_angle": 0.0,
+    "max_angle": 0.08,
+    "min_angle": 0.0,
+    "std_angle": 0.01,
+    "avg_fps": 2.24,
+    "min_fps": 1.09,
+    "max_fps": 2.58,
+    "completion_rate": 0.0,
+    "missing_angle_to_target": 24.92,
+    "pain_before": null,
+    "pain_after": null
+  },
+  "frames": [
+    {
+      "timestamp_sec": 1.584,
+      "fps": 1.4,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4763,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 2.025,
+      "fps": 1.09,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.5392,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 2.413,
+      "fps": 2.39,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4471,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 2.826,
+      "fps": 2.58,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.5234,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 3.207,
+      "fps": 2.44,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4292,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 3.616,
+      "fps": 2.54,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4542,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 4.012,
+      "fps": 2.47,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4403,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 4.415,
+      "fps": 2.53,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4419,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 4.846,
+      "fps": 2.46,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4697,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 5.26,
+      "fps": 2.29,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4257,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 5.665,
+      "fps": 2.46,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4714,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 6.07,
+      "fps": 2.47,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4908,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 6.468,
+      "fps": 2.48,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.5042,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 6.886,
+      "fps": 2.53,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4938,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 7.324,
+      "fps": 2.37,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4731,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 7.744,
+      "fps": 2.28,
+      "angle": 0.05,
+      "reps": 0,
+      "confidence": 0.4786,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 8.153,
+      "fps": 2.38,
+      "angle": 0.08,
+      "reps": 0,
+      "confidence": 0.3199,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 8.564,
+      "fps": 2.47,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4582,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 8.966,
+      "fps": 2.48,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.431,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 9.377,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4075,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 9.796,
+      "fps": 2.44,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.3903,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 10.225,
+      "fps": 2.38,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4391,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 10.634,
+      "fps": 2.38,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4466,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 11.052,
+      "fps": 2.4,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.5249,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 11.46,
+      "fps": 2.45,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.494,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 11.887,
+      "fps": 2.39,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4596,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 12.321,
+      "fps": 2.37,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4278,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 12.744,
+      "fps": 2.28,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4942,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 13.167,
+      "fps": 2.38,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4449,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 13.596,
+      "fps": 2.36,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4264,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 14.013,
+      "fps": 2.39,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4706,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 14.434,
+      "fps": 2.32,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4835,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 14.937,
+      "fps": 2.39,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4971,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 15.373,
+      "fps": 1.99,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.478,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 15.796,
+      "fps": 2.29,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4729,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 16.227,
+      "fps": 2.31,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.5024,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 16.652,
+      "fps": 2.36,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4659,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 17.072,
+      "fps": 2.37,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4357,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 17.551,
+      "fps": 2.38,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.3833,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 18.154,
+      "fps": 2.13,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.3208,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 18.804,
+      "fps": 1.68,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.3369,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 19.602,
+      "fps": 1.55,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.3353,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 20.219,
+      "fps": 1.23,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.3684,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 20.79,
+      "fps": 1.6,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.3958,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 21.45,
+      "fps": 1.81,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.2614,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 21.971,
+      "fps": 1.47,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.3755,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 22.471,
+      "fps": 1.97,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.3216,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 22.922,
+      "fps": 2.03,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4001,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 23.511,
+      "fps": 2.23,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4003,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 24.007,
+      "fps": 1.7,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4607,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 24.502,
+      "fps": 2.01,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4479,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 25.001,
+      "fps": 2.0,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4583,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 25.469,
+      "fps": 1.97,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4983,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 25.969,
+      "fps": 2.06,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.5275,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 26.441,
+      "fps": 2.04,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4983,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 26.968,
+      "fps": 2.14,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4412,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 27.679,
+      "fps": 1.94,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4357,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 28.225,
+      "fps": 1.37,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4007,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 28.801,
+      "fps": 1.92,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.3997,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 29.34,
+      "fps": 1.71,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4053,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 29.897,
+      "fps": 1.88,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4828,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 30.371,
+      "fps": 1.77,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4055,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 30.873,
+      "fps": 2.13,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4604,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 31.365,
+      "fps": 1.97,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.5107,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 31.894,
+      "fps": 2.0,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.5072,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 32.345,
+      "fps": 1.87,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4302,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 32.813,
+      "fps": 2.19,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.493,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 33.254,
+      "fps": 2.14,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4968,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 33.763,
+      "fps": 2.37,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4572,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 34.205,
+      "fps": 1.9,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.5117,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 34.722,
+      "fps": 2.27,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4919,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 35.256,
+      "fps": 1.95,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4916,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 35.735,
+      "fps": 1.88,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.5043,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 36.303,
+      "fps": 2.07,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4704,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 36.801,
+      "fps": 1.76,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4802,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 37.324,
+      "fps": 2.0,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4606,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 37.837,
+      "fps": 1.88,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4273,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 38.322,
+      "fps": 2.09,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4471,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 38.804,
+      "fps": 2.01,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4635,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 39.246,
+      "fps": 2.1,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4873,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 39.675,
+      "fps": 2.23,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6411,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 40.104,
+      "fps": 2.34,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6118,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 40.582,
+      "fps": 2.32,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.5936,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 41.024,
+      "fps": 2.1,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7172,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 41.446,
+      "fps": 2.25,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7864,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 41.868,
+      "fps": 2.33,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7197,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 42.295,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.8075,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 42.744,
+      "fps": 2.34,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.8473,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 43.166,
+      "fps": 2.24,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.8166,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 43.576,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7795,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 44.003,
+      "fps": 2.33,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6832,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 44.417,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7519,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 44.828,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7262,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 45.242,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.73,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 45.68,
+      "fps": 2.33,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7357,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 46.108,
+      "fps": 2.34,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7146,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 46.523,
+      "fps": 2.33,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6709,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 46.944,
+      "fps": 2.4,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6358,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 47.355,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7687,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 47.769,
+      "fps": 2.4,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7836,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 48.183,
+      "fps": 2.43,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7914,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 48.596,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7592,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 49.003,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.8023,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 49.433,
+      "fps": 2.44,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.735,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 49.847,
+      "fps": 2.33,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7788,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 50.26,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7899,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 50.677,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7662,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 51.089,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.8251,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 51.508,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.8371,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 51.921,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7227,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 52.336,
+      "fps": 2.43,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6932,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 52.766,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7517,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 53.177,
+      "fps": 2.34,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7136,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 53.602,
+      "fps": 2.34,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6538,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 54.03,
+      "fps": 2.44,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7549,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 54.466,
+      "fps": 2.38,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7841,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 54.9,
+      "fps": 2.29,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6884,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 55.348,
+      "fps": 2.3,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.5825,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 55.807,
+      "fps": 2.23,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6027,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 56.271,
+      "fps": 2.17,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6698,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 56.739,
+      "fps": 2.1,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.8503,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 57.187,
+      "fps": 2.2,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.8566,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 57.679,
+      "fps": 2.17,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.746,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 58.156,
+      "fps": 2.03,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.5818,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 58.571,
+      "fps": 2.09,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4383,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 58.988,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4465,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 59.4,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.5016,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 59.812,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4907,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 60.227,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.4521,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 60.642,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6181,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 61.059,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6232,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 61.478,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6359,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 61.899,
+      "fps": 2.32,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.5802,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 62.317,
+      "fps": 2.43,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6297,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 62.734,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.625,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 63.194,
+      "fps": 2.38,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6546,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 63.633,
+      "fps": 2.18,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.739,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 64.107,
+      "fps": 2.28,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6965,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 64.566,
+      "fps": 2.13,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7409,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 65.013,
+      "fps": 2.21,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6794,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 65.435,
+      "fps": 2.22,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7157,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 65.863,
+      "fps": 2.27,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6434,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 66.302,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6743,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 66.732,
+      "fps": 2.24,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6533,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 67.152,
+      "fps": 2.33,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6107,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 67.594,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6841,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 68.005,
+      "fps": 2.24,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.658,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 68.42,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7084,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 68.837,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7948,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 69.249,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.8289,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 69.668,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7981,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 70.085,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6961,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 70.508,
+      "fps": 2.33,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6935,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 70.922,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.706,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 71.338,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7519,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 71.754,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7531,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 72.168,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7658,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 72.599,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.8104,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 73.01,
+      "fps": 2.33,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7837,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 73.442,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7483,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 73.858,
+      "fps": 2.33,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7649,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 74.271,
+      "fps": 2.43,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7098,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 74.685,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7563,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 75.092,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7537,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 75.509,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.767,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 75.918,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7891,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 76.363,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.735,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 76.777,
+      "fps": 2.25,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6924,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 77.19,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7085,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 77.606,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6882,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 78.018,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6936,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 78.433,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7284,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 78.846,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6551,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 79.259,
+      "fps": 2.43,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6178,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 79.676,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6248,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 80.086,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.6448,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 80.504,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.8189,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 80.925,
+      "fps": 2.33,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7915,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 81.342,
+      "fps": 2.43,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.763,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 81.754,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.792,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 82.196,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7812,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 82.636,
+      "fps": 2.25,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7469,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 83.106,
+      "fps": 2.31,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.7601,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 83.595,
+      "fps": 2.1,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.8137,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 84.173,
+      "fps": 2.0,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.8302,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 84.688,
+      "fps": 1.77,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.8238,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 85.231,
+      "fps": 1.85,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.8272,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 85.756,
+      "fps": 1.95,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.807,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 86.197,
+      "fps": 1.91,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.8518,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 86.661,
+      "fps": 2.24,
+      "angle": 0.0,
+      "reps": 0,
+      "confidence": 0.8266,
+      "is_complete": false
+    }
+  ]
+}

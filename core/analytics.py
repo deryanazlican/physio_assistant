@@ -9,11 +9,49 @@ matplotlib.use('Agg')
 from collections import defaultdict
 import numpy as np
 
+import re
+import threading
+from pathlib import Path
+
 class ProgressAnalytics:
     """
     Hasta ilerlemesini takip eder ve görselleştirir
     """
-    
+    _lock = threading.Lock()
+
+    def _safe_patient_id(self, patient_name: str) -> str:
+        name = (patient_name or "UNKNOWN").strip()
+        # Windows-safe: harf/rakam/_- boşluk -> _
+        name = re.sub(r"\s+", "_", name)
+        name = re.sub(r"[^a-zA-Z0-9_\-]", "", name)
+        return name or "UNKNOWN"
+
+    def _history_path(self, patient_name: str) -> str:
+        pid = self._safe_patient_id(patient_name)
+        return str(Path(self.data_folder) / f"{pid}_history.json")
+
+    def _load_history(self, filename: str):
+        if not os.path.exists(filename):
+            return []
+        try:
+            with open(filename, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            return data if isinstance(data, list) else []
+        except Exception:
+            # bozuk dosyayı yedekle
+            try:
+                bad_name = filename.replace(".json", "_corrupt.json")
+                os.replace(filename, bad_name)
+            except Exception:
+                pass
+            return []
+
+    def _atomic_save(self, filename: str, history):
+        tmp = filename + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(history, f, ensure_ascii=False, indent=2)
+        os.replace(tmp, filename)
+
     def __init__(self, data_folder="data"):
         self.data_folder = data_folder
         os.makedirs(data_folder, exist_ok=True)
@@ -38,30 +76,23 @@ class ProgressAnalytics:
                 'notes': str
             }
         """
-        filename = f"{self.data_folder}/{patient_name}_history.json"
-        
-        # Mevcut geçmişi yükle
-        if os.path.exists(filename):
-            with open(filename, 'r', encoding='utf-8') as f:
-                history = json.load(f)
-        else:
-            history = []
-        
-        # Yeni kayıt ekle
-        record = {
-            'timestamp': datetime.now().isoformat(),
-            'exercise': exercise_name,
-            'data': data
-        }
-        history.append(record)
-        
-        # Kaydet
-        with open(filename, 'w', encoding='utf-8') as f:
-            json.dump(history, f, ensure_ascii=False, indent=2)
+        filename = self._history_path(patient_name)
+
+        with self._lock:
+            history = self._load_history(filename)
+
+            record = {
+                "timestamp": datetime.now().isoformat(),
+                "exercise": exercise_name,
+                "data": data or {}
+            }
+            history.append(record)
+
+            self._atomic_save(filename, history)
     
     def get_exercise_history(self, patient_name, exercise_name=None, days=30):
         """Egzersiz geçmişini getir"""
-        filename = f"{self.data_folder}/{patient_name}_history.json"
+        filename = self._history_path(patient_name)
         
         if not os.path.exists(filename):
             return []
@@ -79,7 +110,9 @@ class ProgressAnalytics:
                 if exercise_name is None or record['exercise'] == exercise_name:
                     filtered.append(record)
         
+        filtered.sort(key=lambda r: r.get("timestamp", ""))
         return filtered
+
     
     def plot_rom_progress(self, patient_name, exercise_name, save_path="progress_rom.png"):
         """ROM (Hareket Açıklığı) gelişimi grafiği"""

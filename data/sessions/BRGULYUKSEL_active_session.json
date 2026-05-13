@@ -1,0 +1,80 @@
+{
+  "patient_name": "BÝRGULYUKSEL",
+  "complaint": "boynum agriyor",
+  "condition": "BOYUN_AGRISI",
+  "created_at": "2026-03-10T20:30:58.553853",
+  "ended_at": null,
+  "plan": {
+    "patient_name": "BÝRGULYUKSEL",
+    "condition": "BOYUN_AGRISI",
+    "fitness_level": 5,
+    "created_date": "2026-03-10T20:31:15.894894",
+    "start_date": "2026-03-10",
+    "weeks": 2,
+    "schedule": {
+      "Hafta_1": {
+        "Pazartesi": {
+          "exercises": [
+            "ROM_LAT",
+            "ROM_ROT"
+          ],
+          "completed": false,
+          "date": null
+        },
+        "Çarşamba": {
+          "exercises": [
+            "ROM_FLEKS",
+            "IZO_FLEKS"
+          ],
+          "completed": false,
+          "date": null
+        },
+        "Cuma": {
+          "exercises": [
+            "ROM_CEMBER",
+            "IZO_LAT"
+          ],
+          "completed": false,
+          "date": null
+        }
+      },
+      "Hafta_2": {
+        "Pazartesi": {
+          "exercises": [
+            "ROM_LAT",
+            "ROM_ROT"
+          ],
+          "completed": false,
+          "date": null
+        },
+        "Çarşamba": {
+          "exercises": [
+            "ROM_FLEKS",
+            "IZO_EKST"
+          ],
+          "completed": false,
+          "date": null
+        },
+        "Cuma": {
+          "exercises": [
+            "ROM_LAT",
+            "ROM_ROT"
+          ],
+          "completed": false,
+          "date": null
+        }
+      }
+    }
+  },
+  "exercise_results": [
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 62,
+      "status": "done",
+      "timestamp": "2026-03-10T20:35:12.889213"
+    }
+  ],
+  "notes": []
+}

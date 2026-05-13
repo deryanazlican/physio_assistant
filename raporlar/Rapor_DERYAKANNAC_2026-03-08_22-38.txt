@@ -1,0 +1,18 @@
+HASTA: DERYAKANNAC
+TARIH: 08.03.2026 22:38
+------------------------------
+HASTA: DERYAKANNAC
+ŞİKAYET: belim agiyo
+KATEGORİ: BEL_AGRISI
+BAŞLANGIÇ: 2026-03-08T22:36:42.840306
+BİTİŞ: 2026-03-08T22:38:09.019473
+----------------------------------------
+OLUŞTURULAN PLAN:
+----------------------------------------
+OTURUMDA YAPILANLAR:
+Herhangi bir egzersiz kaydı bulunamadı.
+----------------------------------------
+TAHMİNİ PLAN UYUMU: %0.0
+Egzersiz tamamlama düzeyi düşük. Daha kısa veya daha kolay bir plan daha uygun olabilir.
+------------------------------
+FIZYO ASISTAN AI RAPORU SONU

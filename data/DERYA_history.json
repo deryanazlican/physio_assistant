@@ -22,5 +22,67 @@
       "pain_level": 3,
       "notes": ""
     }
+  },
+  {
+    "timestamp": "2026-03-05T20:31:52.417128",
+    "exercise": "ROM_LAT",
+    "data": {
+      "reps": 15,
+      "duration": 2.736161470413208
+    }
+  },
+  {
+    "timestamp": "2026-03-05T20:40:14.216456",
+    "exercise": "ROM_LAT",
+    "data": {
+      "reps": 15,
+      "duration": 2.19688081741333
+    }
+  },
+  {
+    "timestamp": "2026-04-20T19:10:51.984108",
+    "exercise": "ROM_LAT",
+    "data": {
+      "reps": 10,
+      "duration": 54.65766382217407,
+      "quality": 1.0,
+      "predicted_pain": 6.12,
+      "risk_level": "Orta"
+    }
+  },
+  {
+    "timestamp": "2026-04-20T19:10:54.801500",
+    "exercise": "ROM_LAT",
+    "data": {
+      "reps": 10,
+      "duration": 54,
+      "quality": 1.0,
+      "predicted_pain": 6.12,
+      "pain_after": 4,
+      "risk_level": "Orta"
+    }
+  },
+  {
+    "timestamp": "2026-04-20T19:16:45.804385",
+    "exercise": "ROM_LAT",
+    "data": {
+      "reps": 10,
+      "duration": 52.76994323730469,
+      "quality": 1.0,
+      "predicted_pain": 6.09,
+      "risk_level": "Orta"
+    }
+  },
+  {
+    "timestamp": "2026-04-20T19:16:48.695156",
+    "exercise": "ROM_LAT",
+    "data": {
+      "reps": 10,
+      "duration": 52,
+      "quality": 1.0,
+      "predicted_pain": 6.09,
+      "pain_after": 4,
+      "risk_level": "Orta"
+    }
   }
 ]

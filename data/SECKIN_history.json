@@ -1,0 +1,25 @@
+[
+  {
+    "timestamp": "2026-04-19T21:21:28.025908",
+    "exercise": "ROM_FLEKS",
+    "data": {
+      "reps": 10,
+      "duration": 26.92491888999939,
+      "quality": 1.0,
+      "predicted_pain": 5.25,
+      "risk_level": "Orta"
+    }
+  },
+  {
+    "timestamp": "2026-04-19T21:21:32.604153",
+    "exercise": "ROM_FLEKS",
+    "data": {
+      "reps": 10,
+      "duration": 26,
+      "quality": 1.0,
+      "predicted_pain": 5.25,
+      "pain_after": 3,
+      "risk_level": "Orta"
+    }
+  }
+]

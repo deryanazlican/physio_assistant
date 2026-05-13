@@ -1,0 +1,661 @@
+[
+  {
+    "source_file": "AHMET_ROM_LAT_mediapipe_20260417_214935.json",
+    "question": "Ben ROM_LAT egzersizi yaptım.\n\nToplam tekrar: 10/10\nHedef açı: 20.0°\nOrtalama açı: 10.01°\nMaksimum açı: 22.20°\nMinimum açı: 0.02°\nBaşlangıç ağrı skoru: 4\nSüre: 28.17 saniye\nTamamlama oranı: 0.0369\n\nBu performansa göre bana kısa bir değerlendirme yap.\nLütfen:\n1. Genel performansı kısaca değerlendir\n2. Eksik veya zayıf noktayı söyle\n3. 2-3 kısa öneri ver\n4. Türkçe ve anlaşılır yaz",
+    "raw_summary": {
+      "frame_count": 217,
+      "completed_reps": 10,
+      "duration_sec": 28.17,
+      "avg_angle": 10.01,
+      "max_angle": 22.2,
+      "min_angle": 0.02,
+      "std_angle": 6.19,
+      "avg_fps": 7.38,
+      "min_fps": 4.63,
+      "max_fps": 7.91,
+      "completion_frame_count": 8,
+      "completion_rate": 0.0369,
+      "pain_before": 4,
+      "pain_after": null,
+      "missing_angle_to_target": 0.0
+    },
+    "model_outputs": [
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and ",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "gemini-2.5-flash",
+        "backend_type": "gemini",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: Error code: 401 - {'id': 'ofns3qW-6Ng1vN-9eedb1a3ca6fc8cd', 'error': {'message': 'Invalid API key provided. You can find",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+        "backend_type": "together",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "Hiçbir sorun yaşamadım! Performanızın genel olarak yeterli olduğunu gördüm.\n\nGenel performansı kısaca değerlendir: \nPerformanız dengeli, ama bazı kısıtlamalar var.\nEksik veya zayıf nokta: Minimum açının çok düşük olması.\nÖneriler:\n\n1. En az 5-6 kez daha ROM_LAT egzersini yapın\n2. minimum açıya odaklanarak bunu arttırın\n3. Bu egzersizi her gün yapıp, zaman içinde performansınızı iyileştirebilirsiniz.\n\nEğer bu şikayetler devam ediyorsa doktora danışmanızı öneririm!",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 130.56418280000798,
+        "model_name": "llama3.1",
+        "backend_type": "ollama",
+        "success": true,
+        "auto_score": {
+          "score": 4,
+          "max_score": 4
+        }
+      }
+    ]
+  },
+  {
+    "source_file": "BERKE_ROM_LAT_mediapipe_20260417_214211.json",
+    "question": "Ben ROM_LAT egzersizi yaptım.\n\nToplam tekrar: 10/10\nHedef açı: 20.0°\nOrtalama açı: 7.70°\nMaksimum açı: 20.14°\nMinimum açı: 0.00°\nBaşlangıç ağrı skoru: 5\nSüre: 48.28 saniye\nTamamlama oranı: 0.0026\n\nBu performansa göre bana kısa bir değerlendirme yap.\nLütfen:\n1. Genel performansı kısaca değerlendir\n2. Eksik veya zayıf noktayı söyle\n3. 2-3 kısa öneri ver\n4. Türkçe ve anlaşılır yaz",
+    "raw_summary": {
+      "frame_count": 382,
+      "completed_reps": 10,
+      "duration_sec": 48.28,
+      "avg_angle": 7.7,
+      "max_angle": 20.14,
+      "min_angle": 0.0,
+      "std_angle": 5.96,
+      "avg_fps": 7.81,
+      "min_fps": 6.56,
+      "max_fps": 8.33,
+      "completion_frame_count": 1,
+      "completion_rate": 0.0026,
+      "pain_before": 5,
+      "pain_after": null,
+      "missing_angle_to_target": 0.0
+    },
+    "model_outputs": [
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and ",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "gemini-2.5-flash",
+        "backend_type": "gemini",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: Error code: 401 - {'id': 'ofnskp1-6Ng1vN-9eedb4fdfdd9f49e', 'error': {'message': 'Invalid API key provided. You can find",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+        "backend_type": "together",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=180)",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "llama3.1",
+        "backend_type": "ollama",
+        "success": false,
+        "auto_score": null
+      }
+    ]
+  },
+  {
+    "source_file": "CAGDAS_ROM_LAT_mediapipe_20260417_221900.json",
+    "question": "Ben ROM_LAT egzersizi yaptım.\n\nToplam tekrar: 10/10\nHedef açı: 20.0°\nOrtalama açı: 7.76°\nMaksimum açı: 20.72°\nMinimum açı: 0.00°\nBaşlangıç ağrı skoru: 5\nSüre: 59.96 saniye\nTamamlama oranı: 0.0141\n\nBu performansa göre bana kısa bir değerlendirme yap.\nLütfen:\n1. Genel performansı kısaca değerlendir\n2. Eksik veya zayıf noktayı söyle\n3. 2-3 kısa öneri ver\n4. Türkçe ve anlaşılır yaz",
+    "raw_summary": {
+      "frame_count": 427,
+      "completed_reps": 10,
+      "duration_sec": 59.96,
+      "avg_angle": 7.76,
+      "max_angle": 20.72,
+      "min_angle": 0.0,
+      "std_angle": 5.94,
+      "avg_fps": 6.99,
+      "min_fps": 4.57,
+      "max_fps": 7.36,
+      "completion_frame_count": 6,
+      "completion_rate": 0.0141,
+      "pain_before": 5,
+      "pain_after": null,
+      "missing_angle_to_target": 0.0
+    },
+    "model_outputs": [
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and ",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "gemini-2.5-flash",
+        "backend_type": "gemini",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: Error code: 401 - {'id': 'ofnthoK-zfFMX-9eedb983cc90e325', 'error': {'message': 'Invalid API key provided. You can find ",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+        "backend_type": "together",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "Hoş geldin! Başarılarını değerlendireceksem, genel olarak iyi bir ROM_LAT egzersizi yaptın. Performanların normal sınırlar içinde olduğu görülmektedir. Ağrı skoru yüksek olmasına rağmen tamamlama oranı düşük. Bu, daha fazla güçlendirme ve kontrol ihtiyacını göstermektedir.\n\nEksik veya zayıf noktanız, tamamlama oranınızı artırmak ve ağrı skorunuzu düşürebilmek için daha sık ve iyi bir formda egzersiz yapmaya çalışmaktır.",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 115.56591399999161,
+        "model_name": "llama3.1",
+        "backend_type": "ollama",
+        "success": true,
+        "auto_score": {
+          "score": 3,
+          "max_score": 4
+        }
+      }
+    ]
+  },
+  {
+    "source_file": "DENEME_ROM_FLEKS_mediapipe_20260417_224854.json",
+    "question": "Ben ROM_FLEKS egzersizi yaptım.\n\nToplam tekrar: 10/10\nHedef açı: 25.0°\nOrtalama açı: 8.55°\nMaksimum açı: 30.32°\nMinimum açı: 0.09°\nBaşlangıç ağrı skoru: 5\nSüre: 27.85 saniye\nTamamlama oranı: 0.0424\n\nBu performansa göre bana kısa bir değerlendirme yap.\nLütfen:\n1. Genel performansı kısaca değerlendir\n2. Eksik veya zayıf noktayı söyle\n3. 2-3 kısa öneri ver\n4. Türkçe ve anlaşılır yaz",
+    "raw_summary": {
+      "frame_count": 236,
+      "completed_reps": 10,
+      "duration_sec": 27.85,
+      "avg_angle": 8.55,
+      "max_angle": 30.32,
+      "min_angle": 0.09,
+      "std_angle": 7.24,
+      "avg_fps": 8.21,
+      "min_fps": 5.46,
+      "max_fps": 9.1,
+      "completion_frame_count": 10,
+      "completion_rate": 0.0424,
+      "pain_before": 5,
+      "pain_after": null,
+      "missing_angle_to_target": 0.0
+    },
+    "model_outputs": [
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and ",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "gemini-2.5-flash",
+        "backend_type": "gemini",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: Error code: 401 - {'id': 'ofnuLJK-zfFMX-9eedbc823c53693c', 'error': {'message': 'Invalid API key provided. You can find ",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+        "backend_type": "together",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "Merhaba! Yaptığın ROM_FLEKS egzersini için teşekkürler. Genel performansa bakıldığında, ortalama açıların iyi olduğunu görüyoruz. Ancak maksimum açı 30.32°'dir, hedef açı ise 25.0°. Bu, maksimum açının hedef açıyı aştığını gösterir.\n\nZayıf noktanızın başlangıç ağrı skoru yüksek olduğu görünüyor (5). Bu, ağrınıza dikkat etmeniz gerektiğini işaret ediyor.\n\nİleri adımlar için önerilerim:\n\n1. Ağrı skorunu azaltmak için yavaş ve kontrolsüz hareketlerle başlamaya çalışın.\n2. Maksimum açıyı hedef açıya yakınlaştırmak için son 3-4 tekrarı daha dikkatli yapın.\n3. Sürekli olarak ağrınızı izleyerek, hedefinize uygun egzersiz planını oluşturabilir ve uygulayabilirsiniz.\n\nEğer bu durum devam ediyorsa vey...",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 140.7550065999967,
+        "model_name": "llama3.1",
+        "backend_type": "ollama",
+        "success": true,
+        "auto_score": {
+          "score": 3,
+          "max_score": 4
+        }
+      }
+    ]
+  },
+  {
+    "source_file": "DENEME_ROM_FLEKS_movenet_lightning_20260418_190848.json",
+    "question": "Ben ROM_FLEKS egzersizi yaptım.\n\nToplam tekrar: 0/?\nHedef açı: 25.0°\nOrtalama açı: 0.00°\nMaksimum açı: 0.08°\nMinimum açı: 0.00°\nSüre: 86.96 saniye\nTamamlama oranı: 0.0\n\nBu performansa göre bana kısa bir değerlendirme yap.\nLütfen:\n1. Genel performansı kısaca değerlendir\n2. Eksik veya zayıf noktayı söyle\n3. 2-3 kısa öneri ver\n4. Türkçe ve anlaşılır yaz",
+    "raw_summary": {
+      "frame_count": 190,
+      "duration_sec": 86.96,
+      "completed_reps": 0,
+      "avg_angle": 0.0,
+      "max_angle": 0.08,
+      "min_angle": 0.0,
+      "std_angle": 0.01,
+      "avg_fps": 2.24,
+      "min_fps": 1.09,
+      "max_fps": 2.58,
+      "completion_rate": 0.0,
+      "missing_angle_to_target": 24.92,
+      "pain_before": null,
+      "pain_after": null
+    },
+    "model_outputs": [
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and ",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "gemini-2.5-flash",
+        "backend_type": "gemini",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: Error code: 401 - {'id': 'ofnv5zU-6Ng1vN-9eedc01bdea5de2d', 'error': {'message': 'Invalid API key provided. You can find",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+        "backend_type": "together",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "Merhaba! ROM_FLEKS egzersininizi yaptığınız için teşekkür ederim.\n\n**Genel Performans:** Performanız gayet iyi, ancak birkaç alanda çalışmak gerektiğini düşünüyorum.\n\n**Eksik veya Zayıf Nokta:** Hedef açıya ulaşamamanız ve minimum açının düşük olması, kas gelişimi açısından endişe uyandırıyor. \n\n**Öneriler:**\n1. **Hedef Açıya Ulaşma**: Hedef açıya daha fazla odaklanmayı deneyin. Açıları artırarak kaslarınızı güçlendirin.\n2. **Sürekli Çalışma**: Eksikliklerini aşmak için sürekli egzersiz yaparak, kas gelişiminizi destekleyin.\n3. **Doktor Kontrolü**: Acil durumlarda veya persistent bir sorun oluşması halinde doktora başvurmanızı öneririm.\n\nEgzersiz planı oluşturulabilir mi? Evet, bunu yapabili...",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 139.57529940000677,
+        "model_name": "llama3.1",
+        "backend_type": "ollama",
+        "success": true,
+        "auto_score": {
+          "score": 3,
+          "max_score": 4
+        }
+      }
+    ]
+  },
+  {
+    "source_file": "DENEME_ROM_FLEKS_yolo_pose_20260417_224939.json",
+    "question": "Ben ROM_FLEKS egzersizi yaptım.\n\nToplam tekrar: 10/10\nHedef açı: 25.0°\nOrtalama açı: 8.06°\nMaksimum açı: 19.65°\nMinimum açı: 0.24°\nBaşlangıç ağrı skoru: 4\nSüre: 37.05 saniye\nTamamlama oranı: 0.0\n\nBu performansa göre bana kısa bir değerlendirme yap.\nLütfen:\n1. Genel performansı kısaca değerlendir\n2. Eksik veya zayıf noktayı söyle\n3. 2-3 kısa öneri ver\n4. Türkçe ve anlaşılır yaz",
+    "raw_summary": {
+      "frame_count": 108,
+      "completed_reps": 10,
+      "duration_sec": 37.05,
+      "avg_angle": 8.06,
+      "max_angle": 19.65,
+      "min_angle": 0.24,
+      "std_angle": 5.24,
+      "avg_fps": 2.91,
+      "min_fps": 2.75,
+      "max_fps": 4.0,
+      "completion_frame_count": 0,
+      "completion_rate": 0.0,
+      "pain_before": 4,
+      "pain_after": null,
+      "missing_angle_to_target": 5.35
+    },
+    "model_outputs": [
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and ",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "gemini-2.5-flash",
+        "backend_type": "gemini",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: Error code: 401 - {'id': 'ofnvpLh-6Ng1vN-9eedc3903a78d064', 'error': {'message': 'Invalid API key provided. You can find",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+        "backend_type": "together",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "Merhaba, senin ROM_FLEKS egzersinini yaptın. Genel olarak, açılma ve kapanma noktalarına ulaşımınız iyi ama başlangıç ağrı skorunuz yüksek. Bu, kaslarinizde henüz yeterli esneklik sağlanmadığının bir işareti.\n\nZayıflık noktanız açı limitlerinizi geçmekte zorlanıyor. Bunun için daha fazla tekrar ve açılma limitinizi arttırmaya çalışın.\n\nÖneriler:\n1. Hedef açınızı artırın.\n2. Daha fazla tekrar yapmaya çalışın.\n3. Ağrı skorunuzu azaltmak için dinlenme sürelerini uzatın.\n\nEğer bir egzersiz planı oluşturulmasını istiyorsanız bana sorabilirsiniz.",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 106.96404199999233,
+        "model_name": "llama3.1",
+        "backend_type": "ollama",
+        "success": true,
+        "auto_score": {
+          "score": 3,
+          "max_score": 4
+        }
+      }
+    ]
+  },
+  {
+    "source_file": "DENEME_ROM_ROT_movenet_lightning_20260418_191759.json",
+    "question": "Ben ROM_ROT egzersizi yaptım.\n\nToplam tekrar: 10/?\nHedef açı: 0.1°\nOrtalama açı: -0.02°\nMaksimum açı: 0.24°\nMinimum açı: -0.22°\nSüre: 64.12 saniye\nTamamlama oranı: 0.1391\n\nBu performansa göre bana kısa bir değerlendirme yap.\nLütfen:\n1. Genel performansı kısaca değerlendir\n2. Eksik veya zayıf noktayı söyle\n3. 2-3 kısa öneri ver\n4. Türkçe ve anlaşılır yaz",
+    "raw_summary": {
+      "frame_count": 151,
+      "duration_sec": 64.12,
+      "completed_reps": 10,
+      "avg_angle": -0.02,
+      "max_angle": 0.24,
+      "min_angle": -0.22,
+      "std_angle": 0.1,
+      "avg_fps": 2.4,
+      "min_fps": 1.14,
+      "max_fps": 2.73,
+      "completion_rate": 0.1391,
+      "missing_angle_to_target": 0.0,
+      "pain_before": null,
+      "pain_after": null
+    },
+    "model_outputs": [
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and ",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "gemini-2.5-flash",
+        "backend_type": "gemini",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: Error code: 401 - {'id': 'ofnwRLe-6Ng1vN-9eedc66eeecf0bd4', 'error': {'message': 'Invalid API key provided. You can find",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+        "backend_type": "together",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "Merhaba! Yaptığın ROM ROT egzersini sonuçlarına göre değerlendirme yapabilir miyim?\n\n1. Genel Performan: Ekstremite hareketliliği bakımından iyi bir performans gösterdin, ancak ortalamada negatif açılar gözükmektedir.\n2. Zayıf Nokta: Orteyatik hareketlilikte bazı olumsuz açılara şahit olduk. Bu durumun altında yatan nedenin ne olduğunu tam olarak anlayabilmek için fizyoterapist veya doktora başvurmanızı öneririm.\n3. Öneriler:\n * Hareketliliği arttırmak için ek egzersizler ekleyip, daha sık uygulamanı öneririm.\n * Ekstremiteyi güçlendirme amaçlı stretching ve mobilizasyon egzersizleri yapman faydalı olabilir.\n\nBuna göre bir plan oluşturabilme imkanı olduğunu düşünüyorum. Lütfen bana geri bild...",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 138.59524229999806,
+        "model_name": "llama3.1",
+        "backend_type": "ollama",
+        "success": true,
+        "auto_score": {
+          "score": 3,
+          "max_score": 4
+        }
+      }
+    ]
+  },
+  {
+    "source_file": "ESKILOG_ROM_LAT_mediapipe_20260418_223524.json",
+    "question": "Ben cervical_lateral_flexion egzersizi yaptım.\n\nToplam tekrar: 10/10\nHedef açı: 20.0°\nOrtalama açı: 8.96°\nMaksimum açı: 22.57°\nMinimum açı: 0.04°\nKalite skoru: 0.7\nSimetri skoru: 0.8439\nBaşlangıç ağrı skoru: 4\nSağ tekrar: 10, Sol tekrar: 10\nSağ maksimum açı: 22.57°, Sol maksimum açı: 19.05°\nSüre: 24.34 saniye\nTamamlama oranı: 0.0268\n\nBu performansa göre bana kısa bir değerlendirme yap.\nLütfen:\n1. Genel performansı kısaca değerlendir\n2. Eksik veya zayıf noktayı söyle\n3. 2-3 kısa öneri ver\n4. Türkçe ve anlaşılır yaz",
+    "raw_summary": {
+      "frame_count": 224,
+      "completed_reps": 10,
+      "duration_sec": 24.34,
+      "avg_angle": 8.96,
+      "max_angle": 22.57,
+      "min_angle": 0.04,
+      "std_angle": 5.48,
+      "avg_fps": 8.93,
+      "min_fps": 6.14,
+      "max_fps": 10.0,
+      "completion_frame_count": 6,
+      "completion_rate": 0.0268,
+      "pain_before": 4,
+      "pain_after": null,
+      "missing_angle_to_target": 0.0,
+      "exercise_code": "ROM_LAT",
+      "movement_name": "cervical_lateral_flexion",
+      "movement_value": 2.654907844753268,
+      "movement_target": 10.0,
+      "movement_unit": "deg",
+      "quality_score": 0.7,
+      "max_movement_value": 22.57015412904801,
+      "avg_movement_value": 2.654907844753268,
+      "completed_reps_total": 10,
+      "max_right_value": 22.57015412904801,
+      "max_left_value": 19.04685605549929,
+      "right_reps": 10,
+      "left_reps": 10,
+      "symmetry_score": 0.8439
+    },
+    "model_outputs": [
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and ",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "gemini-2.5-flash",
+        "backend_type": "gemini",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: Error code: 401 - {'id': 'ofnx8g8-6Ng1vN-9eedc9de1bc7f4ed', 'error': {'message': 'Invalid API key provided. You can find",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+        "backend_type": "together",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "Merhaba! Cervikal lateral flexion egzersini hakkında yapılan ölçümlere göre genel performansınız orta düzeyde görünüyor. Performans puanınız 0,7'dir ve simetri skoru da %84'e yakındır.\n\nEksik veya zayıf noktanızda, maksimum açıda sağ tarafınızda daha iyi performans gösteriyorsunuz. Kalite skorunun düşük olmasının sebebi, başlangıç ağrı puanınızın 4'tür. Bu da egzersiz sırasında hissedilen bazı ağrılar olabilir.\n\nİki üç kısa öneri olarak;\n\n- Egzersizi yavaş yavaş ve dikkatlice yapmanızı öneririm.\n- Sol tarafınıza daha fazla odaklanmayı denemenizi tavsiye ederim.\n- Ağrı puanınızı 3'e indirmeyi amaçlayabilirsiniz.\n\nEğer egzersiz planı oluşturulmasını isterseniz bana geri dönmenizi rica ederim.",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 95.22481509999488,
+        "model_name": "llama3.1",
+        "backend_type": "ollama",
+        "success": true,
+        "auto_score": {
+          "score": 4,
+          "max_score": 4
+        }
+      }
+    ]
+  },
+  {
+    "source_file": "mediapipe.json",
+    "question": "Ben ROM_ROT egzersizi yaptım.\n\nToplam tekrar: 10/10\nHedef açı: 30.0°\nOrtalama açı: 0.14°\nMaksimum açı: 0.42°\nMinimum açı: 0.00°\nBaşlangıç ağrı skoru: 3\nSüre: 122.13 saniye\nTamamlama oranı: 0.0\n\nBu performansa göre bana kısa bir değerlendirme yap.\nLütfen:\n1. Genel performansı kısaca değerlendir\n2. Eksik veya zayıf noktayı söyle\n3. 2-3 kısa öneri ver\n4. Türkçe ve anlaşılır yaz",
+    "raw_summary": {
+      "frame_count": 648,
+      "completed_reps": 10,
+      "duration_sec": 122.13,
+      "avg_angle": 0.14,
+      "max_angle": 0.42,
+      "min_angle": 0.0,
+      "std_angle": 0.09,
+      "avg_fps": 5.23,
+      "min_fps": 3.09,
+      "max_fps": 5.4,
+      "completion_frame_count": 0,
+      "completion_rate": 0.0,
+      "pain_before": 3,
+      "pain_after": null,
+      "missing_angle_to_target": 29.58
+    },
+    "model_outputs": [
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and ",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "gemini-2.5-flash",
+        "backend_type": "gemini",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: Error code: 401 - {'id': 'ofnxdjD-6Ng1vN-9eedcc3d0ff6782b', 'error': {'message': 'Invalid API key provided. You can find",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+        "backend_type": "together",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "Sayın kullanıcı, ROM_ROT egzersini yaptığınız için teşekkür ederim! Genel olarak performansınızı olumlu buluyorum. Başlangıç ağrı skoru 3 olarak gösteriyor ki bu da normaldir.\n\nEksik veya zayıf noktanız ise maksimum açıda düşük bir performansı göstermeniz. Minimum açıda iyi bir sonuç elde etmeniz güzel ancak maksimum açıda daha yüksek performansa ihtiyacınız var.\n\nÖnerilerim şöyledir:\n\n1. Kondisyonu iyileştirmek için günlük egzersiz yapmayı deneyin.\n2. Hedef açı 30.0° olduğunu gördüm, bu değeri zorlamadan yavaş yavaş artırın.\n3. Egzersiz planımı size sunabilirim, ilgileniyorsanız bana mesaj atabilirsiniz.\n\nEgzersiz planı oluşturulduğunda sizi bilgilendireceğim.",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 83.34891240000434,
+        "model_name": "llama3.1",
+        "backend_type": "ollama",
+        "success": true,
+        "auto_score": {
+          "score": 4,
+          "max_score": 4
+        }
+      }
+    ]
+  },
+  {
+    "source_file": "movenet.json",
+    "question": "Ben ROM_ROT egzersizi yaptım.\n\nToplam tekrar: 0/?\nHedef açı: 0.1°\nOrtalama açı: -0.01°\nMaksimum açı: 0.54°\nMinimum açı: -0.38°\nSüre: 150.96 saniye\nTamamlama oranı: 0.1933\n\nBu performansa göre bana kısa bir değerlendirme yap.\nLütfen:\n1. Genel performansı kısaca değerlendir\n2. Eksik veya zayıf noktayı söyle\n3. 2-3 kısa öneri ver\n4. Türkçe ve anlaşılır yaz",
+    "raw_summary": {
+      "frame_count": 357,
+      "duration_sec": 150.96,
+      "completed_reps_right": 10,
+      "completed_reps_left": 10,
+      "completed_reps_total": 20,
+      "avg_angle": -0.01,
+      "max_angle": 0.54,
+      "min_angle": -0.38,
+      "std_angle": 0.14,
+      "avg_fps": 2.39,
+      "min_fps": 1.04,
+      "max_fps": 2.63,
+      "completion_rate": 0.1933,
+      "missing_angle_to_target": 0.0,
+      "pain_before": null,
+      "pain_after": null
+    },
+    "model_outputs": [
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and ",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "gemini-2.5-flash",
+        "backend_type": "gemini",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: Error code: 401 - {'id': 'ofny5wt-zfFMX-9eedce62384ead60', 'error': {'message': 'Invalid API key provided. You can find ",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+        "backend_type": "together",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "Merhaba! ROMROT egzersinindeki performansını inceledim.\n\n**Genel Performans:** Egzersinin sırasında bazı açılar arasında büyük farklar var. Bu, hareket sırasında kontrolün veya istikrarın eksik olabileceği anlamına gelebilir.\n\n**Zayıf Nokta:** Düzenli ve kontrolcü bir şekilde yapılan egzersinlerde maksimum ve minimum açılarda daha iyi sonuçlar görmeniz beklentisi içindedir.\n\n**Öneriler:**\n\n1. Egzersini düzenli ve kontrolcü bir şekilde yapmayı hedefleyin.\n2. Hareketlerinizde daha dengeli ve istikrarlı olun.\n3. Eksik olan noktaları çalışmak için bana ulaşabilirsiniz ve birlikte bir plan oluşturabiliriz.\n\nEğer daha fazla destek veya özel planlama istersen lütfen beni bilgilendir!",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 113.35847789999389,
+        "model_name": "llama3.1",
+        "backend_type": "ollama",
+        "success": true,
+        "auto_score": {
+          "score": 4,
+          "max_score": 4
+        }
+      }
+    ]
+  },
+  {
+    "source_file": "yolo.json",
+    "question": "Ben ROM_ROT egzersizi yaptım.\n\nToplam tekrar: 10/10\nHedef açı: 30.0°\nOrtalama açı: 0.22°\nMaksimum açı: 0.47°\nMinimum açı: 0.00°\nBaşlangıç ağrı skoru: 4\nSüre: 137.21 saniye\nTamamlama oranı: 0.0\n\nBu performansa göre bana kısa bir değerlendirme yap.\nLütfen:\n1. Genel performansı kısaca değerlendir\n2. Eksik veya zayıf noktayı söyle\n3. 2-3 kısa öneri ver\n4. Türkçe ve anlaşılır yaz",
+    "raw_summary": {
+      "frame_count": 513,
+      "completed_reps": 10,
+      "duration_sec": 137.21,
+      "avg_angle": 0.22,
+      "max_angle": 0.47,
+      "min_angle": 0.0,
+      "std_angle": 0.14,
+      "avg_fps": 3.72,
+      "min_fps": 3.63,
+      "max_fps": 3.89,
+      "completion_frame_count": 0,
+      "completion_rate": 0.0,
+      "pain_before": 4,
+      "pain_after": null,
+      "missing_angle_to_target": 29.53
+    },
+    "model_outputs": [
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and ",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "gemini-2.5-flash",
+        "backend_type": "gemini",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "❌ Yanıt alınamadı: Error code: 401 - {'id': 'ofnygFm-6Ng1vN-9eedd1342c350ed1', 'error': {'message': 'Invalid API key provided. You can find",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 0.0,
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+        "backend_type": "together",
+        "success": false,
+        "auto_score": null
+      },
+      {
+        "condition": "BOYUN_AGRISI",
+        "answer": "Merhaba! Performanızı değerlendirecek olursam:\n\n**Genel performans:** Performansınız genel olarak iyi, fakat bazı kısıtlara rastladım.\n\n**Zayıf nokta:** Açı hareketliliği düşük, maksimum açı 0.47° kalabalık ve minimum açı ise 0.00° kalabalıktır.\n\n**Öneriler:**\n\n1. Ağırlık veya direnç arttırmak için ROM_ROT egzersizine devam etmenizi öneririm.\n2. Başlangıç ağrı skoru düşürebilmek için egzersizleri daha düzenli bir şekilde yapmanızı tavsiye ederim.\n3. Ayrıca, maksimum ve minimum açı hareketliliğini artırmak için farklı vuruş ve pozisyonlar denemenizi şiddetle öneririm.\n\nEğer ihtiyaç duyarsanız, ayrıntılı bir plan oluşturabilir veya yeni egzersizler ekleyebiliriz.",
+        "wants_plan": false,
+        "wants_report": false,
+        "latency": 114.82686139999714,
+        "model_name": "llama3.1",
+        "backend_type": "ollama",
+        "success": true,
+        "auto_score": {
+          "score": 4,
+          "max_score": 4
+        }
+      }
+    ]
+  }
+]

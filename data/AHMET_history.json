@@ -1,0 +1,25 @@
+[
+  {
+    "timestamp": "2026-04-17T21:49:35.750115",
+    "exercise": "ROM_LAT",
+    "data": {
+      "reps": 10,
+      "duration": 28.169427156448364,
+      "quality": 1.0,
+      "predicted_pain": 3.5,
+      "risk_level": "Orta"
+    }
+  },
+  {
+    "timestamp": "2026-04-17T21:49:38.059520",
+    "exercise": "ROM_LAT",
+    "data": {
+      "reps": 10,
+      "duration": 28,
+      "quality": 1.0,
+      "predicted_pain": 3.5,
+      "pain_after": 3,
+      "risk_level": "Orta"
+    }
+  }
+]

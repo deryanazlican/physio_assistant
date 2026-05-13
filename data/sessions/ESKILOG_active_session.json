@@ -1,0 +1,139 @@
+{
+  "patient_name": "ESKILOG",
+  "complaint": "Uygulama içinden başlatıldı",
+  "condition": "BOYUN_AGRISI",
+  "created_at": "2026-04-18T21:52:44.450362",
+  "ended_at": null,
+  "plan": {},
+  "exercise_results": [
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 87,
+      "status": "done",
+      "timestamp": "2026-04-18T21:52:44.450362"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 87,
+      "status": "done",
+      "timestamp": "2026-04-18T21:52:47.236043"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 78,
+      "status": "done",
+      "timestamp": "2026-04-18T21:55:48.343876"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 78,
+      "status": "done",
+      "timestamp": "2026-04-18T21:55:51.110430"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 39,
+      "status": "done",
+      "timestamp": "2026-04-18T22:08:51.632437"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 39,
+      "status": "done",
+      "timestamp": "2026-04-18T22:08:54.479897"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 31,
+      "status": "done",
+      "timestamp": "2026-04-18T22:10:23.873357"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 31,
+      "status": "done",
+      "timestamp": "2026-04-18T22:10:32.316512"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 29,
+      "status": "done",
+      "timestamp": "2026-04-18T22:15:13.825824"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 29,
+      "status": "done",
+      "timestamp": "2026-04-18T22:15:16.599717"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 38,
+      "status": "done",
+      "timestamp": "2026-04-18T22:16:00.480344"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 38,
+      "status": "done",
+      "timestamp": "2026-04-18T22:16:08.131557"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 27,
+      "status": "done",
+      "timestamp": "2026-04-18T22:23:43.388310"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 27,
+      "status": "done",
+      "timestamp": "2026-04-18T22:23:46.160789"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 24,
+      "status": "done",
+      "timestamp": "2026-04-18T22:35:24.980663"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 24,
+      "status": "done",
+      "timestamp": "2026-04-18T22:35:27.834875"
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,27 @@
+{
+  "patient_name": "BÝRGUL",
+  "complaint": "Uygulama içinden başlatıldı",
+  "condition": "BOYUN_AGRISI",
+  "created_at": "2026-04-02T18:57:25.428150",
+  "ended_at": null,
+  "plan": {},
+  "exercise_results": [
+    {
+      "exercise_code": "ROM_FLEKS",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 21,
+      "status": "done",
+      "timestamp": "2026-04-02T18:57:25.428150"
+    },
+    {
+      "exercise_code": "ROM_FLEKS",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 21,
+      "status": "done",
+      "timestamp": "2026-04-02T18:57:28.350145"
+    }
+  ],
+  "notes": []
+}

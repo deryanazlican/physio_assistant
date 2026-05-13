@@ -1,0 +1,27 @@
+{
+  "patient_name": "AHMET",
+  "complaint": "Uygulama içinden başlatıldı",
+  "condition": "BOYUN_AGRISI",
+  "created_at": "2026-04-17T21:49:35.752360",
+  "ended_at": null,
+  "plan": {},
+  "exercise_results": [
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 28,
+      "status": "done",
+      "timestamp": "2026-04-17T21:49:35.752360"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 28,
+      "status": "done",
+      "timestamp": "2026-04-17T21:49:38.061483"
+    }
+  ],
+  "notes": []
+}

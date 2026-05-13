@@ -1,0 +1,3332 @@
+{
+  "patient_name": "DENEME",
+  "exercise_code": "ROM_FLEKS",
+  "model_name": "mediapipe",
+  "target_angle": 25.0,
+  "target_reps": 10,
+  "start_timestamp": 1776455306.0958786,
+  "created_at": "2026-04-17T22:48:26.095878",
+  "summary": {
+    "frame_count": 236,
+    "completed_reps": 10,
+    "duration_sec": 27.85,
+    "avg_angle": 8.55,
+    "max_angle": 30.32,
+    "min_angle": 0.09,
+    "std_angle": 7.24,
+    "avg_fps": 8.21,
+    "min_fps": 5.46,
+    "max_fps": 9.1,
+    "completion_frame_count": 10,
+    "completion_rate": 0.0424,
+    "pain_before": 5,
+    "pain_after": 4,
+    "missing_angle_to_target": 0.0
+  },
+  "frames": [
+    {
+      "frame_index": 0,
+      "timestamp_sec": 0.059,
+      "fps": 5.5,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4835,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 0,
+      "timestamp_sec": 0.085,
+      "fps": 5.46,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4897,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 1,
+      "timestamp_sec": 0.209,
+      "fps": 5.47,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4914,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 2,
+      "timestamp_sec": 0.322,
+      "fps": 5.5,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4916,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 3,
+      "timestamp_sec": 0.446,
+      "fps": 5.53,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4911,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 4,
+      "timestamp_sec": 0.546,
+      "fps": 5.6,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4881,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 5,
+      "timestamp_sec": 0.663,
+      "fps": 5.7,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4847,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 6,
+      "timestamp_sec": 0.779,
+      "fps": 5.78,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4827,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 7,
+      "timestamp_sec": 0.896,
+      "fps": 5.86,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4806,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 8,
+      "timestamp_sec": 1.013,
+      "fps": 5.94,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4794,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 9,
+      "timestamp_sec": 1.13,
+      "fps": 6.0,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4765,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 10,
+      "timestamp_sec": 1.229,
+      "fps": 6.13,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4754,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 11,
+      "timestamp_sec": 1.336,
+      "fps": 6.25,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4743,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 12,
+      "timestamp_sec": 1.442,
+      "fps": 6.37,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4725,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 13,
+      "timestamp_sec": 1.534,
+      "fps": 6.47,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.472,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 14,
+      "timestamp_sec": 1.656,
+      "fps": 6.6,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4694,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 15,
+      "timestamp_sec": 1.761,
+      "fps": 6.73,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4664,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 16,
+      "timestamp_sec": 1.872,
+      "fps": 6.85,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4634,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 17,
+      "timestamp_sec": 1.979,
+      "fps": 6.98,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4613,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 18,
+      "timestamp_sec": 2.082,
+      "fps": 7.13,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4601,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 19,
+      "timestamp_sec": 2.185,
+      "fps": 7.27,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4589,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 20,
+      "timestamp_sec": 2.294,
+      "fps": 7.42,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4581,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 21,
+      "timestamp_sec": 2.4,
+      "fps": 7.56,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4554,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 22,
+      "timestamp_sec": 2.514,
+      "fps": 7.71,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4541,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 23,
+      "timestamp_sec": 2.622,
+      "fps": 7.86,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4538,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 24,
+      "timestamp_sec": 2.724,
+      "fps": 8.05,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4517,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 25,
+      "timestamp_sec": 2.833,
+      "fps": 8.23,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4512,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 26,
+      "timestamp_sec": 2.939,
+      "fps": 8.44,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4503,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 27,
+      "timestamp_sec": 3.05,
+      "fps": 8.66,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4492,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 28,
+      "timestamp_sec": 3.157,
+      "fps": 8.91,
+      "angle": null,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4474,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Duz bak ve 1 sn sabit kal (kalibrasyon)...",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 29,
+      "timestamp_sec": 3.286,
+      "fps": 9.08,
+      "angle": 1.38,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.446,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:0/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 30,
+      "timestamp_sec": 3.393,
+      "fps": 9.09,
+      "angle": 1.24,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4456,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:0/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 31,
+      "timestamp_sec": 3.527,
+      "fps": 9.09,
+      "angle": 1.2,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4455,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:0/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 32,
+      "timestamp_sec": 3.648,
+      "fps": 9.1,
+      "angle": 1.12,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4448,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:0/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 33,
+      "timestamp_sec": 3.752,
+      "fps": 9.06,
+      "angle": 1.26,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4444,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:0/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 34,
+      "timestamp_sec": 3.883,
+      "fps": 9.03,
+      "angle": 0.99,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.445,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:0/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 35,
+      "timestamp_sec": 4.006,
+      "fps": 9.01,
+      "angle": 1.23,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4445,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:0/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 36,
+      "timestamp_sec": 4.128,
+      "fps": 9.0,
+      "angle": 1.59,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4439,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:0/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 37,
+      "timestamp_sec": 4.24,
+      "fps": 8.99,
+      "angle": 4.43,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4433,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:0/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 38,
+      "timestamp_sec": 4.363,
+      "fps": 8.99,
+      "angle": 9.43,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4437,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 9° | One:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 39,
+      "timestamp_sec": 4.486,
+      "fps": 8.97,
+      "angle": 11.42,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4434,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 11° | One:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 40,
+      "timestamp_sec": 4.591,
+      "fps": 8.91,
+      "angle": 14.01,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4441,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 14° | One:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 41,
+      "timestamp_sec": 4.723,
+      "fps": 8.88,
+      "angle": 16.43,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4448,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 16° | One:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 42,
+      "timestamp_sec": 4.843,
+      "fps": 8.85,
+      "angle": 16.65,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4455,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 16° | One:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 43,
+      "timestamp_sec": 4.963,
+      "fps": 8.79,
+      "angle": 16.33,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4458,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 16° | One:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 44,
+      "timestamp_sec": 5.085,
+      "fps": 8.76,
+      "angle": 16.48,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4452,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 16° | One:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 45,
+      "timestamp_sec": 5.191,
+      "fps": 8.74,
+      "angle": 15.32,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4454,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 15° | One:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 46,
+      "timestamp_sec": 5.318,
+      "fps": 8.71,
+      "angle": 11.46,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4463,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 11° | One:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 47,
+      "timestamp_sec": 5.441,
+      "fps": 8.67,
+      "angle": 2.97,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4453,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:0/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 48,
+      "timestamp_sec": 5.545,
+      "fps": 8.63,
+      "angle": 1.72,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4441,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:1/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 49,
+      "timestamp_sec": 5.678,
+      "fps": 8.61,
+      "angle": 2.85,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4443,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:1/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 50,
+      "timestamp_sec": 5.802,
+      "fps": 8.57,
+      "angle": 4.23,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.444,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:1/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 51,
+      "timestamp_sec": 5.919,
+      "fps": 8.54,
+      "angle": 3.09,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.444,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:1/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 52,
+      "timestamp_sec": 6.039,
+      "fps": 8.53,
+      "angle": 2.9,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.443,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:1/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 53,
+      "timestamp_sec": 6.161,
+      "fps": 8.48,
+      "angle": 3.85,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4417,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:1/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 54,
+      "timestamp_sec": 6.276,
+      "fps": 8.46,
+      "angle": 4.0,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4409,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:1/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 55,
+      "timestamp_sec": 6.399,
+      "fps": 8.42,
+      "angle": 3.79,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4405,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:1/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 56,
+      "timestamp_sec": 6.516,
+      "fps": 8.39,
+      "angle": 2.65,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4404,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:1/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 57,
+      "timestamp_sec": 6.635,
+      "fps": 8.37,
+      "angle": 1.77,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4404,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:1/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 58,
+      "timestamp_sec": 6.756,
+      "fps": 8.35,
+      "angle": 0.7,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4414,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:1/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 59,
+      "timestamp_sec": 6.871,
+      "fps": 8.37,
+      "angle": 3.58,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4415,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:1/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 60,
+      "timestamp_sec": 6.991,
+      "fps": 8.37,
+      "angle": 7.46,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.442,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 7° | One:1/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 61,
+      "timestamp_sec": 7.112,
+      "fps": 8.37,
+      "angle": 9.15,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4428,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 9° | One:1/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 62,
+      "timestamp_sec": 7.231,
+      "fps": 8.37,
+      "angle": 11.06,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4434,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 11° | One:1/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 63,
+      "timestamp_sec": 7.346,
+      "fps": 8.37,
+      "angle": 12.15,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4449,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 12° | One:1/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 64,
+      "timestamp_sec": 7.466,
+      "fps": 8.38,
+      "angle": 12.59,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4451,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 12° | One:1/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 65,
+      "timestamp_sec": 7.589,
+      "fps": 8.38,
+      "angle": 12.18,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4448,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 12° | One:1/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 66,
+      "timestamp_sec": 7.692,
+      "fps": 8.38,
+      "angle": 10.03,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4447,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 10° | One:1/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 67,
+      "timestamp_sec": 7.822,
+      "fps": 8.38,
+      "angle": 4.98,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4432,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:1/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 68,
+      "timestamp_sec": 7.94,
+      "fps": 8.39,
+      "angle": 1.3,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4416,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:1/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 69,
+      "timestamp_sec": 8.055,
+      "fps": 8.41,
+      "angle": 3.85,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.44,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:2/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 70,
+      "timestamp_sec": 8.172,
+      "fps": 8.4,
+      "angle": 4.99,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4385,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:2/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 71,
+      "timestamp_sec": 8.297,
+      "fps": 8.4,
+      "angle": 5.53,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4379,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 5° | Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 72,
+      "timestamp_sec": 8.416,
+      "fps": 8.41,
+      "angle": 4.96,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.438,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:2/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 73,
+      "timestamp_sec": 8.536,
+      "fps": 8.4,
+      "angle": 4.8,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4377,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:2/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 74,
+      "timestamp_sec": 8.655,
+      "fps": 8.4,
+      "angle": 4.93,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4399,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:2/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 75,
+      "timestamp_sec": 8.768,
+      "fps": 8.4,
+      "angle": 5.1,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4405,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 5° | Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 76,
+      "timestamp_sec": 8.872,
+      "fps": 8.42,
+      "angle": 6.11,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4399,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 5° | Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 77,
+      "timestamp_sec": 8.999,
+      "fps": 8.43,
+      "angle": 6.43,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4389,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 6° | Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 78,
+      "timestamp_sec": 9.104,
+      "fps": 8.43,
+      "angle": 6.64,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4384,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 6° | Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 79,
+      "timestamp_sec": 9.234,
+      "fps": 8.45,
+      "angle": 6.21,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4378,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 5° | Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 80,
+      "timestamp_sec": 9.343,
+      "fps": 8.45,
+      "angle": 5.48,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4377,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 5° | Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 81,
+      "timestamp_sec": 9.46,
+      "fps": 8.44,
+      "angle": 4.44,
+      "reps": 0,
+      "is_complete": false,
+      "confidence": 0.4373,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:2/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 82,
+      "timestamp_sec": 9.591,
+      "fps": 8.45,
+      "angle": 2.22,
+      "reps": 1,
+      "is_complete": false,
+      "confidence": 0.4371,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:2/10 Arkaya:0/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 83,
+      "timestamp_sec": 9.731,
+      "fps": 8.41,
+      "angle": 0.25,
+      "reps": 1,
+      "is_complete": false,
+      "confidence": 0.437,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:2/10 Arkaya:1/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 84,
+      "timestamp_sec": 9.86,
+      "fps": 8.38,
+      "angle": 1.37,
+      "reps": 1,
+      "is_complete": false,
+      "confidence": 0.437,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:2/10 Arkaya:1/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 85,
+      "timestamp_sec": 10.003,
+      "fps": 8.33,
+      "angle": 1.1,
+      "reps": 1,
+      "is_complete": false,
+      "confidence": 0.4367,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:2/10 Arkaya:1/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 86,
+      "timestamp_sec": 10.15,
+      "fps": 8.27,
+      "angle": 0.7,
+      "reps": 1,
+      "is_complete": false,
+      "confidence": 0.4357,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:2/10 Arkaya:1/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 87,
+      "timestamp_sec": 10.281,
+      "fps": 8.24,
+      "angle": 2.2,
+      "reps": 1,
+      "is_complete": false,
+      "confidence": 0.4344,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:2/10 Arkaya:1/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 88,
+      "timestamp_sec": 10.404,
+      "fps": 8.22,
+      "angle": 3.63,
+      "reps": 1,
+      "is_complete": false,
+      "confidence": 0.4336,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:2/10 Arkaya:1/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 89,
+      "timestamp_sec": 10.526,
+      "fps": 8.21,
+      "angle": 5.63,
+      "reps": 1,
+      "is_complete": false,
+      "confidence": 0.4323,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 5° | Arkaya:1/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 90,
+      "timestamp_sec": 10.648,
+      "fps": 8.2,
+      "angle": 6.57,
+      "reps": 1,
+      "is_complete": false,
+      "confidence": 0.4336,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 6° | Arkaya:1/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 91,
+      "timestamp_sec": 10.766,
+      "fps": 8.21,
+      "angle": 0.7,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.4341,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:2/10 Arkaya:1/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 92,
+      "timestamp_sec": 10.884,
+      "fps": 8.2,
+      "angle": 0.89,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.4363,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:2/10 Arkaya:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 93,
+      "timestamp_sec": 11.005,
+      "fps": 8.19,
+      "angle": 1.44,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.4372,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:2/10 Arkaya:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 94,
+      "timestamp_sec": 11.126,
+      "fps": 8.19,
+      "angle": 0.87,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.4394,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:2/10 Arkaya:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 95,
+      "timestamp_sec": 11.246,
+      "fps": 8.2,
+      "angle": 4.59,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.4392,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:2/10 Arkaya:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 96,
+      "timestamp_sec": 11.363,
+      "fps": 8.18,
+      "angle": 4.37,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.4395,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:2/10 Arkaya:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 97,
+      "timestamp_sec": 11.488,
+      "fps": 8.18,
+      "angle": 2.86,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.4385,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:2/10 Arkaya:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 98,
+      "timestamp_sec": 11.596,
+      "fps": 8.15,
+      "angle": 0.76,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.439,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:2/10 Arkaya:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 99,
+      "timestamp_sec": 11.711,
+      "fps": 8.17,
+      "angle": 2.76,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.4396,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:2/10 Arkaya:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 100,
+      "timestamp_sec": 11.846,
+      "fps": 8.17,
+      "angle": 12.73,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.4404,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 12° | One:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 101,
+      "timestamp_sec": 11.952,
+      "fps": 8.17,
+      "angle": 22.04,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.4426,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 22° | One:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 102,
+      "timestamp_sec": 12.085,
+      "fps": 8.17,
+      "angle": 26.31,
+      "reps": 2,
+      "is_complete": true,
+      "confidence": 0.4456,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 26° | One:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 103,
+      "timestamp_sec": 12.192,
+      "fps": 8.17,
+      "angle": 26.0,
+      "reps": 2,
+      "is_complete": true,
+      "confidence": 0.4483,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 26° | One:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 104,
+      "timestamp_sec": 12.321,
+      "fps": 8.18,
+      "angle": 22.01,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.4495,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 22° | One:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 105,
+      "timestamp_sec": 12.439,
+      "fps": 8.16,
+      "angle": 12.78,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.4501,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 12° | One:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 106,
+      "timestamp_sec": 12.56,
+      "fps": 8.15,
+      "angle": 7.7,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.4492,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 7° | One:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 107,
+      "timestamp_sec": 12.663,
+      "fps": 8.14,
+      "angle": 2.82,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.4475,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:2/10 Arkaya:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 108,
+      "timestamp_sec": 12.792,
+      "fps": 8.15,
+      "angle": 3.9,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.4459,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:3/10 Arkaya:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 109,
+      "timestamp_sec": 12.911,
+      "fps": 8.15,
+      "angle": 6.83,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.4461,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 6° | Arkaya:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 110,
+      "timestamp_sec": 13.031,
+      "fps": 8.15,
+      "angle": 4.94,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.4477,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:3/10 Arkaya:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 111,
+      "timestamp_sec": 13.148,
+      "fps": 8.14,
+      "angle": 4.46,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.4475,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:3/10 Arkaya:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 112,
+      "timestamp_sec": 13.253,
+      "fps": 8.18,
+      "angle": 5.25,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.4491,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:3/10 Arkaya:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 113,
+      "timestamp_sec": 13.369,
+      "fps": 8.23,
+      "angle": 5.22,
+      "reps": 2,
+      "is_complete": false,
+      "confidence": 0.4494,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 5° | Arkaya:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 114,
+      "timestamp_sec": 13.492,
+      "fps": 8.3,
+      "angle": 1.47,
+      "reps": 3,
+      "is_complete": false,
+      "confidence": 0.4505,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:3/10 Arkaya:2/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 115,
+      "timestamp_sec": 13.612,
+      "fps": 8.35,
+      "angle": 7.0,
+      "reps": 3,
+      "is_complete": false,
+      "confidence": 0.4483,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 6° | Arkaya:3/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 116,
+      "timestamp_sec": 13.737,
+      "fps": 8.38,
+      "angle": 8.49,
+      "reps": 3,
+      "is_complete": false,
+      "confidence": 0.447,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 7° | Arkaya:3/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 117,
+      "timestamp_sec": 13.853,
+      "fps": 8.4,
+      "angle": 6.4,
+      "reps": 3,
+      "is_complete": false,
+      "confidence": 0.4461,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 5° | Arkaya:3/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 118,
+      "timestamp_sec": 13.97,
+      "fps": 8.42,
+      "angle": 4.72,
+      "reps": 3,
+      "is_complete": false,
+      "confidence": 0.4449,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:3/10 Arkaya:3/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 119,
+      "timestamp_sec": 14.092,
+      "fps": 8.43,
+      "angle": 1.04,
+      "reps": 3,
+      "is_complete": false,
+      "confidence": 0.4453,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:3/10 Arkaya:3/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 120,
+      "timestamp_sec": 14.215,
+      "fps": 8.41,
+      "angle": 7.09,
+      "reps": 3,
+      "is_complete": false,
+      "confidence": 0.4461,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 7° | One:3/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 121,
+      "timestamp_sec": 14.318,
+      "fps": 8.41,
+      "angle": 15.65,
+      "reps": 3,
+      "is_complete": false,
+      "confidence": 0.4472,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 15° | One:3/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 122,
+      "timestamp_sec": 14.434,
+      "fps": 8.43,
+      "angle": 20.71,
+      "reps": 3,
+      "is_complete": false,
+      "confidence": 0.4493,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 20° | One:3/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 123,
+      "timestamp_sec": 14.546,
+      "fps": 8.45,
+      "angle": 20.9,
+      "reps": 3,
+      "is_complete": false,
+      "confidence": 0.4505,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 20° | One:3/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 124,
+      "timestamp_sec": 14.662,
+      "fps": 8.45,
+      "angle": 18.42,
+      "reps": 3,
+      "is_complete": false,
+      "confidence": 0.4497,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 18° | One:3/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 125,
+      "timestamp_sec": 14.791,
+      "fps": 8.47,
+      "angle": 13.4,
+      "reps": 3,
+      "is_complete": false,
+      "confidence": 0.4491,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 13° | One:3/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 126,
+      "timestamp_sec": 14.912,
+      "fps": 8.47,
+      "angle": 2.35,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.447,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:3/10 Arkaya:4/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 127,
+      "timestamp_sec": 15.026,
+      "fps": 8.49,
+      "angle": 5.31,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.446,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:4/10 Arkaya:4/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 128,
+      "timestamp_sec": 15.149,
+      "fps": 8.47,
+      "angle": 8.58,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.4446,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 7° | Arkaya:4/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 129,
+      "timestamp_sec": 15.271,
+      "fps": 8.47,
+      "angle": 7.25,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.4453,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 6° | Arkaya:4/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 130,
+      "timestamp_sec": 15.375,
+      "fps": 8.48,
+      "angle": 7.7,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.4442,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 7° | Arkaya:4/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 131,
+      "timestamp_sec": 15.486,
+      "fps": 8.49,
+      "angle": 8.98,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.4433,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 8° | Arkaya:4/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 132,
+      "timestamp_sec": 15.611,
+      "fps": 8.52,
+      "angle": 8.64,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.4427,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 8° | Arkaya:4/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 133,
+      "timestamp_sec": 15.732,
+      "fps": 8.5,
+      "angle": 7.7,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.4427,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 7° | Arkaya:4/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 134,
+      "timestamp_sec": 15.837,
+      "fps": 8.5,
+      "angle": 7.22,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.4423,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 7° | Arkaya:4/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 135,
+      "timestamp_sec": 15.968,
+      "fps": 8.51,
+      "angle": 8.44,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.4421,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 8° | Arkaya:4/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 136,
+      "timestamp_sec": 16.091,
+      "fps": 8.5,
+      "angle": 7.23,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.442,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 6° | Arkaya:4/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 137,
+      "timestamp_sec": 16.198,
+      "fps": 8.48,
+      "angle": 3.05,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.4417,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:4/10 Arkaya:4/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 138,
+      "timestamp_sec": 16.333,
+      "fps": 8.47,
+      "angle": 8.38,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.4435,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 8° | One:4/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 139,
+      "timestamp_sec": 16.438,
+      "fps": 8.48,
+      "angle": 13.54,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.4467,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 13° | One:4/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 140,
+      "timestamp_sec": 16.553,
+      "fps": 8.49,
+      "angle": 25.68,
+      "reps": 4,
+      "is_complete": true,
+      "confidence": 0.4486,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 25° | One:4/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 141,
+      "timestamp_sec": 16.683,
+      "fps": 8.49,
+      "angle": 30.23,
+      "reps": 4,
+      "is_complete": true,
+      "confidence": 0.4493,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 30° | One:4/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 142,
+      "timestamp_sec": 16.8,
+      "fps": 8.49,
+      "angle": 30.32,
+      "reps": 4,
+      "is_complete": true,
+      "confidence": 0.4496,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 30° | One:4/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 143,
+      "timestamp_sec": 16.903,
+      "fps": 8.47,
+      "angle": 29.58,
+      "reps": 4,
+      "is_complete": true,
+      "confidence": 0.4506,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 29° | One:4/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 144,
+      "timestamp_sec": 17.036,
+      "fps": 8.47,
+      "angle": 10.75,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.4506,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 10° | One:4/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 145,
+      "timestamp_sec": 17.141,
+      "fps": 8.48,
+      "angle": 5.76,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.4505,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:4/10 Arkaya:5/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 146,
+      "timestamp_sec": 17.273,
+      "fps": 8.49,
+      "angle": 5.06,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.45,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:4/10 Arkaya:5/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 147,
+      "timestamp_sec": 17.387,
+      "fps": 8.49,
+      "angle": 7.3,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.4496,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 6° | Arkaya:5/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 148,
+      "timestamp_sec": 17.508,
+      "fps": 8.48,
+      "angle": 5.36,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.4495,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 5° | Arkaya:5/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 149,
+      "timestamp_sec": 17.627,
+      "fps": 8.5,
+      "angle": 5.5,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.4476,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:4/10 Arkaya:5/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 150,
+      "timestamp_sec": 17.746,
+      "fps": 8.5,
+      "angle": 4.46,
+      "reps": 4,
+      "is_complete": false,
+      "confidence": 0.4484,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:4/10 Arkaya:5/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 151,
+      "timestamp_sec": 17.865,
+      "fps": 8.48,
+      "angle": 3.93,
+      "reps": 5,
+      "is_complete": false,
+      "confidence": 0.4505,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:4/10 Arkaya:5/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 152,
+      "timestamp_sec": 17.99,
+      "fps": 8.46,
+      "angle": 4.09,
+      "reps": 5,
+      "is_complete": false,
+      "confidence": 0.4503,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:5/10 Arkaya:6/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 153,
+      "timestamp_sec": 18.131,
+      "fps": 8.42,
+      "angle": 7.07,
+      "reps": 5,
+      "is_complete": false,
+      "confidence": 0.4493,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 6° | Arkaya:6/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 154,
+      "timestamp_sec": 18.266,
+      "fps": 8.36,
+      "angle": 3.8,
+      "reps": 5,
+      "is_complete": false,
+      "confidence": 0.4479,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:5/10 Arkaya:6/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 155,
+      "timestamp_sec": 18.394,
+      "fps": 8.33,
+      "angle": 2.11,
+      "reps": 5,
+      "is_complete": false,
+      "confidence": 0.4485,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:5/10 Arkaya:7/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 156,
+      "timestamp_sec": 18.515,
+      "fps": 8.31,
+      "angle": 8.55,
+      "reps": 5,
+      "is_complete": false,
+      "confidence": 0.4506,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 8° | One:5/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 157,
+      "timestamp_sec": 18.637,
+      "fps": 8.31,
+      "angle": 23.59,
+      "reps": 5,
+      "is_complete": false,
+      "confidence": 0.4543,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 23° | One:5/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 158,
+      "timestamp_sec": 18.757,
+      "fps": 8.32,
+      "angle": 30.25,
+      "reps": 5,
+      "is_complete": true,
+      "confidence": 0.4548,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 30° | One:5/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 159,
+      "timestamp_sec": 18.882,
+      "fps": 8.31,
+      "angle": 25.33,
+      "reps": 5,
+      "is_complete": true,
+      "confidence": 0.4565,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 25° | One:5/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 160,
+      "timestamp_sec": 18.989,
+      "fps": 8.28,
+      "angle": 22.57,
+      "reps": 5,
+      "is_complete": false,
+      "confidence": 0.4558,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 22° | One:5/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 161,
+      "timestamp_sec": 19.121,
+      "fps": 8.27,
+      "angle": 10.59,
+      "reps": 5,
+      "is_complete": false,
+      "confidence": 0.4543,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 10° | One:5/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 162,
+      "timestamp_sec": 19.226,
+      "fps": 8.26,
+      "angle": 4.9,
+      "reps": 5,
+      "is_complete": false,
+      "confidence": 0.4522,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:5/10 Arkaya:7/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 163,
+      "timestamp_sec": 19.358,
+      "fps": 8.27,
+      "angle": 4.47,
+      "reps": 5,
+      "is_complete": false,
+      "confidence": 0.4503,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:5/10 Arkaya:7/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 164,
+      "timestamp_sec": 19.476,
+      "fps": 8.26,
+      "angle": 9.25,
+      "reps": 5,
+      "is_complete": false,
+      "confidence": 0.4487,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 8° | Arkaya:7/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 165,
+      "timestamp_sec": 19.588,
+      "fps": 8.27,
+      "angle": 9.66,
+      "reps": 5,
+      "is_complete": false,
+      "confidence": 0.4483,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 8° | Arkaya:7/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 166,
+      "timestamp_sec": 19.707,
+      "fps": 8.3,
+      "angle": 8.73,
+      "reps": 5,
+      "is_complete": false,
+      "confidence": 0.4482,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 7° | Arkaya:7/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 167,
+      "timestamp_sec": 19.836,
+      "fps": 8.29,
+      "angle": 7.91,
+      "reps": 5,
+      "is_complete": false,
+      "confidence": 0.4484,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 7° | Arkaya:7/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 168,
+      "timestamp_sec": 19.955,
+      "fps": 8.28,
+      "angle": 7.88,
+      "reps": 5,
+      "is_complete": false,
+      "confidence": 0.4497,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 7° | Arkaya:7/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 169,
+      "timestamp_sec": 20.076,
+      "fps": 8.27,
+      "angle": 7.76,
+      "reps": 5,
+      "is_complete": false,
+      "confidence": 0.4492,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 7° | Arkaya:7/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 170,
+      "timestamp_sec": 20.181,
+      "fps": 8.25,
+      "angle": 7.96,
+      "reps": 5,
+      "is_complete": false,
+      "confidence": 0.4483,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 7° | Arkaya:7/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 171,
+      "timestamp_sec": 20.297,
+      "fps": 8.26,
+      "angle": 6.81,
+      "reps": 5,
+      "is_complete": false,
+      "confidence": 0.4467,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 6° | Arkaya:7/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 172,
+      "timestamp_sec": 20.428,
+      "fps": 8.27,
+      "angle": 1.06,
+      "reps": 6,
+      "is_complete": false,
+      "confidence": 0.4467,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:5/10 Arkaya:7/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 173,
+      "timestamp_sec": 20.552,
+      "fps": 8.25,
+      "angle": 9.64,
+      "reps": 6,
+      "is_complete": false,
+      "confidence": 0.4478,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 9° | One:6/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 174,
+      "timestamp_sec": 20.674,
+      "fps": 8.24,
+      "angle": 23.59,
+      "reps": 6,
+      "is_complete": false,
+      "confidence": 0.4504,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 23° | One:6/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 175,
+      "timestamp_sec": 20.792,
+      "fps": 8.24,
+      "angle": 27.55,
+      "reps": 6,
+      "is_complete": true,
+      "confidence": 0.4523,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 27° | One:6/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 176,
+      "timestamp_sec": 20.905,
+      "fps": 8.24,
+      "angle": 28.42,
+      "reps": 6,
+      "is_complete": true,
+      "confidence": 0.4537,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 28° | One:6/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 177,
+      "timestamp_sec": 21.024,
+      "fps": 8.25,
+      "angle": 24.05,
+      "reps": 6,
+      "is_complete": false,
+      "confidence": 0.4574,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 24° | One:6/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 178,
+      "timestamp_sec": 21.129,
+      "fps": 8.24,
+      "angle": 15.71,
+      "reps": 6,
+      "is_complete": false,
+      "confidence": 0.457,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 15° | One:6/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 179,
+      "timestamp_sec": 21.259,
+      "fps": 8.26,
+      "angle": 3.29,
+      "reps": 7,
+      "is_complete": false,
+      "confidence": 0.455,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:6/10 Arkaya:8/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 180,
+      "timestamp_sec": 21.381,
+      "fps": 8.25,
+      "angle": 6.53,
+      "reps": 7,
+      "is_complete": false,
+      "confidence": 0.4524,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 5° | Arkaya:8/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 181,
+      "timestamp_sec": 21.502,
+      "fps": 8.26,
+      "angle": 8.32,
+      "reps": 7,
+      "is_complete": false,
+      "confidence": 0.4499,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 7° | Arkaya:8/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 182,
+      "timestamp_sec": 21.615,
+      "fps": 8.29,
+      "angle": 8.84,
+      "reps": 7,
+      "is_complete": false,
+      "confidence": 0.4481,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 8° | Arkaya:8/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 183,
+      "timestamp_sec": 21.72,
+      "fps": 8.35,
+      "angle": 9.13,
+      "reps": 7,
+      "is_complete": false,
+      "confidence": 0.4462,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 8° | Arkaya:8/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 184,
+      "timestamp_sec": 21.847,
+      "fps": 8.39,
+      "angle": 8.12,
+      "reps": 7,
+      "is_complete": false,
+      "confidence": 0.4461,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 7° | Arkaya:8/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 185,
+      "timestamp_sec": 21.951,
+      "fps": 8.41,
+      "angle": 10.09,
+      "reps": 7,
+      "is_complete": false,
+      "confidence": 0.4443,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 9° | Arkaya:8/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 186,
+      "timestamp_sec": 22.084,
+      "fps": 8.41,
+      "angle": 10.26,
+      "reps": 7,
+      "is_complete": false,
+      "confidence": 0.4427,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 9° | Arkaya:8/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 187,
+      "timestamp_sec": 22.205,
+      "fps": 8.41,
+      "angle": 8.67,
+      "reps": 7,
+      "is_complete": false,
+      "confidence": 0.4415,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 7° | Arkaya:8/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 188,
+      "timestamp_sec": 22.324,
+      "fps": 8.42,
+      "angle": 0.09,
+      "reps": 7,
+      "is_complete": false,
+      "confidence": 0.4422,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:7/10 Arkaya:8/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 189,
+      "timestamp_sec": 22.427,
+      "fps": 8.44,
+      "angle": 10.61,
+      "reps": 7,
+      "is_complete": false,
+      "confidence": 0.4438,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 10° | One:7/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 190,
+      "timestamp_sec": 22.548,
+      "fps": 8.44,
+      "angle": 14.01,
+      "reps": 7,
+      "is_complete": false,
+      "confidence": 0.444,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 14° | One:7/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 191,
+      "timestamp_sec": 22.669,
+      "fps": 8.46,
+      "angle": 18.8,
+      "reps": 7,
+      "is_complete": false,
+      "confidence": 0.4459,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 18° | One:7/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 192,
+      "timestamp_sec": 22.788,
+      "fps": 8.45,
+      "angle": 19.66,
+      "reps": 7,
+      "is_complete": false,
+      "confidence": 0.4483,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 19° | One:7/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 193,
+      "timestamp_sec": 22.891,
+      "fps": 8.46,
+      "angle": 16.56,
+      "reps": 7,
+      "is_complete": false,
+      "confidence": 0.449,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 16° | One:7/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 194,
+      "timestamp_sec": 23.01,
+      "fps": 8.46,
+      "angle": 11.2,
+      "reps": 7,
+      "is_complete": false,
+      "confidence": 0.4483,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 11° | One:7/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 195,
+      "timestamp_sec": 23.138,
+      "fps": 8.44,
+      "angle": 6.92,
+      "reps": 7,
+      "is_complete": false,
+      "confidence": 0.4478,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:7/10 Arkaya:9/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 196,
+      "timestamp_sec": 23.249,
+      "fps": 8.47,
+      "angle": 1.8,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4461,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:7/10 Arkaya:9/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 197,
+      "timestamp_sec": 23.374,
+      "fps": 8.48,
+      "angle": 6.65,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4453,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 5° | Arkaya:9/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 198,
+      "timestamp_sec": 23.493,
+      "fps": 8.49,
+      "angle": 8.75,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4442,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 7° | Arkaya:9/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 199,
+      "timestamp_sec": 23.613,
+      "fps": 8.49,
+      "angle": 9.69,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4429,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 8° | Arkaya:9/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 200,
+      "timestamp_sec": 23.735,
+      "fps": 8.48,
+      "angle": 9.65,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4426,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 8° | Arkaya:9/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 201,
+      "timestamp_sec": 23.855,
+      "fps": 8.46,
+      "angle": 8.26,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4428,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 7° | Arkaya:9/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 202,
+      "timestamp_sec": 23.959,
+      "fps": 8.47,
+      "angle": 8.44,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4422,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 7° | Arkaya:9/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 203,
+      "timestamp_sec": 24.088,
+      "fps": 8.5,
+      "angle": 7.67,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4416,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬆️ ARKAYA GIT 6° | Arkaya:9/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 204,
+      "timestamp_sec": 24.209,
+      "fps": 8.49,
+      "angle": 4.82,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.441,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:8/10 Arkaya:9/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 205,
+      "timestamp_sec": 24.316,
+      "fps": 8.47,
+      "angle": 0.33,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4409,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:8/10 Arkaya:9/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 206,
+      "timestamp_sec": 24.451,
+      "fps": 8.46,
+      "angle": 1.82,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4416,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:8/10 Arkaya:10/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 207,
+      "timestamp_sec": 24.565,
+      "fps": 8.47,
+      "angle": 2.39,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.442,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:8/10 Arkaya:10/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 208,
+      "timestamp_sec": 24.692,
+      "fps": 8.44,
+      "angle": 2.8,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4425,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:8/10 Arkaya:10/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 209,
+      "timestamp_sec": 24.816,
+      "fps": 8.45,
+      "angle": 3.54,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4432,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:8/10 Arkaya:10/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 210,
+      "timestamp_sec": 24.94,
+      "fps": 8.43,
+      "angle": 3.55,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.444,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:8/10 Arkaya:10/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 211,
+      "timestamp_sec": 25.061,
+      "fps": 8.43,
+      "angle": 3.69,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4441,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:8/10 Arkaya:10/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 212,
+      "timestamp_sec": 25.192,
+      "fps": 8.4,
+      "angle": 4.28,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4447,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:8/10 Arkaya:10/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 213,
+      "timestamp_sec": 25.311,
+      "fps": 8.37,
+      "angle": 4.36,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4442,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:8/10 Arkaya:10/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 214,
+      "timestamp_sec": 25.427,
+      "fps": 8.37,
+      "angle": 9.43,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4464,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 9° | One:8/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 215,
+      "timestamp_sec": 25.545,
+      "fps": 8.37,
+      "angle": 18.16,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4466,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 18° | One:8/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 216,
+      "timestamp_sec": 25.66,
+      "fps": 8.39,
+      "angle": 19.08,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4495,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 19° | One:8/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 217,
+      "timestamp_sec": 25.779,
+      "fps": 8.38,
+      "angle": 18.57,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4516,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 18° | One:8/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 218,
+      "timestamp_sec": 25.879,
+      "fps": 8.4,
+      "angle": 16.79,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4539,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 16° | One:8/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 219,
+      "timestamp_sec": 25.998,
+      "fps": 8.38,
+      "angle": 12.76,
+      "reps": 8,
+      "is_complete": false,
+      "confidence": 0.4523,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 12° | One:8/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 220,
+      "timestamp_sec": 26.113,
+      "fps": 8.38,
+      "angle": 3.59,
+      "reps": 9,
+      "is_complete": false,
+      "confidence": 0.4505,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:8/10 Arkaya:10/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 221,
+      "timestamp_sec": 26.232,
+      "fps": 8.38,
+      "angle": 0.28,
+      "reps": 9,
+      "is_complete": false,
+      "confidence": 0.4491,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:9/10 Arkaya:10/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 222,
+      "timestamp_sec": 26.365,
+      "fps": 8.38,
+      "angle": 1.5,
+      "reps": 9,
+      "is_complete": false,
+      "confidence": 0.4472,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:9/10 Arkaya:10/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 223,
+      "timestamp_sec": 26.483,
+      "fps": 8.38,
+      "angle": 2.36,
+      "reps": 9,
+      "is_complete": false,
+      "confidence": 0.4457,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:9/10 Arkaya:10/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 224,
+      "timestamp_sec": 26.602,
+      "fps": 8.38,
+      "angle": 2.55,
+      "reps": 9,
+      "is_complete": false,
+      "confidence": 0.4446,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:9/10 Arkaya:10/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 225,
+      "timestamp_sec": 26.728,
+      "fps": 8.37,
+      "angle": 2.25,
+      "reps": 9,
+      "is_complete": false,
+      "confidence": 0.4435,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:9/10 Arkaya:10/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 226,
+      "timestamp_sec": 26.853,
+      "fps": 8.35,
+      "angle": 1.42,
+      "reps": 9,
+      "is_complete": false,
+      "confidence": 0.4432,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:9/10 Arkaya:10/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 227,
+      "timestamp_sec": 26.979,
+      "fps": 8.33,
+      "angle": 7.1,
+      "reps": 9,
+      "is_complete": false,
+      "confidence": 0.4444,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 7° | One:9/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 228,
+      "timestamp_sec": 27.085,
+      "fps": 8.31,
+      "angle": 17.17,
+      "reps": 9,
+      "is_complete": false,
+      "confidence": 0.4463,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 17° | One:9/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 229,
+      "timestamp_sec": 27.223,
+      "fps": 8.32,
+      "angle": 24.37,
+      "reps": 9,
+      "is_complete": false,
+      "confidence": 0.4508,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 24° | One:9/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 230,
+      "timestamp_sec": 27.345,
+      "fps": 8.31,
+      "angle": 24.8,
+      "reps": 9,
+      "is_complete": false,
+      "confidence": 0.4532,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 24° | One:9/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 231,
+      "timestamp_sec": 27.456,
+      "fps": 8.3,
+      "angle": 21.65,
+      "reps": 9,
+      "is_complete": false,
+      "confidence": 0.4557,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 21° | One:9/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 232,
+      "timestamp_sec": 27.591,
+      "fps": 8.29,
+      "angle": 13.06,
+      "reps": 9,
+      "is_complete": false,
+      "confidence": 0.4556,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "⬇️ ONE EG 13° | One:9/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 233,
+      "timestamp_sec": 27.721,
+      "fps": 8.25,
+      "angle": 6.25,
+      "reps": 9,
+      "is_complete": false,
+      "confidence": 0.4549,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "Daha belirgin one/arkaya eg | One:9/10 Arkaya:10/10",
+        "target_angle": 25.0
+      }
+    },
+    {
+      "frame_index": 234,
+      "timestamp_sec": 27.847,
+      "fps": 8.25,
+      "angle": 2.09,
+      "reps": 10,
+      "is_complete": false,
+      "confidence": 0.4545,
+      "extra": {
+        "feedback_talimat": "Ceneyi gogse gotur, sonra tavana bak (Her ikisi 10'ar)",
+        "feedback_mesaj": "✓ MERKEZ | One:9/10 Arkaya:10/10",
+        "target_angle": 25.0
+      }
+    }
+  ]
+}

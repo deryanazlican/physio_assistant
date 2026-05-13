@@ -1,0 +1,50 @@
+[
+  {
+    "timestamp": "2026-03-05T20:50:25.362585",
+    "exercise": "ROM_LAT",
+    "data": {
+      "reps": 15,
+      "duration": 1.8774511814117432
+    }
+  },
+  {
+    "timestamp": "2026-03-05T20:50:31.022619",
+    "exercise": "ROM_LAT",
+    "data": {
+      "reps": 15,
+      "duration": 1.638085126876831
+    }
+  },
+  {
+    "timestamp": "2026-03-05T21:04:43.733442",
+    "exercise": "OMUZ_YANA_ACMA",
+    "data": {
+      "reps": 70,
+      "duration": 1.6102771759033203
+    }
+  },
+  {
+    "timestamp": "2026-03-05T21:04:47.550853",
+    "exercise": "OMUZ_YANA_ACMA",
+    "data": {
+      "reps": 111,
+      "duration": 0.04992938041687012
+    }
+  },
+  {
+    "timestamp": "2026-03-05T21:05:06.698428",
+    "exercise": "OMUZ_PEN_ABDUKSIYON",
+    "data": {
+      "reps": 11,
+      "duration": 11.382559061050415
+    }
+  },
+  {
+    "timestamp": "2026-03-05T21:05:15.347025",
+    "exercise": "OMUZ_DUVAR_ONE",
+    "data": {
+      "reps": 81,
+      "duration": 3.0798797607421875
+    }
+  }
+]

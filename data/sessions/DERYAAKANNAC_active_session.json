@@ -1,0 +1,71 @@
+{
+  "patient_name": "DERYAAKANNAC",
+  "complaint": "egzersiz plani olusturalim",
+  "condition": "BEL_AGRISI",
+  "created_at": "2026-04-02T17:31:41.644991",
+  "ended_at": null,
+  "plan": {
+    "patient_name": "DERYAAKANNAC",
+    "condition": "BEL_AGRISI",
+    "fitness_level": 5,
+    "created_date": "2026-04-02T17:31:59.549092",
+    "start_date": "2026-04-02",
+    "weeks": 2,
+    "schedule": {
+      "Hafta_1": {
+        "Pazartesi": {
+          "exercises": [
+            "BEL_TEK_DIZ",
+            "BEL_KOPRU"
+          ],
+          "completed": false,
+          "date": null
+        },
+        "Çarşamba": {
+          "exercises": [
+            "BEL_CIFT_DIZ",
+            "BEL_KEDI_DEVE"
+          ],
+          "completed": false,
+          "date": null
+        },
+        "Cuma": {
+          "exercises": [
+            "BEL_MEKIK",
+            "BEL_SLR"
+          ],
+          "completed": false,
+          "date": null
+        }
+      },
+      "Hafta_2": {
+        "Pazartesi": {
+          "exercises": [
+            "BEL_TEK_DIZ",
+            "BEL_KOPRU"
+          ],
+          "completed": false,
+          "date": null
+        },
+        "Çarşamba": {
+          "exercises": [
+            "BEL_CIFT_DIZ",
+            "BEL_KEDI_DEVE"
+          ],
+          "completed": false,
+          "date": null
+        },
+        "Cuma": {
+          "exercises": [
+            "BEL_MEKIK",
+            "BEL_SLR"
+          ],
+          "completed": false,
+          "date": null
+        }
+      }
+    }
+  },
+  "exercise_results": [],
+  "notes": []
+}

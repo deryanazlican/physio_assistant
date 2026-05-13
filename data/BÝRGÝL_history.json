@@ -1,0 +1,23 @@
+[
+  {
+    "timestamp": "2026-03-05T18:21:44.781679",
+    "exercise": "ROM_LAT",
+    "data": {
+      "reps": 15
+    }
+  },
+  {
+    "timestamp": "2026-03-05T18:22:42.700426",
+    "exercise": "ROM_FLEKS",
+    "data": {
+      "reps": 31
+    }
+  },
+  {
+    "timestamp": "2026-03-05T18:22:44.865589",
+    "exercise": "ROM_FLEKS",
+    "data": {
+      "reps": 31
+    }
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "patient_name": "BERKEOZGUDER",
+  "condition": "BOYUN_AGRISI",
+  "fitness_level": 5,
+  "created_date": "2026-03-10T21:24:51.338385",
+  "start_date": "2026-03-10",
+  "weeks": 2,
+  "schedule": {
+    "Hafta_1": {
+      "Pazartesi": {
+        "exercises": [
+          "ROM_LAT",
+          "ROM_ROT"
+        ],
+        "completed": false,
+        "date": null
+      },
+      "Çarşamba": {
+        "exercises": [
+          "ROM_FLEKS",
+          "IZO_FLEKS"
+        ],
+        "completed": false,
+        "date": null
+      },
+      "Cuma": {
+        "exercises": [
+          "ROM_CEMBER",
+          "IZO_LAT"
+        ],
+        "completed": false,
+        "date": null
+      }
+    },
+    "Hafta_2": {
+      "Pazartesi": {
+        "exercises": [
+          "ROM_LAT",
+          "ROM_ROT"
+        ],
+        "completed": false,
+        "date": null
+      },
+      "Çarşamba": {
+        "exercises": [
+          "ROM_FLEKS",
+          "IZO_EKST"
+        ],
+        "completed": false,
+        "date": null
+      },
+      "Cuma": {
+        "exercises": [
+          "ROM_LAT",
+          "ROM_ROT"
+        ],
+        "completed": false,
+        "date": null
+      }
+    }
+  }
+}

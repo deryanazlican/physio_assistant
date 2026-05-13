@@ -1,0 +1,48 @@
+[
+  {
+    "timestamp": "2026-04-17T22:48:54.145419",
+    "exercise": "ROM_FLEKS",
+    "data": {
+      "reps": 10,
+      "duration": 27.846784830093384,
+      "quality": 1.0,
+      "predicted_pain": 6.07,
+      "risk_level": "Orta"
+    }
+  },
+  {
+    "timestamp": "2026-04-17T22:48:56.327621",
+    "exercise": "ROM_FLEKS",
+    "data": {
+      "reps": 10,
+      "duration": 27,
+      "quality": 1.0,
+      "predicted_pain": 6.07,
+      "pain_after": 4,
+      "risk_level": "Orta"
+    }
+  },
+  {
+    "timestamp": "2026-04-17T22:49:39.990214",
+    "exercise": "ROM_FLEKS",
+    "data": {
+      "reps": 10,
+      "duration": 37.04562520980835,
+      "quality": 1.0,
+      "predicted_pain": 5.67,
+      "risk_level": "Orta"
+    }
+  },
+  {
+    "timestamp": "2026-04-17T22:49:42.630701",
+    "exercise": "ROM_FLEKS",
+    "data": {
+      "reps": 10,
+      "duration": 37,
+      "quality": 1.0,
+      "predicted_pain": 5.67,
+      "pain_after": 3,
+      "risk_level": "Orta"
+    }
+  }
+]

@@ -1,0 +1,659 @@
+[
+  {
+    "exercise": "ROM_LAT",
+    "timestamp": 1773173087.24234,
+    "data": {
+      "angle": 1.0317054952837221,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.9,
+      "current_pain": 3,
+      "predicted_pain": 2.5,
+      "risk_level": "Düşük"
+    }
+  },
+  {
+    "exercise": "ROM_FLEKS",
+    "timestamp": 1773173180.3116288,
+    "data": {
+      "angle": 3.6516320056187226,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.91,
+      "current_pain": 4,
+      "predicted_pain": 4.5,
+      "risk_level": "Orta"
+    }
+  },
+  {
+    "exercise": "ROM_LAT",
+    "timestamp": 1775141983.5888507,
+    "data": {
+      "angle": 2.5947011279420122,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.56,
+      "current_pain": 6,
+      "predicted_pain": 5.5,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 4
+    }
+  },
+  {
+    "exercise": "ROM_ROT",
+    "timestamp": 1775142121.169433,
+    "data": {
+      "angle": 0.2615997040425614,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 2.07,
+      "current_pain": 4,
+      "predicted_pain": 4.5,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 0.03821682843897078,
+      "pain_after": 3
+    }
+  },
+  {
+    "exercise": "ROM_FLEKS",
+    "timestamp": 1775143510.081839,
+    "data": {
+      "angle": 3.0252149925379896,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.65,
+      "current_pain": 9,
+      "predicted_pain": 8.5,
+      "risk_level": "Yüksek",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 8
+    }
+  },
+  {
+    "exercise": "ROM_ROT",
+    "timestamp": 1775144596.1493776,
+    "data": {
+      "angle": 0.23941558647694525,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 1.93,
+      "current_pain": 7,
+      "predicted_pain": 7.83,
+      "risk_level": "Yüksek",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 6
+    }
+  },
+  {
+    "exercise": "ROM_LAT",
+    "timestamp": 1775144877.6426797,
+    "data": {
+      "angle": 2.8532072548868914,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.52,
+      "current_pain": 5,
+      "predicted_pain": 6.13,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 4
+    }
+  },
+  {
+    "exercise": "ROM_LAT",
+    "timestamp": 1775145186.9732816,
+    "data": {
+      "angle": 3.1937019074404884,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.38,
+      "current_pain": 7,
+      "predicted_pain": 8.38,
+      "risk_level": "Yüksek",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 5
+    }
+  },
+  {
+    "exercise": "ROM_FLEKS",
+    "timestamp": 1775145445.4281504,
+    "data": {
+      "angle": 3.7783012540923195,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.35,
+      "current_pain": 4,
+      "predicted_pain": 5.47,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 3
+    }
+  },
+  {
+    "exercise": "ROM_FLEKS",
+    "timestamp": 1775145783.6688538,
+    "data": {
+      "angle": 3.724235264924374,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.55,
+      "current_pain": 4,
+      "predicted_pain": 5.47,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 3
+    }
+  },
+  {
+    "exercise": "ROM_LAT",
+    "timestamp": 1775146015.8012605,
+    "data": {
+      "angle": 1.4710454536726933,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.63,
+      "current_pain": 3,
+      "predicted_pain": 4.49,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 2
+    }
+  },
+  {
+    "patient_name": "LEO",
+    "exercise": "ROM_LAT",
+    "timestamp": 1775146932.7776492,
+    "data": {
+      "angle": 3.959435517387833,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.5,
+      "current_pain": 5,
+      "predicted_pain": 6.16,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 3
+    }
+  },
+  {
+    "patient_name": "LEO",
+    "exercise": "ROM_FLEKS",
+    "timestamp": 1775147036.0652978,
+    "data": {
+      "angle": 0.39167886221353265,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.32,
+      "current_pain": 4,
+      "predicted_pain": 5.25,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 3
+    }
+  },
+  {
+    "patient_name": "LEO",
+    "exercise": "IZO_FLEKS",
+    "timestamp": 1775147207.2853923,
+    "data": {
+      "angle": 0.0,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.93,
+      "current_pain": 3,
+      "predicted_pain": 4.52,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 2
+    }
+  },
+  {
+    "patient_name": "LEO",
+    "exercise": "ROM_LAT",
+    "timestamp": 1775148638.1282535,
+    "data": {
+      "angle": 2.2752407083369297,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.34,
+      "current_pain": 3,
+      "predicted_pain": 2.5,
+      "risk_level": "Düşük",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 2
+    }
+  },
+  {
+    "patient_name": "LEO",
+    "exercise": "ROM_LAT",
+    "timestamp": 1775150269.6790147,
+    "data": {
+      "angle": 2.47526874893547,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.66,
+      "current_pain": 6,
+      "predicted_pain": 5.5,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 4
+    }
+  },
+  {
+    "patient_name": "BERKE",
+    "exercise": "ROM_LAT",
+    "timestamp": 1776451331.951353,
+    "data": {
+      "angle": 2.922537536668348,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.8,
+      "current_pain": 5,
+      "predicted_pain": 4.5,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 4
+    }
+  },
+  {
+    "patient_name": "AHMET",
+    "exercise": "ROM_LAT",
+    "timestamp": 1776451775.7343316,
+    "data": {
+      "angle": 3.334245235418596,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.47,
+      "current_pain": 4,
+      "predicted_pain": 3.5,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 3
+    }
+  },
+  {
+    "patient_name": "CAGDAS",
+    "exercise": "ROM_LAT",
+    "timestamp": 1776453540.3777466,
+    "data": {
+      "angle": 2.2967516878099437,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 1.0,
+      "current_pain": 5,
+      "predicted_pain": 4.5,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 4
+    }
+  },
+  {
+    "patient_name": "CAGDAS",
+    "exercise": "ROM_ROT",
+    "timestamp": 1776454648.058923,
+    "data": {
+      "angle": 0.24675490170741865,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 2.29,
+      "current_pain": 4,
+      "predicted_pain": 3.5,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 3
+    }
+  },
+  {
+    "patient_name": "CAGDAS",
+    "exercise": "ROM_ROT",
+    "timestamp": 1776454780.4207635,
+    "data": {
+      "angle": 0.1400030348461998,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 2.04,
+      "current_pain": 3,
+      "predicted_pain": 4.76,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 0.03675515373547872,
+      "pain_after": 2
+    }
+  },
+  {
+    "patient_name": "DENEME",
+    "exercise": "ROM_FLEKS",
+    "timestamp": 1776455334.1360219,
+    "data": {
+      "angle": 2.0933805651858393,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.46,
+      "current_pain": 5,
+      "predicted_pain": 6.07,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 4
+    }
+  },
+  {
+    "patient_name": "DENEME",
+    "exercise": "ROM_FLEKS",
+    "timestamp": 1776455379.9611492,
+    "data": {
+      "angle": 2.9954401033193108,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.62,
+      "current_pain": 4,
+      "predicted_pain": 5.67,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 0.01270796106921302,
+      "pain_after": 3
+    }
+  },
+  {
+    "patient_name": "ESKILOG",
+    "exercise": "ROM_LAT",
+    "timestamp": 1776538364.4034095,
+    "data": {
+      "angle": 0.0,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 1.46,
+      "current_pain": 5,
+      "predicted_pain": 6.33,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 4
+    }
+  },
+  {
+    "patient_name": "ESKILOG",
+    "exercise": "ROM_LAT",
+    "timestamp": 1776538548.2819152,
+    "data": {
+      "angle": 0.0,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 1.3,
+      "current_pain": 5,
+      "predicted_pain": 6.21,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 4
+    }
+  },
+  {
+    "patient_name": "ESKILOG",
+    "exercise": "ROM_LAT",
+    "timestamp": 1776539331.350406,
+    "data": {
+      "angle": 0.0,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.66,
+      "current_pain": 4,
+      "predicted_pain": 5.25,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 3
+    }
+  },
+  {
+    "patient_name": "ESKILOG",
+    "exercise": "ROM_LAT",
+    "timestamp": 1776539423.7912211,
+    "data": {
+      "angle": 0.0,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.53,
+      "current_pain": 3,
+      "predicted_pain": 4.69,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 0.02566399335861206,
+      "pain_after": 2
+    }
+  },
+  {
+    "patient_name": "ESKILOG",
+    "exercise": "ROM_LAT",
+    "timestamp": 1776539713.735002,
+    "data": {
+      "angle": 0.0,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.49,
+      "current_pain": 3,
+      "predicted_pain": 4.48,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 2
+    }
+  },
+  {
+    "patient_name": "ESKILOG",
+    "exercise": "ROM_LAT",
+    "timestamp": 1776539760.400066,
+    "data": {
+      "angle": 0.0,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.65,
+      "current_pain": 2,
+      "predicted_pain": 4.01,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 0.012949889898300171,
+      "pain_after": 1
+    }
+  },
+  {
+    "patient_name": "ESKILOG",
+    "exercise": "ROM_LAT",
+    "timestamp": 1776540223.3051558,
+    "data": {
+      "angle": 0.0,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.46,
+      "current_pain": 4,
+      "predicted_pain": 5.25,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 3
+    }
+  },
+  {
+    "patient_name": "ESKILOG",
+    "exercise": "ROM_LAT",
+    "timestamp": 1776540924.89475,
+    "data": {
+      "angle": 0.0,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.41,
+      "current_pain": 4,
+      "predicted_pain": 5.25,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 3
+    }
+  },
+  {
+    "patient_name": "SECKIN",
+    "exercise": "ROM_FLEKS",
+    "timestamp": 1776622887.97457,
+    "data": {
+      "angle": 0.0,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.45,
+      "current_pain": 4,
+      "predicted_pain": 5.25,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 3
+    }
+  },
+  {
+    "patient_name": "BIRGÜL",
+    "exercise": "IZO_LAT",
+    "timestamp": 1776695927.296688,
+    "data": {
+      "angle": 0.0,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.75,
+      "current_pain": 6,
+      "predicted_pain": 7.2,
+      "risk_level": "Yüksek",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 5
+    }
+  },
+  {
+    "patient_name": "BIRGÜL",
+    "exercise": "ROM_FLEKS",
+    "timestamp": 1776696025.331614,
+    "data": {
+      "angle": 0.0,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.62,
+      "current_pain": 5,
+      "predicted_pain": 6.61,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 0.027217189537154303,
+      "pain_after": 4
+    }
+  },
+  {
+    "patient_name": "BIRGÜL",
+    "exercise": "ROM_FLEKS",
+    "timestamp": 1776696188.8718305,
+    "data": {
+      "angle": 0.0,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.43,
+      "current_pain": 4,
+      "predicted_pain": 5.25,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 3
+    }
+  },
+  {
+    "patient_name": "BIRGÜL",
+    "exercise": "ROM_LAT",
+    "timestamp": 1776696773.5291722,
+    "data": {
+      "angle": 0.0,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.92,
+      "current_pain": 5,
+      "predicted_pain": 6.12,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 4
+    }
+  },
+  {
+    "patient_name": "BERKE",
+    "exercise": "ROM_LAT",
+    "timestamp": 1776697031.5607069,
+    "data": {
+      "angle": 0.0,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.59,
+      "current_pain": 4,
+      "predicted_pain": 5.25,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 3
+    }
+  },
+  {
+    "patient_name": "CAGDAS",
+    "exercise": "ROM_LAT",
+    "timestamp": 1776697839.0980542,
+    "data": {
+      "angle": 0.0,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.66,
+      "current_pain": 4,
+      "predicted_pain": 5.25,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 3
+    }
+  },
+  {
+    "patient_name": "CAGDAS",
+    "exercise": "ROM_LAT",
+    "timestamp": 1776697917.7545943,
+    "data": {
+      "angle": 0.0,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.83,
+      "current_pain": 3,
+      "predicted_pain": 4.74,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 0.021837213436762492,
+      "pain_after": 2
+    }
+  },
+  {
+    "patient_name": "DERYA",
+    "exercise": "ROM_LAT",
+    "timestamp": 1776701451.936022,
+    "data": {
+      "angle": 0.0,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.91,
+      "current_pain": 5,
+      "predicted_pain": 6.12,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 4
+    }
+  },
+  {
+    "patient_name": "DERYA",
+    "exercise": "ROM_LAT",
+    "timestamp": 1776701805.7473176,
+    "data": {
+      "angle": 0.0,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 0.88,
+      "current_pain": 5,
+      "predicted_pain": 6.09,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 4
+    }
+  },
+  {
+    "patient_name": "BIRGÜL",
+    "exercise": "ROM_LAT",
+    "timestamp": 1776785126.285533,
+    "data": {
+      "angle": 0.0,
+      "quality": 1.0,
+      "reps": 10,
+      "duration": 1.4,
+      "current_pain": 4,
+      "predicted_pain": 5.31,
+      "risk_level": "Orta",
+      "last_exercise_hours_ago": 48.0,
+      "pain_after": 3
+    }
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "timestamp": "2026-03-05T20:24:46.741758",
+    "exercise": "ROM_LAT",
+    "data": {
+      "reps": 15,
+      "duration": 2.4778480529785156
+    }
+  },
+  {
+    "timestamp": "2026-04-02T18:53:06.973927",
+    "exercise": "ROM_LAT",
+    "data": {
+      "reps": 10,
+      "duration": 22.523743152618408,
+      "quality": 1.0,
+      "predicted_pain": 8.38,
+      "risk_level": "Yüksek"
+    }
+  },
+  {
+    "timestamp": "2026-04-02T18:53:09.544398",
+    "exercise": "ROM_LAT",
+    "data": {
+      "reps": 10,
+      "duration": 22,
+      "quality": 1.0,
+      "predicted_pain": 8.38,
+      "pain_after": 5,
+      "risk_level": "Yüksek"
+    }
+  }
+]

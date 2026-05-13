@@ -1,251 +1,301 @@
-# ai/pain_predictor.py
-import json
+from __future__ import annotations
+
 import os
+from typing import Any, Dict, List, Optional
+
+import joblib
 import numpy as np
+import pandas as pd
+
+
+def _to_float(x: Any, default: float = 0.0) -> float:
+    try:
+        if x is None:
+            return default
+        return float(x)
+    except Exception:
+        return default
+
+
+def _to_int(x: Any, default: int = 0) -> int:
+    try:
+        if x is None:
+            return default
+        return int(float(x))
+    except Exception:
+        return default
+
 
 class SimplePainPredictor:
-    """
-    Basit kural tabanlı ağrı tahmin modeli
-    (Gerçek ML modeli için sklearn gerekir)
-    """
-    
-    def __init__(self):
-        # Kural tabanlı tahmin parametreleri
-        self.rules = {
-            'overwork': {  # Aşırı çalışma
-                'reps_threshold': 15,
-                'duration_threshold': 20,  # dakika
-                'pain_increase': 2
-            },
-            'poor_form': {  # Kötü form
-                'quality_threshold': 0.5,
-                'pain_increase': 1.5
-            },
-            'insufficient_rest': {  # Yetersiz dinlenme
-                'min_rest_hours': 24,
-                'pain_increase': 1
-            },
-            'progression_too_fast': {  # Çok hızlı ilerleme
-                'angle_increase_threshold': 20,  # Haftalık %20 artış
-                'pain_increase': 1.5
-            }
-        }
-    
-    def predict_pain_after_exercise(self, current_data, exercise_history=None):
-        """
-        Egzersiz sonrası ağrı tahmini
-        
-        Args:
-            current_data: {
-                'exercise': str,
-                'reps': int,
-                'duration': float (dk),
-                'quality': float (0-1),
-                'current_pain': int (0-10),
-                'last_exercise_hours_ago': float
-            }
-            exercise_history: list (opsiyonel)
-        
-        Returns:
-            dict: {
-                'predicted_pain': int (0-10),
-                'risk_level': str (Düşük/Orta/Yüksek),
-                'warnings': list,
-                'recommendations': list
-            }
-        """
-        
-        # Başlangıç ağrısı
-        base_pain = current_data.get('current_pain', 3)
-        predicted_pain = base_pain
-        warnings = []
-        recommendations = []
-        
-        # Kural 1: Aşırı çalışma kontrolü
-        if current_data.get('reps', 0) > self.rules['overwork']['reps_threshold']:
-            predicted_pain += self.rules['overwork']['pain_increase']
-            warnings.append("⚠️ Çok fazla tekrar yapıyorsunuz")
-            recommendations.append("Tekrar sayısını azaltın (10-12 yeterli)")
-        
-        if current_data.get('duration', 0) > self.rules['overwork']['duration_threshold']:
-            predicted_pain += self.rules['overwork']['pain_increase']
-            warnings.append("⚠️ Egzersiz süresi çok uzun")
-            recommendations.append("Toplam süreyi 15 dakikada tutun")
-        
-        # Kural 2: Form kalitesi
-        quality = current_data.get('quality', 1.0)
-        if quality < self.rules['poor_form']['quality_threshold']:
-            predicted_pain += self.rules['poor_form']['pain_increase']
-            warnings.append("⚠️ Form kalitesi düşük")
-            recommendations.append("Yavaşlayın ve formunuza odaklanın")
-        
-        # Kural 3: Dinlenme süresi
-        last_exercise = current_data.get('last_exercise_hours_ago', 48)
-        if last_exercise < self.rules['insufficient_rest']['min_rest_hours']:
-            predicted_pain += self.rules['insufficient_rest']['pain_increase']
-            warnings.append("⚠️ Yeterince dinlenmediniz")
-            recommendations.append("Egzersizler arası en az 24 saat bekleyin")
-        
-        # Kural 4: İlerleme kontrolü (eğer geçmiş varsa)
-        if exercise_history and len(exercise_history) >= 2:
-            recent_angles = [ex['data'].get('angle', 0) for ex in exercise_history[-5:]]
-            if recent_angles:
-                angle_increase = (recent_angles[-1] - recent_angles[0]) / len(recent_angles)
-                if angle_increase > 5:  # Haftada 5° artış çok
-                    predicted_pain += self.rules['progression_too_fast']['pain_increase']
-                    warnings.append("⚠️ Çok hızlı ilerliyorsunuz")
-                    recommendations.append("İlerlemeyi yavaşlatın (%10 kural)")
-        
-        # Pozitif faktörler (ağrıyı azaltan)
-        if quality > 0.8:
-            predicted_pain -= 0.5
-            recommendations.append("✅ Formunuz mükemmel, böyle devam!")
-        
-        if last_exercise > 48:
-            predicted_pain -= 0.5
-            recommendations.append("✅ İyi dinlendiniz")
-        
-        # Sınırla
-        predicted_pain = max(0, min(10, predicted_pain))
-        
-        # Risk seviyesi
-        if predicted_pain <= 3:
+    def predict_pain_after_exercise(self, current_data: Dict[str, Any], exercise_history: Optional[List[Dict[str, Any]]] = None) -> Dict[str, Any]:
+        pain_before = _to_float(current_data.get("pain_before", current_data.get("current_pain", 3)), 3.0)
+        quality = _to_float(current_data.get("quality_score", current_data.get("quality", 0.7)), 0.7)
+        symmetry = _to_float(current_data.get("symmetry_score", 0.7), 0.7)
+        completed_reps = _to_int(current_data.get("completed_reps", current_data.get("reps", 0)), 0)
+        target_reps = _to_int(current_data.get("target_reps", 10), 10)
+        max_angle = _to_float(current_data.get("max_angle", current_data.get("angle", 0)), 0.0)
+        target_angle = _to_float(current_data.get("target_angle", 1.0), 1.0)
+        duration_sec = _to_float(current_data.get("duration_sec", current_data.get("duration", 0.0)), 0.0)
+
+        predicted_pain = pain_before
+        warnings: List[str] = []
+        recommendations: List[str] = []
+
+        rep_ratio = (completed_reps / target_reps) if target_reps > 0 else 0.0
+        angle_ratio = (max_angle / target_angle) if target_angle > 0 else 0.0
+
+        if quality < 0.60:
+            predicted_pain += 1.2
+            warnings.append("⚠️ Form kalitesi düşük.")
+            recommendations.append("Hareketi daha kontrollü yapın.")
+
+        if symmetry < 0.45:
+            predicted_pain += 0.8
+            warnings.append("⚠️ Simetri düşük.")
+            recommendations.append("Sağ-sol dengesini korumaya odaklanın.")
+
+        if rep_ratio < 0.70:
+            predicted_pain += 0.4
+            recommendations.append("Hedef tekrar sayısına kontrollü şekilde yaklaşın.")
+
+        if angle_ratio > 1.15:
+            predicted_pain += 0.8
+            warnings.append("⚠️ Hedef açının üzerine çıkılmış olabilir.")
+            recommendations.append("Ağrısız hareket aralığında kalın.")
+
+        if duration_sec > 90:
+            predicted_pain += 0.4
+            recommendations.append("Egzersizi biraz daha kısa setlere bölebilirsiniz.")
+
+        if quality > 0.85:
+            predicted_pain -= 0.3
+
+        if symmetry > 0.80:
+            predicted_pain -= 0.2
+
+        predicted_pain = float(np.clip(predicted_pain, 0.0, 10.0))
+        return self._build_response(predicted_pain, pain_before, warnings, recommendations, confidence=0.45)
+
+    def _build_response(
+        self,
+        predicted_pain: float,
+        pain_before: float,
+        warnings: List[str],
+        recommendations: List[str],
+        confidence: float,
+        top_factors: Optional[List[str]] = None,
+    ) -> Dict[str, Any]:
+        pain_delta = predicted_pain - pain_before
+
+        if predicted_pain < 4:
             risk_level = "Düşük"
             risk_color = "🟢"
-        elif predicted_pain <= 6:
+        elif predicted_pain < 7:
             risk_level = "Orta"
             risk_color = "🟡"
         else:
             risk_level = "Yüksek"
             risk_color = "🔴"
-        
+
+        if not recommendations:
+            recommendations = ["Kontrollü şekilde devam edin."]
+
         return {
-            'predicted_pain': round(predicted_pain, 1),
-            'risk_level': risk_level,
-            'risk_color': risk_color,
-            'warnings': warnings,
-            'recommendations': recommendations if recommendations else ["✅ Her şey yolunda, devam edin!"]
+            "predicted_pain": round(predicted_pain, 2),
+            "predicted_delta": round(pain_delta, 2),
+            "risk_level": risk_level,
+            "risk_color": risk_color,
+            "warnings": warnings,
+            "recommendations": recommendations,
+            "confidence": round(float(np.clip(confidence, 0.30, 0.99)), 2),
+            "top_factors": top_factors or [],
         }
-    
-    def should_continue(self, prediction):
-        """Egzersize devam edilmeli mi?"""
-        return prediction['predicted_pain'] <= 6
-    
-    def get_recommendation_text(self, prediction):
-        """Öneri metnini al"""
-        text = f"{prediction['risk_color']} Risk Seviyesi: {prediction['risk_level']}\n"
-        text += f"Tahmini Ağrı: {prediction['predicted_pain']}/10\n\n"
-        
-        if prediction['warnings']:
-            text += "⚠️ UYARILAR:\n"
-            for warning in prediction['warnings']:
-                text += f"  • {warning}\n"
-            text += "\n"
-        
-        text += "💡 ÖNERİLER:\n"
-        for rec in prediction['recommendations']:
-            text += f"  • {rec}\n"
-        
-        return text
+
+    def should_continue(self, prediction: Dict[str, Any]) -> bool:
+        return _to_float(prediction.get("predicted_pain", 10.0), 10.0) < 7.0
+
+    def get_recommendation_text(self, prediction: Dict[str, Any]) -> str:
+        pain = prediction.get("predicted_pain", "?")
+        delta = prediction.get("predicted_delta", "?")
+        risk = prediction.get("risk_level", "?")
+        recs = prediction.get("recommendations", [])
+        return f"Tahmini egzersiz sonrası ağrı: {pain}/10 (Δ {delta}). Risk seviyesi: {risk}. " + (f"Öneri: {recs[0]}" if recs else "")
 
 
-# ==================== GELİŞMİŞ ML SÜRÜMÜ (Opsiyonel) ====================
-try:
-    from sklearn.ensemble import RandomForestRegressor
-    import pickle
-    
-    class MLPainPredictor:
-        """
-        Makine öğrenmesi tabanlı ağrı tahmini
-        """
-        
-        def __init__(self, model_path="pain_model.pkl"):
-            self.model_path = model_path
-            self.model = None
-            self.is_trained = False
-            
-            # Model varsa yükle
-            if os.path.exists(model_path):
-                self.load_model()
-        
-        def train(self, training_data):
-            """
-            Modeli eğit
-            
-            training_data: list of {
-                'features': [reps, duration, quality, current_pain, rest_hours],
-                'label': pain_after (0-10)
-            }
-            """
-            if len(training_data) < 10:
-                print("⚠️ Yeterli veri yok (en az 10 kayıt)")
-                return False
-            
-            X = np.array([d['features'] for d in training_data])
-            y = np.array([d['label'] for d in training_data])
-            
-            self.model = RandomForestRegressor(n_estimators=100, random_state=42)
-            self.model.fit(X, y)
-            self.is_trained = True
-            
-            self.save_model()
-            print(f"✅ Model eğitildi ({len(training_data)} kayıt)")
-            return True
-        
-        def predict(self, features):
-            """Tahmin yap"""
-            if not self.is_trained:
-                return None
-            
-            prediction = self.model.predict([features])[0]
-            return max(0, min(10, prediction))
-        
-        def save_model(self):
-            """Modeli kaydet"""
-            with open(self.model_path, 'wb') as f:
-                pickle.dump(self.model, f)
-        
-        def load_model(self):
-            """Modeli yükle"""
+class MLPainPredictor:
+    def __init__(self, model_path: str):
+        self.model_path = model_path
+        self.bundle = None
+        self.model = None
+        self.feature_cols: List[str] = []
+        self.is_loaded = False
+        self.fallback = SimplePainPredictor()
+
+        if os.path.exists(self.model_path):
             try:
-                with open(self.model_path, 'rb') as f:
-                    self.model = pickle.load(f)
-                self.is_trained = True
-                print("✅ Model yüklendi")
-            except:
-                print("⚠️ Model yüklenemedi")
+                self.bundle = joblib.load(self.model_path)
+                self.model = self.bundle["model"]
+                self.feature_cols = self.bundle["feature_cols"]
+                self.is_loaded = True
+                print(f"ML model yüklendi: {self.model_path}")
+            except Exception as e:
+                print(f"ML model yüklenemedi: {e}")
 
-except ImportError:
-    print("ℹ️ sklearn yüklü değil, sadece basit tahmin kullanılabilir")
+    def _extract_features(self, current_data: Dict[str, Any]) -> Dict[str, Any]:
+        features = {
+            "patient_name": str(current_data.get("patient_name", "UNKNOWN")),
+            "exercise_code": str(current_data.get("exercise_code", current_data.get("exercise", "UNKNOWN"))),
+            "model_name": str(current_data.get("model_name", "unknown")),
+            "target_angle": _to_float(current_data.get("target_angle", 0.0)),
+            "target_reps": _to_int(current_data.get("target_reps", 0)),
 
+            "frame_count": _to_int(current_data.get("frame_count", 0)),
+            "completed_reps": _to_int(current_data.get("completed_reps", current_data.get("reps", 0))),
+            "duration_sec": _to_float(current_data.get("duration_sec", current_data.get("duration", 0.0))),
+            "avg_angle": _to_float(current_data.get("avg_angle", current_data.get("angle", 0.0))),
+            "max_angle": _to_float(current_data.get("max_angle", current_data.get("angle", 0.0))),
+            "min_angle": _to_float(current_data.get("min_angle", 0.0)),
+            "std_angle": _to_float(current_data.get("std_angle", 0.0)),
+            "avg_fps": _to_float(current_data.get("avg_fps", 0.0)),
+            "min_fps": _to_float(current_data.get("min_fps", 0.0)),
+            "max_fps": _to_float(current_data.get("max_fps", 0.0)),
+            "completion_frame_count": _to_int(current_data.get("completion_frame_count", 0)),
+            "completion_rate": _to_float(current_data.get("completion_rate", 0.0)),
+            "pain_before": _to_float(current_data.get("pain_before", current_data.get("current_pain", 0.0))),
+            "missing_angle_to_target": _to_float(current_data.get("missing_angle_to_target", 0.0)),
+            "movement_name": str(current_data.get("movement_name", "unknown")),
+            "movement_value": _to_float(current_data.get("movement_value", 0.0)),
+            "movement_target": _to_float(current_data.get("movement_target", 0.0)),
+            "quality_score": _to_float(current_data.get("quality_score", current_data.get("quality", 0.0))),
+            "max_movement_value": _to_float(current_data.get("max_movement_value", 0.0)),
+            "avg_movement_value": _to_float(current_data.get("avg_movement_value", 0.0)),
+            "completed_reps_total": _to_int(current_data.get("completed_reps_total", current_data.get("completed_reps", 0))),
+            "max_right_value": _to_float(current_data.get("max_right_value", 0.0)),
+            "max_left_value": _to_float(current_data.get("max_left_value", 0.0)),
+            "right_reps": _to_int(current_data.get("right_reps", 0)),
+            "left_reps": _to_int(current_data.get("left_reps", 0)),
+            "symmetry_score": _to_float(current_data.get("symmetry_score", 0.0)),
 
-# ==================== KULLANIM ÖRNEĞİ ====================
-if __name__ == "__main__":
-    predictor = SimplePainPredictor()
-    
-    # Test senaryoları
-    print("TEST 1: Normal Egzersiz")
-    print("="*50)
-    prediction = predictor.predict_pain_after_exercise({
-        'exercise': 'ROM_LAT',
-        'reps': 10,
-        'duration': 10,
-        'quality': 0.8,
-        'current_pain': 3,
-        'last_exercise_hours_ago': 48
-    })
-    print(predictor.get_recommendation_text(prediction))
-    
-    print("\n\nTEST 2: Aşırı Çalışma")
-    print("="*50)
-    prediction = predictor.predict_pain_after_exercise({
-        'exercise': 'ROM_LAT',
-        'reps': 20,  # Çok fazla!
-        'duration': 25,  # Çok uzun!
-        'quality': 0.6,  # Kötü form
-        'current_pain': 5,
-        'last_exercise_hours_ago': 12  # Az dinlenme
-    })
-    print(predictor.get_recommendation_text(prediction))
-    
-    print(f"\nDevam edilmeli mi? {predictor.should_continue(prediction)}")
+            "valid_angle_ratio": _to_float(current_data.get("valid_angle_ratio", 0.0)),
+            "mean_confidence": _to_float(current_data.get("mean_confidence", 0.0)),
+            "low_confidence_ratio": _to_float(current_data.get("low_confidence_ratio", 0.0)),
+            "angle_range_frames": _to_float(current_data.get("angle_range_frames", 0.0)),
+            "angle_mean_frames": _to_float(current_data.get("angle_mean_frames", 0.0)),
+            "angle_std_frames": _to_float(current_data.get("angle_std_frames", 0.0)),
+            "early_angle_mean": _to_float(current_data.get("early_angle_mean", 0.0)),
+            "late_angle_mean": _to_float(current_data.get("late_angle_mean", 0.0)),
+            "angle_trend_delta": _to_float(current_data.get("angle_trend_delta", 0.0)),
+            "rep_speed": _to_float(current_data.get("rep_speed", 0.0)),
+            "complete_frame_ratio": _to_float(current_data.get("complete_frame_ratio", 0.0)),
+        }
+
+        target_angle = features["target_angle"]
+        target_reps = features["target_reps"]
+        features["target_hit_ratio"] = (features["max_angle"] / target_angle) if target_angle > 0 else 0.0
+        features["rep_completion_ratio"] = (features["completed_reps"] / target_reps) if target_reps > 0 else 0.0
+        features["right_left_gap"] = abs(features["max_right_value"] - features["max_left_value"])
+
+        return features
+
+    def _build_explanations(self, feats: Dict[str, Any]) -> List[str]:
+        factors = []
+
+        if _to_float(feats.get("quality_score", 0.0)) < 0.60:
+            factors.append("low_quality")
+        if _to_float(feats.get("symmetry_score", 1.0)) < 0.45:
+            factors.append("low_symmetry")
+        if _to_float(feats.get("target_hit_ratio", 0.0)) > 1.15:
+            factors.append("over_target_angle")
+        if _to_float(feats.get("rep_completion_ratio", 1.0)) < 0.70:
+            factors.append("low_rep_completion")
+        if _to_float(feats.get("low_confidence_ratio", 0.0)) > 0.40:
+            factors.append("unstable_tracking")
+        if _to_float(feats.get("angle_trend_delta", 0.0)) < -3.0:
+            factors.append("late_session_drop")
+
+        return factors
+
+    def _confidence_score(self, feats: Dict[str, Any]) -> float:
+        confidence = 0.88
+
+        if _to_float(feats.get("low_confidence_ratio", 0.0)) > 0.40:
+            confidence -= 0.20
+        if _to_float(feats.get("valid_angle_ratio", 0.0)) < 0.50:
+            confidence -= 0.20
+        if _to_int(feats.get("frame_count", 0)) < 60:
+            confidence -= 0.10
+        if _to_float(feats.get("mean_confidence", 0.0)) < 0.50:
+            confidence -= 0.10
+
+        return float(np.clip(confidence, 0.35, 0.98))
+
+    def predict_pain_after_exercise(self, current_data: Dict[str, Any], history=None) -> Dict[str, Any]:
+        if not self.is_loaded or self.model is None:
+            return self.fallback.predict_pain_after_exercise(current_data, history)
+
+        feats = self._extract_features(current_data)
+        df = pd.DataFrame([{col: feats.get(col, None) for col in self.feature_cols}])
+
+        pred = float(self.model.predict(df)[0])
+        pred = float(np.clip(pred, 0.0, 10.0))
+
+        pain_before = _to_float(feats.get("pain_before", 0.0), 0.0)
+        delta = pred - pain_before
+
+        if pred < 4:
+            risk_level = "Düşük"
+            risk_color = "🟢"
+        elif pred < 7:
+            risk_level = "Orta"
+            risk_color = "🟡"
+        else:
+            risk_level = "Yüksek"
+            risk_color = "🔴"
+
+        top_factors = self._build_explanations(feats)
+        confidence = self._confidence_score(feats)
+
+        warnings: List[str] = []
+        recommendations: List[str] = []
+
+        if risk_level == "Yüksek":
+            warnings.append("Egzersiz sonrası ağrı yüksek görünüyor.")
+            recommendations.append("Egzersiz yoğunluğunu azaltın ve gerekirse ara verin.")
+        elif risk_level == "Orta":
+            warnings.append("Orta düzey ağrı artışı riski var.")
+            recommendations.append("Kontrollü devam edin, formu koruyun.")
+        else:
+            recommendations.append("Ağrı riski düşük görünüyor, kontrollü devam edebilirsiniz.")
+
+        if "low_quality" in top_factors:
+            recommendations.append("Form kalitesini artırmak için hareketi yavaşlatın.")
+        if "low_symmetry" in top_factors:
+            recommendations.append("Sağ-sol dengeyi iyileştirmeye odaklanın.")
+        if "over_target_angle" in top_factors:
+            recommendations.append("Hedef açının üzerine çıkmayın.")
+        if "late_session_drop" in top_factors:
+            recommendations.append("Yorgunluk artmış olabilir, setleri kısaltmayı düşünün.")
+
+        return {
+            "predicted_pain": round(pred, 2),
+            "predicted_delta": round(delta, 2),
+            "risk_level": risk_level,
+            "risk_color": risk_color,
+            "warnings": warnings,
+            "recommendations": recommendations,
+            "confidence": round(confidence, 2),
+            "top_factors": top_factors,
+        }
+
+    def should_continue(self, prediction: Dict[str, Any]) -> bool:
+        return prediction.get("predicted_pain", 10) < 7
+
+    def get_recommendation_text(self, prediction: Dict[str, Any]) -> str:
+        pain = prediction.get("predicted_pain", "?")
+        delta = prediction.get("predicted_delta", "?")
+        risk = prediction.get("risk_level", "?")
+        recs = prediction.get("recommendations", [])
+        text = f"Tahmini egzersiz sonrası ağrı: {pain}/10. Değişim: {delta}. Risk seviyesi: {risk}."
+        if recs:
+            text += f" Öneri: {recs[0]}"
+        return text

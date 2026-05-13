@@ -1,0 +1,62 @@
+{
+  "patient_name": "PAPPA",
+  "condition": "DIZ_AGRISI",
+  "fitness_level": 5,
+  "created_date": "2026-03-10T22:43:11.180399",
+  "start_date": "2026-03-10",
+  "weeks": 2,
+  "schedule": {
+    "Hafta_1": {
+      "Pazartesi": {
+        "exercises": [
+          "DIZ_HAVLU_EZME",
+          "DIZ_OTUR_UZAT"
+        ],
+        "completed": false,
+        "date": null
+      },
+      "Çarşamba": {
+        "exercises": [
+          "DIZ_YUZUSTU_BUKME",
+          "DIZ_YAN_KALDIR"
+        ],
+        "completed": false,
+        "date": null
+      },
+      "Cuma": {
+        "exercises": [
+          "DIZ_DUVAR_SQUAT",
+          "DIZ_HAVLU_EZME"
+        ],
+        "completed": false,
+        "date": null
+      }
+    },
+    "Hafta_2": {
+      "Pazartesi": {
+        "exercises": [
+          "DIZ_HAVLU_EZME",
+          "DIZ_OTUR_UZAT"
+        ],
+        "completed": false,
+        "date": null
+      },
+      "Çarşamba": {
+        "exercises": [
+          "DIZ_YUZUSTU_BUKME",
+          "DIZ_YAN_KALDIR"
+        ],
+        "completed": false,
+        "date": null
+      },
+      "Cuma": {
+        "exercises": [
+          "DIZ_DUVAR_SQUAT",
+          "DIZ_HAVLU_EZME"
+        ],
+        "completed": false,
+        "date": null
+      }
+    }
+  }
+}

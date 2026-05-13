@@ -1,18 +1,20 @@
 # core/plan_generator.py
 import json
 import os
-from datetime import datetime, timedelta
+from datetime import datetime
+import re
+from pathlib import Path
+
 
 class PersonalizedPlanGenerator:
     """
     Hastaya özel egzersiz planı oluşturur
     """
-    
+
     def __init__(self, data_folder="data"):
         self.data_folder = data_folder
         os.makedirs(data_folder, exist_ok=True)
-        
-        # Egzersiz şablonları
+
         self.exercise_templates = {
             "BOYUN_AGRISI": {
                 "Hafta_1": {
@@ -60,107 +62,142 @@ class PersonalizedPlanGenerator:
                 }
             }
         }
-    
+
+    def _safe_patient_id(self, patient_name: str) -> str:
+        name = (patient_name or "UNKNOWN").strip()
+        name = re.sub(r"\s+", "_", name)
+        name = re.sub(r"[^a-zA-Z0-9_\-]", "", name)
+        return name or "UNKNOWN"
+
+    def _plan_path(self, patient_name: str) -> str:
+        pid = self._safe_patient_id(patient_name)
+        return str(Path(self.data_folder) / f"{pid}_plan.json")
+
+    def _atomic_save(self, filename: str, plan: dict):
+        tmp = filename + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(plan, f, ensure_ascii=False, indent=2)
+        os.replace(tmp, filename)
+
+    def _normalize_condition(self, condition):
+        if condition is None:
+            return None
+
+        condition = str(condition).strip().upper()
+        condition = condition.replace("İ", "I")
+        condition = condition.replace("Ç", "C")
+        condition = condition.replace("Ğ", "G")
+        condition = condition.replace("Ö", "O")
+        condition = condition.replace("Ş", "S")
+        condition = condition.replace("Ü", "U")
+
+        aliases = {
+            "BOYUN_AGRISI": "BOYUN_AGRISI",
+            "BOYUN AĞRISI": "BOYUN_AGRISI",
+            "BOYUN AGRISI": "BOYUN_AGRISI",
+
+            "OMUZ_AGRISI": "OMUZ_AGRISI",
+            "OMUZ AĞRISI": "OMUZ_AGRISI",
+            "OMUZ AGRISI": "OMUZ_AGRISI",
+
+            "DIZ_AGRISI": "DIZ_AGRISI",
+            "DIZ AĞRISI": "DIZ_AGRISI",
+            "DIZ AGRISI": "DIZ_AGRISI",
+
+            "KALCA_AGRISI": "KALCA_AGRISI",
+            "KALCA AĞRISI": "KALCA_AGRISI",
+            "KALCA AGRISI": "KALCA_AGRISI",
+
+            "BEL_AGRISI": "BEL_AGRISI",
+            "BEL AĞRISI": "BEL_AGRISI",
+            "BEL AGRISI": "BEL_AGRISI",
+        }
+
+        return aliases.get(condition, condition)
+
     def create_plan(self, patient_name, condition, fitness_level=5, weeks=2):
-        """
-        Kişiselleştirilmiş plan oluştur
-        
-        Args:
-            patient_name: Hasta adı
-            condition: Durum (BOYUN_AGRISI, OMUZ_AGRISI vb.)
-            fitness_level: 1-10 arası kondisyon seviyesi
-            weeks: Kaç haftalık plan
-        
-        Returns:
-            dict: Plan detayları
-        """
-        
+        condition_raw = condition
+        condition = self._normalize_condition(condition)
+
+        print(f"[PLAN_GENERATOR] raw condition = {condition_raw!r}")
+        print(f"[PLAN_GENERATOR] normalized condition = {condition!r}")
+        print(f"[PLAN_GENERATOR] available keys = {list(self.exercise_templates.keys())}")
+
         if condition not in self.exercise_templates:
-            condition = "BOYUN_AGRISI"  # Varsayılan
-        
+            raise ValueError(
+                f"Geçersiz condition geldi: {condition_raw!r} -> {condition!r}"
+            )
+
         template = self.exercise_templates[condition]
-        
-        # Plan oluştur
+
         plan = {
             "patient_name": patient_name,
             "condition": condition,
             "fitness_level": fitness_level,
             "created_date": datetime.now().isoformat(),
-            "start_date": datetime.now().strftime("%Y-%m-%d"),
+            "start_date": datetime.now().date().isoformat(),
             "weeks": weeks,
             "schedule": {}
         }
-        
-        # Haftaları doldur
-        current_date = datetime.now()
+
         for week in range(1, weeks + 1):
             week_key = f"Hafta_{week}"
-            
+
             if week_key in template:
                 week_template = template[week_key]
             else:
-                # Son haftayı tekrarla
                 week_template = template[f"Hafta_{len(template)}"]
-            
+
             plan["schedule"][week_key] = {}
-            
+
             for day, exercises in week_template.items():
-                # Fitness seviyesine göre ayarla
                 if fitness_level < 3:
-                    # Düşük kondisyon: İlk egzersizi al
                     adjusted_exercises = exercises[:1]
                 elif fitness_level < 7:
-                    # Orta kondisyon: İlk 2 egzersiz
                     adjusted_exercises = exercises[:2]
                 else:
-                    # Yüksek kondisyon: Hepsini al
                     adjusted_exercises = exercises
-                
+
                 plan["schedule"][week_key][day] = {
                     "exercises": adjusted_exercises,
                     "completed": False,
                     "date": None
                 }
-        
-        # Kaydet
+
         self._save_plan(patient_name, plan)
-        
         return plan
-    
+
     def _save_plan(self, patient_name, plan):
-        """Planı JSON'a kaydet"""
-        filename = f"{self.data_folder}/{patient_name}_plan.json"
-        with open(filename, 'w', encoding='utf-8') as f:
-            json.dump(plan, f, ensure_ascii=False, indent=2)
+        filename = self._plan_path(patient_name)
+        self._atomic_save(filename, plan)
         print(f"✅ Plan kaydedildi: {filename}")
-    
+
     def load_plan(self, patient_name):
-        """Planı yükle"""
-        filename = f"{self.data_folder}/{patient_name}_plan.json"
+        filename = self._plan_path(patient_name)
         if os.path.exists(filename):
-            with open(filename, 'r', encoding='utf-8') as f:
-                return json.load(f)
+            try:
+                with open(filename, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except Exception:
+                return None
         return None
-    
+
     def get_today_exercises(self, patient_name):
-        """Bugünkü egzersizleri getir"""
         plan = self.load_plan(patient_name)
         if not plan:
             return None
-        
+
         today = datetime.now()
-        start_date = datetime.fromisoformat(plan["created_date"])
+        start_date = datetime.fromisoformat(plan["start_date"])
         days_passed = (today - start_date).days
-        
-        # Hangi hafta?
+
         current_week = (days_passed // 7) + 1
         if current_week > plan["weeks"]:
             return {"message": "Plan tamamlandı!", "exercises": []}
-        
-        # Hangi gün?
+
         day_names = ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"]
         today_name = day_names[today.weekday()]
-        
+
         week_key = f"Hafta_{current_week}"
         if week_key in plan["schedule"] and today_name in plan["schedule"][week_key]:
             day_plan = plan["schedule"][week_key][today_name]
@@ -170,11 +207,10 @@ class PersonalizedPlanGenerator:
                 "exercises": day_plan["exercises"],
                 "completed": day_plan["completed"]
             }
-        
+
         return {"message": "Bugün dinlenme günü", "exercises": []}
-    
+
     def mark_day_complete(self, patient_name, week, day):
-        """Günü tamamlandı olarak işaretle"""
         plan = self.load_plan(patient_name)
         if plan:
             week_key = f"Hafta_{week}"
@@ -184,68 +220,32 @@ class PersonalizedPlanGenerator:
                 self._save_plan(patient_name, plan)
                 return True
         return False
-    
+
     def get_progress_summary(self, patient_name):
-        """İlerleme özeti"""
         plan = self.load_plan(patient_name)
         if not plan:
             return None
-        
+
         total_days = 0
         completed_days = 0
-        
+
         for week_key, week_data in plan["schedule"].items():
             for day, day_data in week_data.items():
                 total_days += 1
                 if day_data["completed"]:
                     completed_days += 1
-        
+
         completion_rate = (completed_days / total_days * 100) if total_days > 0 else 0
-        
+
         return {
             "total_days": total_days,
             "completed_days": completed_days,
             "completion_rate": completion_rate,
             "current_week": self._get_current_week(plan)
         }
-    
+
     def _get_current_week(self, plan):
-        """Mevcut haftayı hesapla"""
         start_date = datetime.fromisoformat(plan["created_date"])
         today = datetime.now()
         days_passed = (today - start_date).days
         return min((days_passed // 7) + 1, plan["weeks"])
-
-
-# ==================== KULLANIM ÖRNEĞİ ====================
-if __name__ == "__main__":
-    planner = PersonalizedPlanGenerator()
-    
-    # 1. Plan oluştur
-    print("1. Plan oluşturuluyor...")
-    plan = planner.create_plan(
-        patient_name="DERYA",
-        condition="BOYUN_AGRISI",
-        fitness_level=6,
-        weeks=2
-    )
-    
-    print(f"Plan oluşturuldu: {plan['patient_name']}")
-    print(f"Durum: {plan['condition']}")
-    print(f"Hafta sayısı: {plan['weeks']}")
-    
-    # 2. Bugünkü egzersizleri getir
-    print("\n2. Bugünkü egzersizler:")
-    today = planner.get_today_exercises("DERYA")
-    if today:
-        print(f"Hafta: {today.get('week', 'N/A')}")
-        print(f"Gün: {today.get('day', 'N/A')}")
-        print(f"Egzersizler: {today.get('exercises', [])}")
-    
-    # 3. İlerleme özeti
-    print("\n3. İlerleme özeti:")
-    summary = planner.get_progress_summary("DERYA")
-    if summary:
-        print(f"Tamamlanan günler: {summary['completed_days']}/{summary['total_days']}")
-        print(f"Tamamlanma oranı: %{summary['completion_rate']:.1f}")
-        print(f"Mevcut hafta: {summary['current_week']}")

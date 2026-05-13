@@ -1,0 +1,3596 @@
+{
+  "patient_name": "DENEME",
+  "exercise_code": "ROM_ROT",
+  "model_name": "movenet_lightning",
+  "target_angle": 0.1,
+  "summary": {
+    "frame_count": 357,
+    "duration_sec": 150.96,
+    "completed_reps_right": 10,
+    "completed_reps_left": 10,
+    "completed_reps_total": 20,
+    "avg_angle": -0.01,
+    "max_angle": 0.54,
+    "min_angle": -0.38,
+    "std_angle": 0.14,
+    "avg_fps": 2.39,
+    "min_fps": 1.04,
+    "max_fps": 2.63,
+    "completion_rate": 0.1933,
+    "missing_angle_to_target": 0.0,
+    "pain_before": null,
+    "pain_after": null
+  },
+  "frames": [
+    {
+      "timestamp_sec": 1.615,
+      "fps": 1.42,
+      "angle": 0.0,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.5747,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 2.038,
+      "fps": 1.04,
+      "angle": 0.0,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.62,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 2.447,
+      "fps": 2.6,
+      "angle": 0.0,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.6103,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 2.903,
+      "fps": 2.28,
+      "angle": 0.0,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.6973,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 3.312,
+      "fps": 2.33,
+      "angle": 0.0,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.6474,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 3.704,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.6014,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 4.085,
+      "fps": 2.51,
+      "angle": 0.0,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.632,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 4.473,
+      "fps": 2.61,
+      "angle": 0.0,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.5898,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 4.849,
+      "fps": 2.62,
+      "angle": 0.0,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.6247,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 5.232,
+      "fps": 2.61,
+      "angle": 0.0,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.6497,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 5.62,
+      "fps": 2.62,
+      "angle": 0.0,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.6601,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 6.002,
+      "fps": 2.62,
+      "angle": 0.0,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.6358,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 6.384,
+      "fps": 2.63,
+      "angle": 0.0,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.6208,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 6.77,
+      "fps": 2.6,
+      "angle": 0.0,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.6296,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 7.15,
+      "fps": 2.62,
+      "angle": 0.0,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.6082,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 7.536,
+      "fps": 2.62,
+      "angle": -0.0,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.6449,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 7.922,
+      "fps": 2.62,
+      "angle": -0.01,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.6535,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 8.322,
+      "fps": 2.5,
+      "angle": -0.01,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.596,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 8.727,
+      "fps": 2.52,
+      "angle": -0.01,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.6577,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 9.123,
+      "fps": 2.52,
+      "angle": 0.04,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.6083,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 9.522,
+      "fps": 2.51,
+      "angle": 0.14,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.4379,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 9.92,
+      "fps": 2.5,
+      "angle": 0.22,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.5003,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 10.319,
+      "fps": 2.51,
+      "angle": 0.24,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.5762,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 10.74,
+      "fps": 2.51,
+      "angle": 0.22,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.6322,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 11.135,
+      "fps": 2.42,
+      "angle": 0.16,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.6566,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 11.532,
+      "fps": 2.52,
+      "angle": 0.11,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.6146,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 11.931,
+      "fps": 2.51,
+      "angle": 0.08,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.6354,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 12.33,
+      "fps": 2.52,
+      "angle": 0.05,
+      "reps_right": 0,
+      "reps_left": 0,
+      "reps_total": 0,
+      "confidence": 0.6278,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 12.781,
+      "fps": 2.42,
+      "angle": 0.03,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.6102,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 13.181,
+      "fps": 2.33,
+      "angle": 0.01,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.6863,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 13.602,
+      "fps": 2.42,
+      "angle": -0.01,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.6869,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 14.016,
+      "fps": 2.33,
+      "angle": -0.02,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.6431,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 14.412,
+      "fps": 2.52,
+      "angle": -0.11,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.4707,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 14.818,
+      "fps": 2.44,
+      "angle": -0.23,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.4232,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 15.221,
+      "fps": 2.51,
+      "angle": -0.32,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.396,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 15.619,
+      "fps": 2.52,
+      "angle": -0.34,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.5055,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 16.016,
+      "fps": 2.51,
+      "angle": -0.28,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.5767,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 16.414,
+      "fps": 2.51,
+      "angle": -0.22,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.6714,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 16.821,
+      "fps": 2.51,
+      "angle": -0.18,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.6819,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 17.225,
+      "fps": 2.42,
+      "angle": -0.14,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.6912,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 17.625,
+      "fps": 2.52,
+      "angle": -0.11,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.698,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 18.034,
+      "fps": 2.42,
+      "angle": -0.09,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.6399,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 18.442,
+      "fps": 2.52,
+      "angle": -0.07,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.625,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 18.855,
+      "fps": 2.41,
+      "angle": -0.06,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.6365,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 19.259,
+      "fps": 2.42,
+      "angle": -0.05,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.6321,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 19.665,
+      "fps": 2.52,
+      "angle": -0.05,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.6531,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 20.08,
+      "fps": 2.42,
+      "angle": -0.05,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.615,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 20.485,
+      "fps": 2.41,
+      "angle": -0.05,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.6901,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 20.911,
+      "fps": 2.5,
+      "angle": -0.04,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.6701,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 21.322,
+      "fps": 2.33,
+      "angle": -0.04,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.7083,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 21.736,
+      "fps": 2.41,
+      "angle": -0.04,
+      "reps_right": 1,
+      "reps_left": 0,
+      "reps_total": 1,
+      "confidence": 0.7005,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 22.149,
+      "fps": 2.42,
+      "angle": -0.03,
+      "reps_right": 1,
+      "reps_left": 1,
+      "reps_total": 2,
+      "confidence": 0.6674,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 22.561,
+      "fps": 2.43,
+      "angle": -0.03,
+      "reps_right": 1,
+      "reps_left": 1,
+      "reps_total": 2,
+      "confidence": 0.6644,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 22.974,
+      "fps": 2.42,
+      "angle": -0.02,
+      "reps_right": 1,
+      "reps_left": 1,
+      "reps_total": 2,
+      "confidence": 0.6433,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 23.383,
+      "fps": 2.41,
+      "angle": -0.02,
+      "reps_right": 1,
+      "reps_left": 1,
+      "reps_total": 2,
+      "confidence": 0.6138,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 23.827,
+      "fps": 2.41,
+      "angle": 0.03,
+      "reps_right": 1,
+      "reps_left": 1,
+      "reps_total": 2,
+      "confidence": 0.6424,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 24.233,
+      "fps": 2.33,
+      "angle": 0.12,
+      "reps_right": 1,
+      "reps_left": 1,
+      "reps_total": 2,
+      "confidence": 0.4596,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 24.646,
+      "fps": 2.43,
+      "angle": 0.19,
+      "reps_right": 1,
+      "reps_left": 1,
+      "reps_total": 2,
+      "confidence": 0.4189,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 25.051,
+      "fps": 2.41,
+      "angle": 0.24,
+      "reps_right": 1,
+      "reps_left": 1,
+      "reps_total": 2,
+      "confidence": 0.431,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 25.472,
+      "fps": 2.43,
+      "angle": 0.27,
+      "reps_right": 1,
+      "reps_left": 1,
+      "reps_total": 2,
+      "confidence": 0.4786,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 25.878,
+      "fps": 2.42,
+      "angle": 0.36,
+      "reps_right": 1,
+      "reps_left": 1,
+      "reps_total": 2,
+      "confidence": 0.3867,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 26.292,
+      "fps": 2.41,
+      "angle": 0.37,
+      "reps_right": 1,
+      "reps_left": 1,
+      "reps_total": 2,
+      "confidence": 0.5525,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 26.7,
+      "fps": 2.51,
+      "angle": 0.31,
+      "reps_right": 1,
+      "reps_left": 1,
+      "reps_total": 2,
+      "confidence": 0.6134,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 27.111,
+      "fps": 2.42,
+      "angle": 0.22,
+      "reps_right": 1,
+      "reps_left": 1,
+      "reps_total": 2,
+      "confidence": 0.6589,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 27.519,
+      "fps": 2.42,
+      "angle": 0.15,
+      "reps_right": 1,
+      "reps_left": 1,
+      "reps_total": 2,
+      "confidence": 0.6419,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 27.938,
+      "fps": 2.42,
+      "angle": 0.11,
+      "reps_right": 1,
+      "reps_left": 1,
+      "reps_total": 2,
+      "confidence": 0.6546,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 28.346,
+      "fps": 2.42,
+      "angle": 0.07,
+      "reps_right": 1,
+      "reps_left": 1,
+      "reps_total": 2,
+      "confidence": 0.6782,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 28.764,
+      "fps": 2.41,
+      "angle": 0.05,
+      "reps_right": 1,
+      "reps_left": 1,
+      "reps_total": 2,
+      "confidence": 0.7268,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 29.177,
+      "fps": 2.43,
+      "angle": 0.03,
+      "reps_right": 2,
+      "reps_left": 1,
+      "reps_total": 3,
+      "confidence": 0.7412,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 29.594,
+      "fps": 2.41,
+      "angle": 0.01,
+      "reps_right": 2,
+      "reps_left": 1,
+      "reps_total": 3,
+      "confidence": 0.7432,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 30.001,
+      "fps": 2.41,
+      "angle": 0.0,
+      "reps_right": 2,
+      "reps_left": 1,
+      "reps_total": 3,
+      "confidence": 0.7263,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 30.414,
+      "fps": 2.42,
+      "angle": -0.07,
+      "reps_right": 2,
+      "reps_left": 1,
+      "reps_total": 3,
+      "confidence": 0.6707,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 30.837,
+      "fps": 2.42,
+      "angle": -0.14,
+      "reps_right": 2,
+      "reps_left": 1,
+      "reps_total": 3,
+      "confidence": 0.6879,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 31.283,
+      "fps": 2.41,
+      "angle": -0.2,
+      "reps_right": 2,
+      "reps_left": 1,
+      "reps_total": 3,
+      "confidence": 0.6352,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 31.697,
+      "fps": 2.24,
+      "angle": -0.22,
+      "reps_right": 2,
+      "reps_left": 1,
+      "reps_total": 3,
+      "confidence": 0.6146,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 32.111,
+      "fps": 2.42,
+      "angle": -0.2,
+      "reps_right": 2,
+      "reps_left": 1,
+      "reps_total": 3,
+      "confidence": 0.6537,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 32.525,
+      "fps": 2.41,
+      "angle": -0.17,
+      "reps_right": 2,
+      "reps_left": 1,
+      "reps_total": 3,
+      "confidence": 0.7313,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 32.939,
+      "fps": 2.42,
+      "angle": -0.14,
+      "reps_right": 2,
+      "reps_left": 1,
+      "reps_total": 3,
+      "confidence": 0.6998,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 33.352,
+      "fps": 2.41,
+      "angle": -0.12,
+      "reps_right": 2,
+      "reps_left": 1,
+      "reps_total": 3,
+      "confidence": 0.673,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 33.766,
+      "fps": 2.42,
+      "angle": -0.1,
+      "reps_right": 2,
+      "reps_left": 1,
+      "reps_total": 3,
+      "confidence": 0.7214,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 34.202,
+      "fps": 2.42,
+      "angle": -0.08,
+      "reps_right": 2,
+      "reps_left": 1,
+      "reps_total": 3,
+      "confidence": 0.7081,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 34.607,
+      "fps": 2.33,
+      "angle": -0.06,
+      "reps_right": 2,
+      "reps_left": 1,
+      "reps_total": 3,
+      "confidence": 0.6679,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 35.021,
+      "fps": 2.42,
+      "angle": -0.05,
+      "reps_right": 2,
+      "reps_left": 1,
+      "reps_total": 3,
+      "confidence": 0.7086,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 35.434,
+      "fps": 2.42,
+      "angle": -0.04,
+      "reps_right": 2,
+      "reps_left": 1,
+      "reps_total": 3,
+      "confidence": 0.682,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 35.842,
+      "fps": 2.42,
+      "angle": -0.04,
+      "reps_right": 2,
+      "reps_left": 2,
+      "reps_total": 4,
+      "confidence": 0.7272,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 36.264,
+      "fps": 2.41,
+      "angle": -0.03,
+      "reps_right": 2,
+      "reps_left": 2,
+      "reps_total": 4,
+      "confidence": 0.6571,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 36.684,
+      "fps": 2.42,
+      "angle": -0.03,
+      "reps_right": 2,
+      "reps_left": 2,
+      "reps_total": 4,
+      "confidence": 0.6959,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 37.091,
+      "fps": 2.41,
+      "angle": -0.02,
+      "reps_right": 2,
+      "reps_left": 2,
+      "reps_total": 4,
+      "confidence": 0.7243,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 37.504,
+      "fps": 2.42,
+      "angle": 0.07,
+      "reps_right": 2,
+      "reps_left": 2,
+      "reps_total": 4,
+      "confidence": 0.6437,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 37.917,
+      "fps": 2.42,
+      "angle": 0.14,
+      "reps_right": 2,
+      "reps_left": 2,
+      "reps_total": 4,
+      "confidence": 0.6669,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 38.332,
+      "fps": 2.43,
+      "angle": 0.19,
+      "reps_right": 2,
+      "reps_left": 2,
+      "reps_total": 4,
+      "confidence": 0.5974,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 38.747,
+      "fps": 2.41,
+      "angle": 0.21,
+      "reps_right": 2,
+      "reps_left": 2,
+      "reps_total": 4,
+      "confidence": 0.6965,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 39.159,
+      "fps": 2.41,
+      "angle": 0.16,
+      "reps_right": 2,
+      "reps_left": 2,
+      "reps_total": 4,
+      "confidence": 0.7121,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 39.57,
+      "fps": 2.43,
+      "angle": 0.1,
+      "reps_right": 2,
+      "reps_left": 2,
+      "reps_total": 4,
+      "confidence": 0.691,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 39.985,
+      "fps": 2.42,
+      "angle": 0.06,
+      "reps_right": 2,
+      "reps_left": 2,
+      "reps_total": 4,
+      "confidence": 0.6788,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 40.398,
+      "fps": 2.42,
+      "angle": 0.03,
+      "reps_right": 3,
+      "reps_left": 2,
+      "reps_total": 5,
+      "confidence": 0.6319,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 40.811,
+      "fps": 2.41,
+      "angle": 0.01,
+      "reps_right": 3,
+      "reps_left": 2,
+      "reps_total": 5,
+      "confidence": 0.6648,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 41.223,
+      "fps": 2.42,
+      "angle": -0.0,
+      "reps_right": 3,
+      "reps_left": 2,
+      "reps_total": 5,
+      "confidence": 0.7027,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 41.666,
+      "fps": 2.43,
+      "angle": -0.01,
+      "reps_right": 3,
+      "reps_left": 2,
+      "reps_total": 5,
+      "confidence": 0.7074,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 42.078,
+      "fps": 2.26,
+      "angle": -0.09,
+      "reps_right": 3,
+      "reps_left": 2,
+      "reps_total": 5,
+      "confidence": 0.7295,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 42.493,
+      "fps": 2.42,
+      "angle": -0.17,
+      "reps_right": 3,
+      "reps_left": 2,
+      "reps_total": 5,
+      "confidence": 0.673,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 42.912,
+      "fps": 2.41,
+      "angle": -0.23,
+      "reps_right": 3,
+      "reps_left": 2,
+      "reps_total": 5,
+      "confidence": 0.6721,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 43.321,
+      "fps": 2.41,
+      "angle": -0.23,
+      "reps_right": 3,
+      "reps_left": 2,
+      "reps_total": 5,
+      "confidence": 0.655,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 43.738,
+      "fps": 2.42,
+      "angle": -0.19,
+      "reps_right": 3,
+      "reps_left": 2,
+      "reps_total": 5,
+      "confidence": 0.7302,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 44.145,
+      "fps": 2.4,
+      "angle": -0.15,
+      "reps_right": 3,
+      "reps_left": 2,
+      "reps_total": 5,
+      "confidence": 0.6722,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 44.597,
+      "fps": 2.41,
+      "angle": -0.13,
+      "reps_right": 3,
+      "reps_left": 2,
+      "reps_total": 5,
+      "confidence": 0.681,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 45.011,
+      "fps": 2.25,
+      "angle": -0.11,
+      "reps_right": 3,
+      "reps_left": 2,
+      "reps_total": 5,
+      "confidence": 0.7018,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 45.425,
+      "fps": 2.42,
+      "angle": -0.08,
+      "reps_right": 3,
+      "reps_left": 2,
+      "reps_total": 5,
+      "confidence": 0.6936,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 45.84,
+      "fps": 2.41,
+      "angle": -0.07,
+      "reps_right": 3,
+      "reps_left": 2,
+      "reps_total": 5,
+      "confidence": 0.7101,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 46.255,
+      "fps": 2.41,
+      "angle": -0.06,
+      "reps_right": 3,
+      "reps_left": 2,
+      "reps_total": 5,
+      "confidence": 0.6894,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 46.67,
+      "fps": 2.42,
+      "angle": -0.06,
+      "reps_right": 3,
+      "reps_left": 2,
+      "reps_total": 5,
+      "confidence": 0.7147,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 47.078,
+      "fps": 2.43,
+      "angle": -0.05,
+      "reps_right": 3,
+      "reps_left": 2,
+      "reps_total": 5,
+      "confidence": 0.7674,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 47.493,
+      "fps": 2.42,
+      "angle": -0.05,
+      "reps_right": 3,
+      "reps_left": 2,
+      "reps_total": 5,
+      "confidence": 0.7606,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 47.906,
+      "fps": 2.41,
+      "angle": -0.04,
+      "reps_right": 3,
+      "reps_left": 2,
+      "reps_total": 5,
+      "confidence": 0.7822,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 48.318,
+      "fps": 2.42,
+      "angle": -0.04,
+      "reps_right": 3,
+      "reps_left": 3,
+      "reps_total": 6,
+      "confidence": 0.6684,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 48.734,
+      "fps": 2.41,
+      "angle": -0.03,
+      "reps_right": 3,
+      "reps_left": 3,
+      "reps_total": 6,
+      "confidence": 0.7479,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 49.144,
+      "fps": 2.43,
+      "angle": -0.03,
+      "reps_right": 3,
+      "reps_left": 3,
+      "reps_total": 6,
+      "confidence": 0.7243,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 49.563,
+      "fps": 2.42,
+      "angle": 0.01,
+      "reps_right": 3,
+      "reps_left": 3,
+      "reps_total": 6,
+      "confidence": 0.6955,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 49.973,
+      "fps": 2.41,
+      "angle": 0.09,
+      "reps_right": 3,
+      "reps_left": 3,
+      "reps_total": 6,
+      "confidence": 0.6513,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 50.396,
+      "fps": 2.41,
+      "angle": 0.16,
+      "reps_right": 3,
+      "reps_left": 3,
+      "reps_total": 6,
+      "confidence": 0.7174,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 50.813,
+      "fps": 2.34,
+      "angle": 0.18,
+      "reps_right": 3,
+      "reps_left": 3,
+      "reps_total": 6,
+      "confidence": 0.7281,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 51.228,
+      "fps": 2.42,
+      "angle": 0.13,
+      "reps_right": 3,
+      "reps_left": 3,
+      "reps_total": 6,
+      "confidence": 0.7262,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 51.66,
+      "fps": 2.41,
+      "angle": 0.09,
+      "reps_right": 3,
+      "reps_left": 3,
+      "reps_total": 6,
+      "confidence": 0.6769,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 52.079,
+      "fps": 2.34,
+      "angle": 0.05,
+      "reps_right": 3,
+      "reps_left": 3,
+      "reps_total": 6,
+      "confidence": 0.6775,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 52.499,
+      "fps": 2.33,
+      "angle": 0.03,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.713,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 52.911,
+      "fps": 2.42,
+      "angle": 0.01,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.6725,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 53.33,
+      "fps": 2.43,
+      "angle": -0.01,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.701,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 53.738,
+      "fps": 2.42,
+      "angle": -0.04,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.7157,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 54.153,
+      "fps": 2.42,
+      "angle": -0.12,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.6885,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 54.565,
+      "fps": 2.44,
+      "angle": -0.18,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.6741,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 54.999,
+      "fps": 2.42,
+      "angle": -0.23,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.647,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 55.407,
+      "fps": 2.33,
+      "angle": -0.23,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.6455,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 55.82,
+      "fps": 2.42,
+      "angle": -0.2,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.6617,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 56.228,
+      "fps": 2.42,
+      "angle": -0.17,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.7241,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 56.643,
+      "fps": 2.44,
+      "angle": -0.13,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.662,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 57.075,
+      "fps": 2.42,
+      "angle": -0.11,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.6648,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 57.49,
+      "fps": 2.33,
+      "angle": -0.09,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.7347,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 57.913,
+      "fps": 2.33,
+      "angle": -0.07,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.7448,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 58.325,
+      "fps": 2.41,
+      "angle": -0.07,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.7555,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 58.74,
+      "fps": 2.42,
+      "angle": -0.06,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.6462,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 59.157,
+      "fps": 2.41,
+      "angle": -0.06,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.7248,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 59.571,
+      "fps": 2.42,
+      "angle": -0.05,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.6653,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 59.982,
+      "fps": 2.42,
+      "angle": -0.05,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.6705,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 60.396,
+      "fps": 2.42,
+      "angle": -0.05,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.7337,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 60.809,
+      "fps": 2.41,
+      "angle": -0.05,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.6813,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 61.221,
+      "fps": 2.43,
+      "angle": -0.04,
+      "reps_right": 4,
+      "reps_left": 3,
+      "reps_total": 7,
+      "confidence": 0.7461,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 61.639,
+      "fps": 2.41,
+      "angle": -0.04,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.7727,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 62.077,
+      "fps": 2.43,
+      "angle": -0.04,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.6625,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 62.498,
+      "fps": 2.26,
+      "angle": -0.04,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.6757,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 62.92,
+      "fps": 2.33,
+      "angle": -0.02,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.7418,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 63.337,
+      "fps": 2.41,
+      "angle": 0.08,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.656,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 63.75,
+      "fps": 2.44,
+      "angle": 0.15,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.6451,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 64.165,
+      "fps": 2.42,
+      "angle": 0.2,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.604,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 64.588,
+      "fps": 2.32,
+      "angle": 0.23,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.6733,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 65.033,
+      "fps": 2.42,
+      "angle": 0.25,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.6986,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 65.451,
+      "fps": 2.25,
+      "angle": 0.26,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.7017,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 65.881,
+      "fps": 2.33,
+      "angle": 0.27,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.6963,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 66.308,
+      "fps": 2.34,
+      "angle": 0.27,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.6926,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 66.72,
+      "fps": 2.42,
+      "angle": 0.25,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.6615,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 67.129,
+      "fps": 2.44,
+      "angle": 0.24,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.6699,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 67.549,
+      "fps": 2.41,
+      "angle": 0.22,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.6539,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 67.971,
+      "fps": 2.41,
+      "angle": 0.2,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.7287,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 68.387,
+      "fps": 2.34,
+      "angle": 0.18,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.7323,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 68.81,
+      "fps": 2.42,
+      "angle": 0.17,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.6871,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 69.227,
+      "fps": 2.33,
+      "angle": 0.13,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.7144,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 69.645,
+      "fps": 2.42,
+      "angle": 0.11,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.7086,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 70.067,
+      "fps": 2.34,
+      "angle": 0.08,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.624,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 70.485,
+      "fps": 2.42,
+      "angle": 0.05,
+      "reps_right": 4,
+      "reps_left": 4,
+      "reps_total": 8,
+      "confidence": 0.6845,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 70.9,
+      "fps": 2.41,
+      "angle": 0.03,
+      "reps_right": 5,
+      "reps_left": 4,
+      "reps_total": 9,
+      "confidence": 0.7414,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 71.311,
+      "fps": 2.41,
+      "angle": 0.01,
+      "reps_right": 5,
+      "reps_left": 4,
+      "reps_total": 9,
+      "confidence": 0.7444,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 71.726,
+      "fps": 2.43,
+      "angle": -0.0,
+      "reps_right": 5,
+      "reps_left": 4,
+      "reps_total": 9,
+      "confidence": 0.6639,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 72.141,
+      "fps": 2.42,
+      "angle": -0.01,
+      "reps_right": 5,
+      "reps_left": 4,
+      "reps_total": 9,
+      "confidence": 0.7069,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 72.591,
+      "fps": 2.34,
+      "angle": -0.07,
+      "reps_right": 5,
+      "reps_left": 4,
+      "reps_total": 9,
+      "confidence": 0.6653,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 73.021,
+      "fps": 2.25,
+      "angle": -0.13,
+      "reps_right": 5,
+      "reps_left": 4,
+      "reps_total": 9,
+      "confidence": 0.6678,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 73.436,
+      "fps": 2.32,
+      "angle": -0.17,
+      "reps_right": 5,
+      "reps_left": 4,
+      "reps_total": 9,
+      "confidence": 0.645,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 73.85,
+      "fps": 2.43,
+      "angle": -0.15,
+      "reps_right": 5,
+      "reps_left": 4,
+      "reps_total": 9,
+      "confidence": 0.7835,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 74.267,
+      "fps": 2.43,
+      "angle": -0.13,
+      "reps_right": 5,
+      "reps_left": 4,
+      "reps_total": 9,
+      "confidence": 0.7076,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 74.693,
+      "fps": 2.33,
+      "angle": -0.11,
+      "reps_right": 5,
+      "reps_left": 4,
+      "reps_total": 9,
+      "confidence": 0.6733,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 75.116,
+      "fps": 2.43,
+      "angle": -0.09,
+      "reps_right": 5,
+      "reps_left": 4,
+      "reps_total": 9,
+      "confidence": 0.7425,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 75.551,
+      "fps": 2.33,
+      "angle": -0.07,
+      "reps_right": 5,
+      "reps_left": 4,
+      "reps_total": 9,
+      "confidence": 0.7079,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 75.963,
+      "fps": 2.32,
+      "angle": -0.05,
+      "reps_right": 5,
+      "reps_left": 4,
+      "reps_total": 9,
+      "confidence": 0.722,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 76.405,
+      "fps": 2.42,
+      "angle": -0.04,
+      "reps_right": 5,
+      "reps_left": 5,
+      "reps_total": 10,
+      "confidence": 0.695,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 76.905,
+      "fps": 2.3,
+      "angle": -0.02,
+      "reps_right": 5,
+      "reps_left": 5,
+      "reps_total": 10,
+      "confidence": 0.6723,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 77.367,
+      "fps": 1.97,
+      "angle": -0.01,
+      "reps_right": 5,
+      "reps_left": 5,
+      "reps_total": 10,
+      "confidence": 0.6932,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 77.791,
+      "fps": 2.18,
+      "angle": -0.01,
+      "reps_right": 5,
+      "reps_left": 5,
+      "reps_total": 10,
+      "confidence": 0.6629,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 78.211,
+      "fps": 2.33,
+      "angle": -0.01,
+      "reps_right": 5,
+      "reps_left": 5,
+      "reps_total": 10,
+      "confidence": 0.6914,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 78.633,
+      "fps": 2.34,
+      "angle": -0.0,
+      "reps_right": 5,
+      "reps_left": 5,
+      "reps_total": 10,
+      "confidence": 0.6581,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 79.046,
+      "fps": 2.43,
+      "angle": -0.02,
+      "reps_right": 5,
+      "reps_left": 5,
+      "reps_total": 10,
+      "confidence": 0.6495,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 79.465,
+      "fps": 2.41,
+      "angle": -0.09,
+      "reps_right": 5,
+      "reps_left": 5,
+      "reps_total": 10,
+      "confidence": 0.6232,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 79.876,
+      "fps": 2.41,
+      "angle": -0.15,
+      "reps_right": 5,
+      "reps_left": 5,
+      "reps_total": 10,
+      "confidence": 0.6275,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 80.288,
+      "fps": 2.42,
+      "angle": -0.19,
+      "reps_right": 5,
+      "reps_left": 5,
+      "reps_total": 10,
+      "confidence": 0.6499,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 80.7,
+      "fps": 2.41,
+      "angle": -0.21,
+      "reps_right": 5,
+      "reps_left": 5,
+      "reps_total": 10,
+      "confidence": 0.6581,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 81.12,
+      "fps": 2.41,
+      "angle": -0.18,
+      "reps_right": 5,
+      "reps_left": 5,
+      "reps_total": 10,
+      "confidence": 0.7189,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 81.576,
+      "fps": 2.41,
+      "angle": -0.14,
+      "reps_right": 5,
+      "reps_left": 5,
+      "reps_total": 10,
+      "confidence": 0.7074,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 82.007,
+      "fps": 2.24,
+      "angle": -0.11,
+      "reps_right": 5,
+      "reps_left": 5,
+      "reps_total": 10,
+      "confidence": 0.7218,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 82.424,
+      "fps": 2.25,
+      "angle": -0.09,
+      "reps_right": 5,
+      "reps_left": 5,
+      "reps_total": 10,
+      "confidence": 0.7321,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 82.866,
+      "fps": 2.42,
+      "angle": -0.07,
+      "reps_right": 5,
+      "reps_left": 5,
+      "reps_total": 10,
+      "confidence": 0.6753,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 83.28,
+      "fps": 2.25,
+      "angle": -0.06,
+      "reps_right": 5,
+      "reps_left": 5,
+      "reps_total": 10,
+      "confidence": 0.6253,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 83.694,
+      "fps": 2.43,
+      "angle": -0.05,
+      "reps_right": 5,
+      "reps_left": 5,
+      "reps_total": 10,
+      "confidence": 0.7624,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 84.106,
+      "fps": 2.43,
+      "angle": -0.05,
+      "reps_right": 5,
+      "reps_left": 5,
+      "reps_total": 10,
+      "confidence": 0.6918,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 84.525,
+      "fps": 2.42,
+      "angle": -0.04,
+      "reps_right": 5,
+      "reps_left": 5,
+      "reps_total": 10,
+      "confidence": 0.6981,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 84.931,
+      "fps": 2.43,
+      "angle": -0.02,
+      "reps_right": 5,
+      "reps_left": 6,
+      "reps_total": 11,
+      "confidence": 0.698,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 85.371,
+      "fps": 2.42,
+      "angle": -0.01,
+      "reps_right": 5,
+      "reps_left": 6,
+      "reps_total": 11,
+      "confidence": 0.7152,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 85.784,
+      "fps": 2.25,
+      "angle": -0.01,
+      "reps_right": 5,
+      "reps_left": 6,
+      "reps_total": 11,
+      "confidence": 0.6493,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 86.199,
+      "fps": 2.42,
+      "angle": 0.01,
+      "reps_right": 5,
+      "reps_left": 6,
+      "reps_total": 11,
+      "confidence": 0.6905,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 86.617,
+      "fps": 2.42,
+      "angle": 0.1,
+      "reps_right": 5,
+      "reps_left": 6,
+      "reps_total": 11,
+      "confidence": 0.6449,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 87.038,
+      "fps": 2.33,
+      "angle": 0.17,
+      "reps_right": 5,
+      "reps_left": 6,
+      "reps_total": 11,
+      "confidence": 0.6203,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 87.452,
+      "fps": 2.42,
+      "angle": 0.22,
+      "reps_right": 5,
+      "reps_left": 6,
+      "reps_total": 11,
+      "confidence": 0.6207,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 87.867,
+      "fps": 2.42,
+      "angle": 0.24,
+      "reps_right": 5,
+      "reps_left": 6,
+      "reps_total": 11,
+      "confidence": 0.6492,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 88.281,
+      "fps": 2.44,
+      "angle": 0.18,
+      "reps_right": 5,
+      "reps_left": 6,
+      "reps_total": 11,
+      "confidence": 0.7053,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 88.692,
+      "fps": 2.42,
+      "angle": 0.12,
+      "reps_right": 5,
+      "reps_left": 6,
+      "reps_total": 11,
+      "confidence": 0.7116,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 89.108,
+      "fps": 2.41,
+      "angle": 0.08,
+      "reps_right": 5,
+      "reps_left": 6,
+      "reps_total": 11,
+      "confidence": 0.6534,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 89.521,
+      "fps": 2.42,
+      "angle": 0.05,
+      "reps_right": 5,
+      "reps_left": 6,
+      "reps_total": 11,
+      "confidence": 0.7079,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 89.935,
+      "fps": 2.42,
+      "angle": 0.02,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.6857,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 90.347,
+      "fps": 2.42,
+      "angle": 0.01,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.7364,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 90.76,
+      "fps": 2.42,
+      "angle": 0.0,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.7468,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 91.174,
+      "fps": 2.41,
+      "angle": -0.01,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.7447,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 91.594,
+      "fps": 2.41,
+      "angle": -0.01,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.7675,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 92.006,
+      "fps": 2.41,
+      "angle": -0.01,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.7394,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 92.416,
+      "fps": 2.42,
+      "angle": -0.02,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.7452,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 92.843,
+      "fps": 2.42,
+      "angle": -0.02,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.7294,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 93.274,
+      "fps": 2.34,
+      "angle": -0.03,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.7431,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 93.689,
+      "fps": 2.32,
+      "angle": -0.03,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.7036,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 94.104,
+      "fps": 2.41,
+      "angle": -0.03,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.7198,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 94.523,
+      "fps": 2.41,
+      "angle": -0.04,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.7518,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 94.935,
+      "fps": 2.42,
+      "angle": -0.05,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.7328,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 95.358,
+      "fps": 2.43,
+      "angle": 0.03,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.6435,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 95.804,
+      "fps": 2.34,
+      "angle": 0.12,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.5972,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 96.224,
+      "fps": 2.24,
+      "angle": 0.18,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.5766,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 96.636,
+      "fps": 2.41,
+      "angle": 0.22,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.6548,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 97.05,
+      "fps": 2.41,
+      "angle": 0.24,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.6299,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 97.467,
+      "fps": 2.42,
+      "angle": 0.21,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.7562,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 97.89,
+      "fps": 2.33,
+      "angle": 0.15,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.699,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 98.302,
+      "fps": 2.43,
+      "angle": 0.11,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.7599,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 98.72,
+      "fps": 2.41,
+      "angle": 0.07,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.787,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 99.134,
+      "fps": 2.42,
+      "angle": 0.05,
+      "reps_right": 6,
+      "reps_left": 6,
+      "reps_total": 12,
+      "confidence": 0.7751,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 99.547,
+      "fps": 2.42,
+      "angle": 0.02,
+      "reps_right": 7,
+      "reps_left": 6,
+      "reps_total": 13,
+      "confidence": 0.6833,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 99.96,
+      "fps": 2.41,
+      "angle": -0.0,
+      "reps_right": 7,
+      "reps_left": 6,
+      "reps_total": 13,
+      "confidence": 0.7102,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 100.371,
+      "fps": 2.43,
+      "angle": -0.02,
+      "reps_right": 7,
+      "reps_left": 6,
+      "reps_total": 13,
+      "confidence": 0.6409,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 100.786,
+      "fps": 2.42,
+      "angle": -0.08,
+      "reps_right": 7,
+      "reps_left": 6,
+      "reps_total": 13,
+      "confidence": 0.6623,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 101.201,
+      "fps": 2.41,
+      "angle": -0.15,
+      "reps_right": 7,
+      "reps_left": 6,
+      "reps_total": 13,
+      "confidence": 0.67,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 101.612,
+      "fps": 2.42,
+      "angle": -0.2,
+      "reps_right": 7,
+      "reps_left": 6,
+      "reps_total": 13,
+      "confidence": 0.635,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 102.022,
+      "fps": 2.42,
+      "angle": -0.24,
+      "reps_right": 7,
+      "reps_left": 6,
+      "reps_total": 13,
+      "confidence": 0.607,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 102.438,
+      "fps": 2.41,
+      "angle": -0.24,
+      "reps_right": 7,
+      "reps_left": 6,
+      "reps_total": 13,
+      "confidence": 0.6305,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 102.849,
+      "fps": 2.43,
+      "angle": -0.2,
+      "reps_right": 7,
+      "reps_left": 6,
+      "reps_total": 13,
+      "confidence": 0.7308,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 103.293,
+      "fps": 2.42,
+      "angle": -0.16,
+      "reps_right": 7,
+      "reps_left": 6,
+      "reps_total": 13,
+      "confidence": 0.6544,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 103.711,
+      "fps": 2.25,
+      "angle": -0.15,
+      "reps_right": 7,
+      "reps_left": 6,
+      "reps_total": 13,
+      "confidence": 0.724,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 104.122,
+      "fps": 2.42,
+      "angle": -0.13,
+      "reps_right": 7,
+      "reps_left": 6,
+      "reps_total": 13,
+      "confidence": 0.6902,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 104.539,
+      "fps": 2.42,
+      "angle": -0.1,
+      "reps_right": 7,
+      "reps_left": 6,
+      "reps_total": 13,
+      "confidence": 0.7258,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 104.951,
+      "fps": 2.42,
+      "angle": -0.09,
+      "reps_right": 7,
+      "reps_left": 6,
+      "reps_total": 13,
+      "confidence": 0.7133,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 105.364,
+      "fps": 2.41,
+      "angle": -0.07,
+      "reps_right": 7,
+      "reps_left": 6,
+      "reps_total": 13,
+      "confidence": 0.6982,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 105.782,
+      "fps": 2.42,
+      "angle": -0.07,
+      "reps_right": 7,
+      "reps_left": 6,
+      "reps_total": 13,
+      "confidence": 0.7165,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 106.21,
+      "fps": 2.42,
+      "angle": -0.06,
+      "reps_right": 7,
+      "reps_left": 6,
+      "reps_total": 13,
+      "confidence": 0.7223,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 106.624,
+      "fps": 2.33,
+      "angle": -0.05,
+      "reps_right": 7,
+      "reps_left": 6,
+      "reps_total": 13,
+      "confidence": 0.7304,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 107.039,
+      "fps": 2.41,
+      "angle": -0.04,
+      "reps_right": 7,
+      "reps_left": 6,
+      "reps_total": 13,
+      "confidence": 0.7023,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 107.447,
+      "fps": 2.42,
+      "angle": -0.04,
+      "reps_right": 7,
+      "reps_left": 7,
+      "reps_total": 14,
+      "confidence": 0.7092,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 107.862,
+      "fps": 2.43,
+      "angle": -0.03,
+      "reps_right": 7,
+      "reps_left": 7,
+      "reps_total": 14,
+      "confidence": 0.7449,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 108.271,
+      "fps": 2.42,
+      "angle": -0.03,
+      "reps_right": 7,
+      "reps_left": 7,
+      "reps_total": 14,
+      "confidence": 0.6011,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 108.689,
+      "fps": 2.43,
+      "angle": 0.03,
+      "reps_right": 7,
+      "reps_left": 7,
+      "reps_total": 14,
+      "confidence": 0.5817,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 109.1,
+      "fps": 2.43,
+      "angle": 0.22,
+      "reps_right": 7,
+      "reps_left": 7,
+      "reps_total": 14,
+      "confidence": 0.2946,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 109.517,
+      "fps": 2.43,
+      "angle": 0.54,
+      "reps_right": 7,
+      "reps_left": 7,
+      "reps_total": 14,
+      "confidence": 0.2509,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 109.942,
+      "fps": 2.34,
+      "angle": 0.49,
+      "reps_right": 7,
+      "reps_left": 7,
+      "reps_total": 14,
+      "confidence": 0.4394,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 110.353,
+      "fps": 2.43,
+      "angle": 0.37,
+      "reps_right": 7,
+      "reps_left": 7,
+      "reps_total": 14,
+      "confidence": 0.6652,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 110.763,
+      "fps": 2.41,
+      "angle": 0.26,
+      "reps_right": 7,
+      "reps_left": 7,
+      "reps_total": 14,
+      "confidence": 0.6861,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 111.18,
+      "fps": 2.41,
+      "angle": 0.18,
+      "reps_right": 7,
+      "reps_left": 7,
+      "reps_total": 14,
+      "confidence": 0.67,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 111.59,
+      "fps": 2.42,
+      "angle": 0.12,
+      "reps_right": 7,
+      "reps_left": 7,
+      "reps_total": 14,
+      "confidence": 0.6436,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 112.006,
+      "fps": 2.42,
+      "angle": 0.07,
+      "reps_right": 7,
+      "reps_left": 7,
+      "reps_total": 14,
+      "confidence": 0.6732,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 112.419,
+      "fps": 2.41,
+      "angle": 0.03,
+      "reps_right": 8,
+      "reps_left": 7,
+      "reps_total": 15,
+      "confidence": 0.6567,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 112.843,
+      "fps": 2.42,
+      "angle": 0.01,
+      "reps_right": 8,
+      "reps_left": 7,
+      "reps_total": 15,
+      "confidence": 0.6266,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 113.25,
+      "fps": 2.41,
+      "angle": -0.01,
+      "reps_right": 8,
+      "reps_left": 7,
+      "reps_total": 15,
+      "confidence": 0.6175,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 113.693,
+      "fps": 2.4,
+      "angle": -0.05,
+      "reps_right": 8,
+      "reps_left": 7,
+      "reps_total": 15,
+      "confidence": 0.6396,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 114.112,
+      "fps": 2.25,
+      "angle": -0.13,
+      "reps_right": 8,
+      "reps_left": 7,
+      "reps_total": 15,
+      "confidence": 0.5425,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 114.527,
+      "fps": 2.42,
+      "angle": -0.24,
+      "reps_right": 8,
+      "reps_left": 7,
+      "reps_total": 15,
+      "confidence": 0.399,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 114.938,
+      "fps": 2.42,
+      "angle": -0.29,
+      "reps_right": 8,
+      "reps_left": 7,
+      "reps_total": 15,
+      "confidence": 0.4273,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 115.351,
+      "fps": 2.42,
+      "angle": -0.26,
+      "reps_right": 8,
+      "reps_left": 7,
+      "reps_total": 15,
+      "confidence": 0.6167,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 115.766,
+      "fps": 2.42,
+      "angle": -0.21,
+      "reps_right": 8,
+      "reps_left": 7,
+      "reps_total": 15,
+      "confidence": 0.709,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 116.19,
+      "fps": 2.42,
+      "angle": -0.17,
+      "reps_right": 8,
+      "reps_left": 7,
+      "reps_total": 15,
+      "confidence": 0.6657,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 116.618,
+      "fps": 2.33,
+      "angle": -0.15,
+      "reps_right": 8,
+      "reps_left": 7,
+      "reps_total": 15,
+      "confidence": 0.6346,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 117.034,
+      "fps": 2.33,
+      "angle": -0.12,
+      "reps_right": 8,
+      "reps_left": 7,
+      "reps_total": 15,
+      "confidence": 0.636,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 117.473,
+      "fps": 2.46,
+      "angle": -0.1,
+      "reps_right": 8,
+      "reps_left": 7,
+      "reps_total": 15,
+      "confidence": 0.6513,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 117.89,
+      "fps": 2.25,
+      "angle": -0.09,
+      "reps_right": 8,
+      "reps_left": 7,
+      "reps_total": 15,
+      "confidence": 0.6334,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 118.296,
+      "fps": 2.42,
+      "angle": -0.08,
+      "reps_right": 8,
+      "reps_left": 7,
+      "reps_total": 15,
+      "confidence": 0.6546,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 118.709,
+      "fps": 2.43,
+      "angle": -0.07,
+      "reps_right": 8,
+      "reps_left": 7,
+      "reps_total": 15,
+      "confidence": 0.6584,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 119.125,
+      "fps": 2.41,
+      "angle": -0.06,
+      "reps_right": 8,
+      "reps_left": 7,
+      "reps_total": 15,
+      "confidence": 0.6589,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 119.536,
+      "fps": 2.43,
+      "angle": -0.06,
+      "reps_right": 8,
+      "reps_left": 7,
+      "reps_total": 15,
+      "confidence": 0.6711,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 119.97,
+      "fps": 2.43,
+      "angle": -0.05,
+      "reps_right": 8,
+      "reps_left": 7,
+      "reps_total": 15,
+      "confidence": 0.6549,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 120.474,
+      "fps": 2.26,
+      "angle": -0.05,
+      "reps_right": 8,
+      "reps_left": 7,
+      "reps_total": 15,
+      "confidence": 0.6268,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 120.945,
+      "fps": 2.04,
+      "angle": -0.04,
+      "reps_right": 8,
+      "reps_left": 8,
+      "reps_total": 16,
+      "confidence": 0.695,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 121.437,
+      "fps": 2.1,
+      "angle": -0.03,
+      "reps_right": 8,
+      "reps_left": 8,
+      "reps_total": 16,
+      "confidence": 0.626,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 121.956,
+      "fps": 2.09,
+      "angle": -0.03,
+      "reps_right": 8,
+      "reps_left": 8,
+      "reps_total": 16,
+      "confidence": 0.6408,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 122.443,
+      "fps": 1.91,
+      "angle": -0.07,
+      "reps_right": 8,
+      "reps_left": 8,
+      "reps_total": 16,
+      "confidence": 0.6257,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 122.937,
+      "fps": 2.04,
+      "angle": -0.19,
+      "reps_right": 8,
+      "reps_left": 8,
+      "reps_total": 16,
+      "confidence": 0.4644,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 123.382,
+      "fps": 1.97,
+      "angle": -0.19,
+      "reps_right": 8,
+      "reps_left": 8,
+      "reps_total": 16,
+      "confidence": 0.6227,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 123.823,
+      "fps": 2.33,
+      "angle": -0.15,
+      "reps_right": 8,
+      "reps_left": 8,
+      "reps_total": 16,
+      "confidence": 0.664,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 124.236,
+      "fps": 2.25,
+      "angle": -0.13,
+      "reps_right": 8,
+      "reps_left": 8,
+      "reps_total": 16,
+      "confidence": 0.6492,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 124.661,
+      "fps": 2.42,
+      "angle": -0.11,
+      "reps_right": 8,
+      "reps_left": 8,
+      "reps_total": 16,
+      "confidence": 0.6386,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 125.081,
+      "fps": 2.33,
+      "angle": -0.09,
+      "reps_right": 8,
+      "reps_left": 8,
+      "reps_total": 16,
+      "confidence": 0.6346,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 125.5,
+      "fps": 2.42,
+      "angle": -0.08,
+      "reps_right": 8,
+      "reps_left": 8,
+      "reps_total": 16,
+      "confidence": 0.6574,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 125.921,
+      "fps": 2.35,
+      "angle": -0.07,
+      "reps_right": 8,
+      "reps_left": 8,
+      "reps_total": 16,
+      "confidence": 0.6267,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 126.359,
+      "fps": 2.34,
+      "angle": -0.06,
+      "reps_right": 8,
+      "reps_left": 8,
+      "reps_total": 16,
+      "confidence": 0.654,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 126.787,
+      "fps": 2.34,
+      "angle": -0.05,
+      "reps_right": 8,
+      "reps_left": 8,
+      "reps_total": 16,
+      "confidence": 0.6652,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 127.205,
+      "fps": 2.32,
+      "angle": -0.05,
+      "reps_right": 8,
+      "reps_left": 8,
+      "reps_total": 16,
+      "confidence": 0.6465,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 127.621,
+      "fps": 2.42,
+      "angle": -0.06,
+      "reps_right": 8,
+      "reps_left": 8,
+      "reps_total": 16,
+      "confidence": 0.6793,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 128.044,
+      "fps": 2.32,
+      "angle": -0.06,
+      "reps_right": 8,
+      "reps_left": 8,
+      "reps_total": 16,
+      "confidence": 0.6528,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 128.463,
+      "fps": 2.42,
+      "angle": -0.05,
+      "reps_right": 8,
+      "reps_left": 8,
+      "reps_total": 16,
+      "confidence": 0.6419,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 128.877,
+      "fps": 2.41,
+      "angle": -0.04,
+      "reps_right": 8,
+      "reps_left": 8,
+      "reps_total": 16,
+      "confidence": 0.6502,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 129.304,
+      "fps": 2.33,
+      "angle": -0.03,
+      "reps_right": 8,
+      "reps_left": 9,
+      "reps_total": 17,
+      "confidence": 0.6764,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 129.763,
+      "fps": 2.41,
+      "angle": -0.03,
+      "reps_right": 8,
+      "reps_left": 9,
+      "reps_total": 17,
+      "confidence": 0.5904,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 130.21,
+      "fps": 2.18,
+      "angle": -0.03,
+      "reps_right": 8,
+      "reps_left": 9,
+      "reps_total": 17,
+      "confidence": 0.6284,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 130.636,
+      "fps": 2.17,
+      "angle": 0.02,
+      "reps_right": 8,
+      "reps_left": 9,
+      "reps_total": 17,
+      "confidence": 0.5883,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 131.053,
+      "fps": 2.42,
+      "angle": 0.1,
+      "reps_right": 8,
+      "reps_left": 9,
+      "reps_total": 17,
+      "confidence": 0.5432,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 131.482,
+      "fps": 2.34,
+      "angle": 0.18,
+      "reps_right": 8,
+      "reps_left": 9,
+      "reps_total": 17,
+      "confidence": 0.4147,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 131.912,
+      "fps": 2.33,
+      "angle": 0.23,
+      "reps_right": 8,
+      "reps_left": 9,
+      "reps_total": 17,
+      "confidence": 0.4512,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 132.338,
+      "fps": 2.33,
+      "angle": 0.23,
+      "reps_right": 8,
+      "reps_left": 9,
+      "reps_total": 17,
+      "confidence": 0.5868,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 132.753,
+      "fps": 2.41,
+      "angle": 0.19,
+      "reps_right": 8,
+      "reps_left": 9,
+      "reps_total": 17,
+      "confidence": 0.6801,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 133.169,
+      "fps": 2.42,
+      "angle": 0.13,
+      "reps_right": 8,
+      "reps_left": 9,
+      "reps_total": 17,
+      "confidence": 0.6163,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 133.594,
+      "fps": 2.34,
+      "angle": 0.09,
+      "reps_right": 8,
+      "reps_left": 9,
+      "reps_total": 17,
+      "confidence": 0.6819,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 134.039,
+      "fps": 2.42,
+      "angle": 0.05,
+      "reps_right": 8,
+      "reps_left": 9,
+      "reps_total": 17,
+      "confidence": 0.6548,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 134.457,
+      "fps": 2.26,
+      "angle": 0.02,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.5994,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 134.881,
+      "fps": 2.33,
+      "angle": -0.0,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.6303,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 135.309,
+      "fps": 2.43,
+      "angle": -0.02,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.6097,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 135.736,
+      "fps": 2.33,
+      "angle": -0.03,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.6581,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 136.151,
+      "fps": 2.32,
+      "angle": -0.04,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.6497,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 136.569,
+      "fps": 2.41,
+      "angle": -0.15,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.446,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 137.037,
+      "fps": 2.34,
+      "angle": -0.25,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.4392,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 137.465,
+      "fps": 2.17,
+      "angle": -0.32,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.4815,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 137.883,
+      "fps": 2.33,
+      "angle": -0.38,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.4814,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 138.3,
+      "fps": 2.41,
+      "angle": -0.37,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.5684,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 138.715,
+      "fps": 2.41,
+      "angle": -0.3,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.7043,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 139.126,
+      "fps": 2.42,
+      "angle": -0.24,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.7042,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 139.549,
+      "fps": 2.43,
+      "angle": -0.2,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.7176,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 139.969,
+      "fps": 2.34,
+      "angle": -0.16,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.6887,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 140.378,
+      "fps": 2.43,
+      "angle": -0.13,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.6542,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 140.797,
+      "fps": 2.41,
+      "angle": -0.11,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.6395,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 141.227,
+      "fps": 2.41,
+      "angle": -0.09,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.6278,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 141.661,
+      "fps": 2.33,
+      "angle": -0.08,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.6433,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 142.091,
+      "fps": 2.24,
+      "angle": -0.07,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.616,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 142.515,
+      "fps": 2.33,
+      "angle": -0.06,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.5466,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 142.934,
+      "fps": 2.41,
+      "angle": -0.06,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.6244,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 143.37,
+      "fps": 2.33,
+      "angle": -0.05,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.6008,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 143.788,
+      "fps": 2.33,
+      "angle": -0.05,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.6323,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 144.236,
+      "fps": 2.41,
+      "angle": -0.05,
+      "reps_right": 9,
+      "reps_left": 9,
+      "reps_total": 18,
+      "confidence": 0.5463,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 144.651,
+      "fps": 2.25,
+      "angle": -0.04,
+      "reps_right": 9,
+      "reps_left": 10,
+      "reps_total": 19,
+      "confidence": 0.5809,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 145.089,
+      "fps": 2.32,
+      "angle": -0.03,
+      "reps_right": 9,
+      "reps_left": 10,
+      "reps_total": 19,
+      "confidence": 0.6224,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 145.524,
+      "fps": 2.33,
+      "angle": -0.03,
+      "reps_right": 9,
+      "reps_left": 10,
+      "reps_total": 19,
+      "confidence": 0.6432,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 145.936,
+      "fps": 2.34,
+      "angle": 0.02,
+      "reps_right": 9,
+      "reps_left": 10,
+      "reps_total": 19,
+      "confidence": 0.5773,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 146.359,
+      "fps": 2.42,
+      "angle": 0.11,
+      "reps_right": 9,
+      "reps_left": 10,
+      "reps_total": 19,
+      "confidence": 0.4605,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 146.789,
+      "fps": 2.34,
+      "angle": 0.17,
+      "reps_right": 9,
+      "reps_left": 10,
+      "reps_total": 19,
+      "confidence": 0.5378,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 147.222,
+      "fps": 2.34,
+      "angle": 0.22,
+      "reps_right": 9,
+      "reps_left": 10,
+      "reps_total": 19,
+      "confidence": 0.5599,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 147.644,
+      "fps": 2.33,
+      "angle": 0.21,
+      "reps_right": 9,
+      "reps_left": 10,
+      "reps_total": 19,
+      "confidence": 0.598,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 148.064,
+      "fps": 2.33,
+      "angle": 0.16,
+      "reps_right": 9,
+      "reps_left": 10,
+      "reps_total": 19,
+      "confidence": 0.6697,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 148.479,
+      "fps": 2.42,
+      "angle": 0.12,
+      "reps_right": 9,
+      "reps_left": 10,
+      "reps_total": 19,
+      "confidence": 0.6079,
+      "is_complete": true
+    },
+    {
+      "timestamp_sec": 148.906,
+      "fps": 2.33,
+      "angle": 0.09,
+      "reps_right": 9,
+      "reps_left": 10,
+      "reps_total": 19,
+      "confidence": 0.6153,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 149.346,
+      "fps": 2.42,
+      "angle": 0.07,
+      "reps_right": 9,
+      "reps_left": 10,
+      "reps_total": 19,
+      "confidence": 0.6288,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 149.784,
+      "fps": 2.25,
+      "angle": 0.05,
+      "reps_right": 9,
+      "reps_left": 10,
+      "reps_total": 19,
+      "confidence": 0.6585,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 150.21,
+      "fps": 2.24,
+      "angle": 0.04,
+      "reps_right": 9,
+      "reps_left": 10,
+      "reps_total": 19,
+      "confidence": 0.7224,
+      "is_complete": false
+    },
+    {
+      "timestamp_sec": 150.629,
+      "fps": 2.42,
+      "angle": 0.04,
+      "reps_right": 10,
+      "reps_left": 10,
+      "reps_total": 20,
+      "confidence": 0.6935,
+      "is_complete": false
+    }
+  ]
+}

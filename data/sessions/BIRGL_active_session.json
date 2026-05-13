@@ -1,0 +1,152 @@
+{
+  "patient_name": "BIRGÜL",
+  "complaint": "merhaba gidisatim nasil",
+  "condition": "BOYUN_AGRISI",
+  "created_at": "2026-04-20T17:37:38.564203",
+  "ended_at": null,
+  "plan": {
+    "patient_name": "BIRGÜL",
+    "condition": "BOYUN_AGRISI",
+    "fitness_level": 5,
+    "created_date": "2026-04-20T17:37:38.564203",
+    "start_date": "2026-04-20",
+    "weeks": 2,
+    "schedule": {
+      "Hafta_1": {
+        "Pazartesi": {
+          "exercises": [
+            "ROM_LAT",
+            "ROM_ROT"
+          ],
+          "completed": false,
+          "date": null
+        },
+        "Çarşamba": {
+          "exercises": [
+            "ROM_FLEKS",
+            "IZO_FLEKS"
+          ],
+          "completed": false,
+          "date": null
+        },
+        "Cuma": {
+          "exercises": [
+            "ROM_CEMBER",
+            "IZO_LAT"
+          ],
+          "completed": false,
+          "date": null
+        }
+      },
+      "Hafta_2": {
+        "Pazartesi": {
+          "exercises": [
+            "ROM_LAT",
+            "ROM_ROT"
+          ],
+          "completed": false,
+          "date": null
+        },
+        "Çarşamba": {
+          "exercises": [
+            "ROM_FLEKS",
+            "IZO_EKST"
+          ],
+          "completed": false,
+          "date": null
+        },
+        "Cuma": {
+          "exercises": [
+            "ROM_LAT",
+            "ROM_ROT"
+          ],
+          "completed": false,
+          "date": null
+        }
+      }
+    }
+  },
+  "exercise_results": [
+    {
+      "exercise_code": "IZO_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 45,
+      "status": "done",
+      "timestamp": "2026-04-20T17:38:47.362239"
+    },
+    {
+      "exercise_code": "IZO_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 45,
+      "status": "done",
+      "timestamp": "2026-04-20T17:38:50.904471"
+    },
+    {
+      "exercise_code": "ROM_FLEKS",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 37,
+      "status": "done",
+      "timestamp": "2026-04-20T17:40:25.409596"
+    },
+    {
+      "exercise_code": "ROM_FLEKS",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 37,
+      "status": "done",
+      "timestamp": "2026-04-20T17:40:28.825177"
+    },
+    {
+      "exercise_code": "ROM_FLEKS",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 25,
+      "status": "done",
+      "timestamp": "2026-04-20T17:43:08.936661"
+    },
+    {
+      "exercise_code": "ROM_FLEKS",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 25,
+      "status": "done",
+      "timestamp": "2026-04-20T17:43:17.601179"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 55,
+      "status": "done",
+      "timestamp": "2026-04-20T17:52:53.588414"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 55,
+      "status": "done",
+      "timestamp": "2026-04-20T17:52:56.090923"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 84,
+      "status": "done",
+      "timestamp": "2026-04-21T18:25:26.438921"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 84,
+      "status": "done",
+      "timestamp": "2026-04-21T18:25:48.425856"
+    }
+  ],
+  "notes": []
+}

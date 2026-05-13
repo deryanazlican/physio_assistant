@@ -1,0 +1,91 @@
+{
+  "patient_name": "CAGDAS",
+  "complaint": "Uygulama içinden başlatıldı",
+  "condition": "BOYUN_AGRISI",
+  "created_at": "2026-04-17T22:19:00.408607",
+  "ended_at": null,
+  "plan": {},
+  "exercise_results": [
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 59,
+      "status": "done",
+      "timestamp": "2026-04-17T22:19:00.408607"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 59,
+      "status": "done",
+      "timestamp": "2026-04-17T22:19:03.136456"
+    },
+    {
+      "exercise_code": "ROM_ROT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 137,
+      "status": "done",
+      "timestamp": "2026-04-17T22:37:28.129352"
+    },
+    {
+      "exercise_code": "ROM_ROT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 137,
+      "status": "done",
+      "timestamp": "2026-04-17T22:37:31.194326"
+    },
+    {
+      "exercise_code": "ROM_ROT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 122,
+      "status": "done",
+      "timestamp": "2026-04-17T22:39:40.461406"
+    },
+    {
+      "exercise_code": "ROM_ROT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 122,
+      "status": "done",
+      "timestamp": "2026-04-17T22:39:42.648078"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 39,
+      "status": "done",
+      "timestamp": "2026-04-20T18:10:39.230836"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 39,
+      "status": "done",
+      "timestamp": "2026-04-20T18:10:41.923505"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 49,
+      "status": "done",
+      "timestamp": "2026-04-20T18:11:57.903371"
+    },
+    {
+      "exercise_code": "ROM_LAT",
+      "target_reps": 10,
+      "completed_reps": 10,
+      "duration_sec": 49,
+      "status": "done",
+      "timestamp": "2026-04-20T18:12:00.569299"
+    }
+  ],
+  "notes": []
+}

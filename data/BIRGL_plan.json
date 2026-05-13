@@ -1,9 +1,9 @@
 {
-  "patient_name": "BIRGL",
+  "patient_name": "BIRGÜL",
   "condition": "BOYUN_AGRISI",
   "fitness_level": 5,
-  "created_date": "2026-01-06T19:06:17.487487",
-  "start_date": "2026-01-06",
+  "created_date": "2026-04-20T17:37:38.564203",
+  "start_date": "2026-04-20",
   "weeks": 2,
   "schedule": {
     "Hafta_1": {

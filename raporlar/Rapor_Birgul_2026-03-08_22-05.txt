@@ -1,0 +1,30 @@
+HASTA: Birgul
+TARIH: 08.03.2026 22:05
+------------------------------
+HASTA: Birgul
+SIKAYET: Boynum ağrıyor ve sağa sola çevirince zorlanıyorum.
+KATEGORI: BOYUN_AGRISI
+BASLANGIC: 2026-03-08T22:05:06.520950
+BITIS: 2026-03-08T22:05:06.520950
+----------------------------------------
+OLUSTURULAN PLAN:
+Hafta_1:
+  Pazartesi: ROM_LAT, ROM_ROT
+  Çarşamba: ROM_FLEKS, IZO_FLEKS
+  Cuma: ROM_CEMBER, IZO_LAT
+Hafta_2:
+  Pazartesi: ROM_LAT, ROM_ROT
+  Çarşamba: ROM_FLEKS, IZO_EKST
+  Cuma: ROM_LAT, ROM_ROT
+----------------------------------------
+OTURUMDA YAPILANLAR:
+ROM_LAT | hedef: 10 | yapilan: 8 | sure(sn): 35 | durum: done
+ROM_ROT | hedef: 10 | yapilan: 10 | sure(sn): 40 | durum: done
+----------------------------------------
+TAHMINI PLAN UYUMU: %90.0
+Kullanici plani buyuk oranda tamamladi. Egzersiz uyumu oldukca iyi.
+----------------------------------------
+NOTLAR:
+- Kullanici rotasyon hareketini daha rahat yapti.
+------------------------------
+FIZYO ASISTAN AI RAPORU SONU
